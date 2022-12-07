@@ -4,10 +4,20 @@
  */
 package Model.Enterprise;
 
+import java.util.ArrayList;
+
 /**
  *
  * @author srikanthchilaka
  */
-public class LogisticsEnterprise {
-    
+public class LogisticsEnterprise extends Enterprise {
+    public LogisticsEnterprise(String name){
+        super (name, Enterprise.EnterpriseType.Logistics);
+        
+    }
+    @Override
+    public ArrayList<Role> getSupportedRole(){
+        return null;
+
+    }
 }
