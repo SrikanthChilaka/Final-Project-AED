@@ -3,11 +3,23 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
 package Model.Organization;
-
+import Model.Role.Role;
+import Model.Role.SupplierRole;
+import java.util.ArrayList;
 /**
  *
  * @author harshinichandrika
  */
-public class SupplierOrganization {
-    
+public class SupplierOrganization extends Organization{
+public SupplierOrganization(){
+super(Organization.OrganizationType.Supplier.getValue());
+     }   
+ @Override
+ 
+ 
+ public ArrayList<Role> getSupportedRole(){
+     ArrayList<Role> roles = new ArrayList<>();
+     roles.add(new SupplierRole());
+     return roles;
+ }
 }
