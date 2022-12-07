@@ -4,11 +4,22 @@
  */
 package Model;
 
+import Model.Employee.Employee;
+import Model.Role.SysAdminRole;
+import Model.UserAccount.UserAccount;
+
 /**
  *
  * @author harshinichandrika
  */
 public class ConfigureASystem {
+     public static EcoSystem configure(){
+        
+        EcoSystem system = EcoSystem.getInstance();
+        Employee employee = system.getEmployeeDirectory().createEmployee("YGS");
+        UserAccount ua = system.getUserAccountDirectory().createUserAccount("neu","neu",employee,new SysAdminRole());
+        return system;
+    }
     
    
 }
