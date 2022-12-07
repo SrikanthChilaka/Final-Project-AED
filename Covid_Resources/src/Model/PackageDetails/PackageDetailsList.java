@@ -4,10 +4,35 @@
  */
 package Model.PackageDetails;
 
+import java.util.ArrayList;
+
 /**
  *
  * @author venkat
  */
 public class PackageDetailsList {
+    private ArrayList<PackageDetails> detailsList;
+
+public PackageDetailsList(){
+detailsList=new ArrayList<>();
+}
+
+public ArrayList<PackageDetails> getDetailsList() {
+return detailsList;
+}
+
+public void setDetailsList(ArrayList<PackageDetails> detailsList) {
+this.detailsList = detailsList;
+}
+
+public PackageDetails addDetails(){
+PackageDetails p=new PackageDetails();
+detailsList.add(p);
+return p;
+
+}
     
 }
+
+    
+
