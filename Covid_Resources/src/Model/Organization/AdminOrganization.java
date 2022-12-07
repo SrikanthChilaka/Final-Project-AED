@@ -11,7 +11,7 @@ import java.util.ArrayList;
  *
  * @author harshinichandrika
  */
-public class AdminOrganization {
+public class AdminOrganization extends Organization{
     private String organizationName;
 
     public String getOrganizationName() {
