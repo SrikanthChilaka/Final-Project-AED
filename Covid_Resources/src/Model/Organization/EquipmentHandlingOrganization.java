@@ -11,7 +11,7 @@ import java.util.ArrayList;
  *
  * @author harshinichandrika
  */
-public class EquipmentHandlingOrganization {
+public class EquipmentHandlingOrganization extends Organization{
     public EquipmentHandlingOrganization(){
         super(Organization.OrganizationType.MedicalEquipment.getValue());
           }
