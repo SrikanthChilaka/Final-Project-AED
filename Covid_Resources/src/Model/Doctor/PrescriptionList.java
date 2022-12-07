@@ -4,10 +4,28 @@
  */
 package Model.Doctor;
 
+import java.util.ArrayList;
+
 /**
  *
  * @author srikanthchilaka
  */
 public class PrescriptionList {
+        
+    private ArrayList<DoctorPrescription> prescriptionlist;
+    public ArrayList<DoctorPrescription> getPrescriptionlist() {
+        return prescriptionlist;
+    }
+
     
+    public void setPrescriptionlist(ArrayList<DoctorPrescription> prescriptionlist) {
+        this.prescriptionlist = prescriptionlist;
+    }
+    
+    
+    public DoctorPrescription addDoctorPrescription(){
+        DoctorPrescription prescription = new DoctorPrescription();
+        prescriptionlist.add(prescription);
+        return prescription;
+    }
 }
