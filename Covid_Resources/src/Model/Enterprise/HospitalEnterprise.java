@@ -3,7 +3,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
 package Model.Enterprise;
-
+import Model.Role.Role;
 import java.util.ArrayList;
 
 /**
