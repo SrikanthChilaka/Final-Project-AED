@@ -9,5 +9,25 @@ package Model.Employee;
  * @author srikanthchilaka
  */
 public class Employee {
+    private String EmployeeName;
+    private int EmployeeId;
+    private static int count = 1;
     
+    public Employee() {
+        EmployeeId = count;
+        count++;
+    }
+    public int getEmployeeId(){
+        return EmployeeId;
+    }
+    public void setName (String EmployeeName){
+        this.EmployeeName=EmployeeName;
+        }
+    public String getEmployeeName(){
+        return EmployeeName;
+        }
+    @Override
+    public String toString(){
+        return EmployeeName;
+    }
 }
