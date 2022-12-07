@@ -3,11 +3,23 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
 package Model.Organization;
+import Model.Role.Role;
+import Model.Role.TransportationRole;
+import java.util.ArrayList;
 
 /**
  *
  * @author harshinichandrika
  */
-public class TransportOrganization {
+public class TransportOrganization extends Organization {
+public TransportOrganization(){
+super(Organization.OrganizationType.Transport.getValue());
     
+}
+@Override
+public ArrayList<Role> getSupportedRole(){
+    ArrayList<Role> roles = new ArrayList<>();
+    roles.add(new TransportationRole());
+    return roles;
+}
 }
