@@ -15,7 +15,7 @@ import java.util.ArrayList;
  *
  * @author harshinichandrika
  */
-public class Organization {
+public abstract class Organization {
     private String name;
 private WorkQueue workQueue;
 private EmployeeDirectory employeeDirectory;
