@@ -4,10 +4,28 @@
  */
 package Model.Role;
 
+
+import Model.EcoSystem;
+import Model.Enterprise.Enterprise;
+import Model.Network.Network;
+import Model.Organization.Organization;
+import Model.UserAccount.UserAccount;
+import javax.swing.JPanel;
+
+
 /**
  *
  * @author venkat
  */
-public class SysAdminRole {
-    
+public class SysAdminRole extends Role{
+    @Override
+public JPanel createWorkArea(JPanel userProcessContainer, UserAccount account, Organization organization, Enterprise enterprise, EcoSystem system,Network network) {
+return new SystemAdminWorkAreaJPanel(userProcessContainer, system);
 }
+
+@Override
+public String toString() {
+    return "Sys Admin Role";
+}
+}
+
