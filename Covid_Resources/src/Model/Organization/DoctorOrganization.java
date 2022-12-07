@@ -11,7 +11,7 @@ import java.util.ArrayList;
  *
  * @author harshinichandrika
  */
-public class DoctorOrganization {
+public class DoctorOrganization extends Organization{
     private ArrayList<DoctorPrescription> plist;
         public DoctorOrganization(){
         super(Organization.OrganizationType.Doctor.getValue());
