@@ -2,21 +2,23 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package Model;
-import Model.Organization.AdminOrganization;
-import Model.Supplier.Product;
-import Model.WorkQueue.DoctorWorkRequest;
+package Model.Design;
+
+import Model.Organization.Organization_Admin;
+import Model.Product;
 import Model.WorkQueue.HealthcareEquipmentWorkRequest;
+import Model.WorkQueue.DoctorWorkRequest;
 import Model.WorkQueue.PharmacyWorkRequest;
 import java.util.Random;
-
 
 /**
  *
  * @author harshinichandrika
  */
 public class DataGenerator {
-    private static String[] equipmentName = {"Oxygen Cylinders","Covid Testing Kits","PulseOxymeters","Stethescope", "Thermometer", "Syringe", "Beds", "BP Kits", "Diabetes Machines"};
+  
+
+ private static String[] equipmentName = {"Oxygen Cylinders","Covid Testing Kits","PulseOxymeters","Stethescope", "Thermometer", "Syringe", "Beds", "BP Kits", "Diabetes Machines"};
     private static String[] medicineName = {"Synthroid", "Crestor", "Ventolin", "esomeprazole", "insulin", "infliximab", "fluticasone", "rosuvastatin"};
     private static String[] network = {"Boston", "Seattle", "Washington DC", "FLORIDA"};
     private static String[] hospitalName = {"AH", "TGH", "General Hospitals", "Smile Hospitals", "Cape cod", "Boston Medical", "Brigham"};
@@ -105,17 +107,17 @@ public class DataGenerator {
     }
 
     
-    public static AdminOrganization InitOrgName() {
-    AdminOrganization request = new AdminOrganization();
-    request.setOrganizationName(generationOrganisationName());
+    public static Organization_Admin InitOrgName() {
+    Organization_Admin request = new Organization_Admin();
+    request.setOrgName(generationOrganisationName());
     return request;
     }
 
     
     public static Product InitVaccineName() {
     Product request = new Product();
-        request.setNameOfVaccine(generateVaccineName());
-        request.setNameOfHospital(generateHospitalName());
+        request.setVaccineName(generateVaccineName());
+        request.setHospitalName(generateHospitalName());
         return request;
     }
 
@@ -123,8 +125,9 @@ public class DataGenerator {
     
     public static Product InitMedicineName() {
      Product request = new Product();
-       request.setNameOfMedicine(generateMedicine());
+       request.setDrugName(generateMedicine());
        return request;
     }
+   
     
 }
