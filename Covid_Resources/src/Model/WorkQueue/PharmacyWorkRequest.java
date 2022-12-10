@@ -3,26 +3,27 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
 package Model.WorkQueue;
+
 import java.util.Date;
 
 /**
  *
- * @author harshinichandrika
+ * @author venkat
  */
 public class PharmacyWorkRequest extends WorkRequest {
-    private String requestDate;
+    private String reqDate;
     private String status ;
-    private String medicationName;
+    private String medsName;
     private int Quantity;
     private String network;
-    private String supplierName;
+    private String suppliersName;
 
     public String getRequestDate() {
-        return requestDate;
+        return reqDate;
     }
 
     public void setRequestDate(String requestDate) {
-        this.requestDate = requestDate;
+        this.reqDate = requestDate;
     }
 
     public String getStatus() {
@@ -34,11 +35,11 @@ public class PharmacyWorkRequest extends WorkRequest {
     }
 
     public String getMedicationName() {
-        return medicationName;
+        return medsName;
     }
 
     public void setMedicationName(String medicationName) {
-        this.medicationName = medicationName;
+        this.medsName = medicationName;
     }
 
     public int getQuantity() {
@@ -58,15 +59,15 @@ public class PharmacyWorkRequest extends WorkRequest {
     }
 
     public String getSupplierName() {
-        return supplierName;
+        return suppliersName;
     }
 
     public void setSupplierName(String supplierName) {
-        this.supplierName = supplierName;
+        this.suppliersName = supplierName;
     }
     
     @Override
     public String toString(){
-        return this.medicationName;
+        return this.medsName;
     }
 }
