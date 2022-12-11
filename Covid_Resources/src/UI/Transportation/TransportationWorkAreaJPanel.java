@@ -46,29 +46,29 @@ private EcoSystem eco;
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        Btnprocessreq = new javax.swing.JButton();
-        mainlbl = new javax.swing.JLabel();
-        jScrollPane1 = new javax.swing.JScrollPane();
+        buttonrequestbutton = new javax.swing.JButton();
+        mainlabel = new javax.swing.JLabel();
+        jpanelscroll2 = new javax.swing.JScrollPane();
         workreqTble = new javax.swing.JTable();
-        BtnRef = new javax.swing.JButton();
-        BTNB = new javax.swing.JButton();
-        BTnA = new javax.swing.JButton();
+        refreshbutton = new javax.swing.JButton();
+        buttonback = new javax.swing.JButton();
+        buttonassign = new javax.swing.JButton();
 
         setBackground(new java.awt.Color(153, 204, 255));
 
-        Btnprocessreq.setBackground(new java.awt.Color(0, 51, 153));
-        Btnprocessreq.setForeground(new java.awt.Color(255, 255, 255));
-        Btnprocessreq.setText("Process request");
-        Btnprocessreq.addActionListener(new java.awt.event.ActionListener() {
+        buttonrequestbutton.setBackground(new java.awt.Color(0, 51, 153));
+        buttonrequestbutton.setForeground(new java.awt.Color(255, 255, 255));
+        buttonrequestbutton.setText("Process request");
+        buttonrequestbutton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                BtnprocessreqActionPerformed(evt);
+                buttonrequestbuttonActionPerformed(evt);
             }
         });
 
-        mainlbl.setFont(new java.awt.Font("Tahoma", 1, 36)); // NOI18N
-        mainlbl.setForeground(new java.awt.Color(0, 51, 153));
-        mainlbl.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/transport.png"))); // NOI18N
-        mainlbl.setText("TRANSPORTATION WORK AREA");
+        mainlabel.setFont(new java.awt.Font("Tahoma", 1, 36)); // NOI18N
+        mainlabel.setForeground(new java.awt.Color(0, 51, 153));
+        mainlabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/transport.png"))); // NOI18N
+        mainlabel.setText("TRANSPORTATION WORK AREA");
 
         workreqTble.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -78,32 +78,32 @@ private EcoSystem eco;
                 "Hospital Name", "Sender", "Status", "Message", "Haste"
             }
         ));
-        jScrollPane1.setViewportView(workreqTble);
+        jpanelscroll2.setViewportView(workreqTble);
 
-        BtnRef.setBackground(new java.awt.Color(0, 51, 153));
-        BtnRef.setForeground(new java.awt.Color(255, 255, 255));
-        BtnRef.setText("Refresh");
-        BtnRef.addActionListener(new java.awt.event.ActionListener() {
+        refreshbutton.setBackground(new java.awt.Color(0, 51, 153));
+        refreshbutton.setForeground(new java.awt.Color(255, 255, 255));
+        refreshbutton.setText("Refresh");
+        refreshbutton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                BtnRefActionPerformed(evt);
+                refreshbuttonActionPerformed(evt);
             }
         });
 
-        BTNB.setBackground(new java.awt.Color(0, 51, 153));
-        BTNB.setForeground(new java.awt.Color(255, 255, 255));
-        BTNB.setText("<< Back");
-        BTNB.addActionListener(new java.awt.event.ActionListener() {
+        buttonback.setBackground(new java.awt.Color(0, 51, 153));
+        buttonback.setForeground(new java.awt.Color(255, 255, 255));
+        buttonback.setText("<< Back");
+        buttonback.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                BTNBActionPerformed(evt);
+                buttonbackActionPerformed(evt);
             }
         });
 
-        BTnA.setBackground(new java.awt.Color(0, 51, 153));
-        BTnA.setForeground(new java.awt.Color(255, 255, 255));
-        BTnA.setText("Assign");
-        BTnA.addActionListener(new java.awt.event.ActionListener() {
+        buttonassign.setBackground(new java.awt.Color(0, 51, 153));
+        buttonassign.setForeground(new java.awt.Color(255, 255, 255));
+        buttonassign.setText("Assign");
+        buttonassign.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                BTnAActionPerformed(evt);
+                buttonassignActionPerformed(evt);
             }
         });
 
@@ -116,39 +116,39 @@ private EcoSystem eco;
                     .addGroup(layout.createSequentialGroup()
                         .addGap(157, 157, 157)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 687, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jpanelscroll2, javax.swing.GroupLayout.PREFERRED_SIZE, 687, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGroup(layout.createSequentialGroup()
                                 .addGap(66, 66, 66)
-                                .addComponent(mainlbl))))
+                                .addComponent(mainlabel))))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(168, 168, 168)
-                        .addComponent(BTNB)
+                        .addComponent(buttonback)
                         .addGap(43, 43, 43)
-                        .addComponent(BTnA)
+                        .addComponent(buttonassign)
                         .addGap(51, 51, 51)
-                        .addComponent(BtnRef, javax.swing.GroupLayout.PREFERRED_SIZE, 136, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(refreshbutton, javax.swing.GroupLayout.PREFERRED_SIZE, 136, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(62, 62, 62)
-                        .addComponent(Btnprocessreq)))
+                        .addComponent(buttonrequestbutton)))
                 .addContainerGap(249, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(mainlbl, javax.swing.GroupLayout.PREFERRED_SIZE, 121, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(mainlabel, javax.swing.GroupLayout.PREFERRED_SIZE, 121, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(68, 68, 68)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 278, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jpanelscroll2, javax.swing.GroupLayout.PREFERRED_SIZE, 278, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(63, 63, 63)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(BTNB)
-                    .addComponent(BTnA)
-                    .addComponent(BtnRef)
-                    .addComponent(Btnprocessreq))
+                    .addComponent(buttonback)
+                    .addComponent(buttonassign)
+                    .addComponent(refreshbutton)
+                    .addComponent(buttonrequestbutton))
                 .addContainerGap(53, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
-    private void BtnprocessreqActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnprocessreqActionPerformed
+    private void buttonrequestbuttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonrequestbuttonActionPerformed
         // TODO add your handling code here:
         int selectedRow = workreqTble.getSelectedRow();
         if (selectedRow < 0){JOptionPane.showMessageDialog(null, "Please select a row!");
@@ -157,19 +157,19 @@ request.setStatus("Processing");
 CardLayout layout = (CardLayout) upperConatiner.getLayout();
 upperConatiner.add("ProcessRequest", new UI.Transportation.ProcessRequestJPanel(upperConatiner,request));
 layout.next(upperConatiner);
-    }//GEN-LAST:event_BtnprocessreqActionPerformed
+    }//GEN-LAST:event_buttonrequestbuttonActionPerformed
 
-    private void BtnRefActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnRefActionPerformed
+    private void refreshbuttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_refreshbuttonActionPerformed
         populateTable();
-    }//GEN-LAST:event_BtnRefActionPerformed
+    }//GEN-LAST:event_refreshbuttonActionPerformed
 
-    private void BTNBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BTNBActionPerformed
+    private void buttonbackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonbackActionPerformed
         upperConatiner.remove(this);
         CardLayout layout = (CardLayout) upperConatiner.getLayout();
         layout.previous(upperConatiner);
-    }//GEN-LAST:event_BTNBActionPerformed
+    }//GEN-LAST:event_buttonbackActionPerformed
 
-    private void BTnAActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BTnAActionPerformed
+    private void buttonassignActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonassignActionPerformed
         int selectedRow = workreqTble.getSelectedRow();
         if (selectedRow < 0){
             return;
@@ -177,16 +177,16 @@ layout.next(upperConatiner);
         TransportationWorkRequest request = (TransportationWorkRequest)workreqTble.getValueAt(selectedRow, 0);
         request.setReceiver(acc);
         request.setStatus("Assigned");
-    }//GEN-LAST:event_BTnAActionPerformed
+    }//GEN-LAST:event_buttonassignActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton BTNB;
-    private javax.swing.JButton BTnA;
-    private javax.swing.JButton BtnRef;
-    private javax.swing.JButton Btnprocessreq;
-    private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JLabel mainlbl;
+    private javax.swing.JButton buttonassign;
+    private javax.swing.JButton buttonback;
+    private javax.swing.JButton buttonrequestbutton;
+    private javax.swing.JScrollPane jpanelscroll2;
+    private javax.swing.JLabel mainlabel;
+    private javax.swing.JButton refreshbutton;
     private javax.swing.JTable workreqTble;
     // End of variables declaration//GEN-END:variables
 

@@ -27,45 +27,45 @@
                       <EmptySpace min="-2" pref="443" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" max="-2" attributes="0">
                           <Group type="102" alignment="0" attributes="0">
-                              <Component id="nameLbl" min="-2" pref="63" max="-2" attributes="0"/>
+                              <Component id="namelabel" min="-2" pref="63" max="-2" attributes="0"/>
                               <EmptySpace type="separate" max="-2" attributes="0"/>
-                              <Component id="JTextName" max="32767" attributes="0"/>
+                              <Component id="jtextname" max="32767" attributes="0"/>
                           </Group>
                           <Group type="102" alignment="0" attributes="0">
-                              <Component id="enterpriseLbl" min="-2" pref="63" max="-2" attributes="0"/>
+                              <Component id="enterpriselabel" min="-2" pref="63" max="-2" attributes="0"/>
                               <EmptySpace type="separate" max="-2" attributes="0"/>
-                              <Component id="Comenter" min="-2" pref="86" max="-2" attributes="0"/>
+                              <Component id="comnter" min="-2" pref="86" max="-2" attributes="0"/>
                           </Group>
                           <Group type="102" alignment="0" attributes="0">
-                              <Component id="networkLbl" min="-2" pref="63" max="-2" attributes="0"/>
+                              <Component id="networklabel" min="-2" pref="63" max="-2" attributes="0"/>
                               <EmptySpace type="separate" max="-2" attributes="0"/>
-                              <Component id="ComNet" min="-2" pref="86" max="-2" attributes="0"/>
+                              <Component id="cmntnet" min="-2" pref="86" max="-2" attributes="0"/>
                           </Group>
                           <Group type="102" alignment="0" attributes="0">
-                              <Component id="usernameLbl" min="-2" pref="63" max="-2" attributes="0"/>
+                              <Component id="usernamelabel" min="-2" pref="63" max="-2" attributes="0"/>
                               <EmptySpace type="separate" max="-2" attributes="0"/>
-                              <Component id="JtextUser" max="32767" attributes="0"/>
+                              <Component id="jtextuser" max="32767" attributes="0"/>
                           </Group>
                           <Group type="102" alignment="0" attributes="0">
-                              <Component id="passwordLbl" min="-2" pref="63" max="-2" attributes="0"/>
+                              <Component id="passwordlabel" min="-2" pref="63" max="-2" attributes="0"/>
                               <EmptySpace type="separate" max="-2" attributes="0"/>
-                              <Component id="JtextPwd" max="32767" attributes="0"/>
+                              <Component id="jtxtpwd" max="32767" attributes="0"/>
                           </Group>
                       </Group>
                   </Group>
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace min="-2" pref="419" max="-2" attributes="0"/>
-                      <Component id="BtnBack" min="-2" pref="123" max="-2" attributes="0"/>
+                      <Component id="buttonback" min="-2" pref="123" max="-2" attributes="0"/>
                       <EmptySpace min="-2" pref="92" max="-2" attributes="0"/>
-                      <Component id="BtnSubmit" min="-2" max="-2" attributes="0"/>
+                      <Component id="buttonsubmit" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace min="-2" pref="322" max="-2" attributes="0"/>
-                      <Component id="jScrollPane1" min="-2" max="-2" attributes="0"/>
+                      <Component id="jpanelscroll1" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace min="-2" pref="314" max="-2" attributes="0"/>
-                      <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
+                      <Component id="jmain1" min="-2" max="-2" attributes="0"/>
                   </Group>
               </Group>
               <EmptySpace pref="77" max="32767" attributes="0"/>
@@ -76,38 +76,38 @@
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" alignment="0" attributes="0">
               <EmptySpace min="-2" pref="21" max="-2" attributes="0"/>
-              <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
+              <Component id="jmain1" min="-2" max="-2" attributes="0"/>
               <EmptySpace min="-2" pref="47" max="-2" attributes="0"/>
-              <Component id="jScrollPane1" min="-2" pref="205" max="-2" attributes="0"/>
+              <Component id="jpanelscroll1" min="-2" pref="205" max="-2" attributes="0"/>
               <EmptySpace type="separate" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="networkLbl" alignment="3" min="-2" pref="22" max="-2" attributes="0"/>
-                  <Component id="ComNet" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="networklabel" alignment="3" min="-2" pref="22" max="-2" attributes="0"/>
+                  <Component id="cmntnet" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace type="separate" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="enterpriseLbl" alignment="3" min="-2" pref="22" max="-2" attributes="0"/>
-                  <Component id="Comenter" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="enterpriselabel" alignment="3" min="-2" pref="22" max="-2" attributes="0"/>
+                  <Component id="comnter" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace type="unrelated" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="usernameLbl" alignment="3" min="-2" pref="22" max="-2" attributes="0"/>
-                  <Component id="JtextUser" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="usernamelabel" alignment="3" min="-2" pref="22" max="-2" attributes="0"/>
+                  <Component id="jtextuser" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace type="unrelated" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="passwordLbl" alignment="3" min="-2" pref="22" max="-2" attributes="0"/>
-                  <Component id="JtextPwd" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="passwordlabel" alignment="3" min="-2" pref="22" max="-2" attributes="0"/>
+                  <Component id="jtxtpwd" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace type="unrelated" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="nameLbl" alignment="3" min="-2" pref="22" max="-2" attributes="0"/>
-                  <Component id="JTextName" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="namelabel" alignment="3" min="-2" pref="22" max="-2" attributes="0"/>
+                  <Component id="jtextname" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace min="-2" pref="44" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="BtnBack" alignment="3" min="-2" pref="69" max="-2" attributes="0"/>
-                  <Component id="BtnSubmit" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="buttonback" alignment="3" min="-2" pref="69" max="-2" attributes="0"/>
+                  <Component id="buttonsubmit" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace max="32767" attributes="0"/>
           </Group>
@@ -115,29 +115,29 @@
     </DimensionLayout>
   </Layout>
   <SubComponents>
-    <Component class="javax.swing.JLabel" name="usernameLbl">
+    <Component class="javax.swing.JLabel" name="usernamelabel">
       <Properties>
         <Property name="text" type="java.lang.String" value="Username:"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JTextField" name="JtextUser">
+    <Component class="javax.swing.JTextField" name="jtextuser">
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="JtextUserActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jtextuserActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JLabel" name="passwordLbl">
+    <Component class="javax.swing.JLabel" name="passwordlabel">
       <Properties>
         <Property name="text" type="java.lang.String" value="Password:"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JLabel" name="nameLbl">
+    <Component class="javax.swing.JLabel" name="namelabel">
       <Properties>
         <Property name="text" type="java.lang.String" value="Name:"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JTextField" name="JTextName">
+    <Component class="javax.swing.JTextField" name="jtextname">
     </Component>
-    <Container class="javax.swing.JScrollPane" name="jScrollPane1">
+    <Container class="javax.swing.JScrollPane" name="jpanelscroll1">
       <Properties>
         <Property name="opaque" type="boolean" value="false"/>
       </Properties>
@@ -160,7 +160,7 @@
         </Component>
       </SubComponents>
     </Container>
-    <Component class="javax.swing.JButton" name="BtnBack">
+    <Component class="javax.swing.JButton" name="buttonback">
       <Properties>
         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
           <Color blue="99" green="33" red="0" type="rgb"/>
@@ -171,10 +171,10 @@
         <Property name="text" type="java.lang.String" value="&lt;&lt; Back"/>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="BtnBackActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="buttonbackActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JButton" name="BtnSubmit">
+    <Component class="javax.swing.JButton" name="buttonsubmit">
       <Properties>
         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
           <Color blue="99" green="33" red="0" type="rgb"/>
@@ -188,17 +188,17 @@
         <Property name="text" type="java.lang.String" value="Submit"/>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="BtnSubmitActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="buttonsubmitActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JLabel" name="networkLbl">
+    <Component class="javax.swing.JLabel" name="networklabel">
       <Properties>
         <Property name="text" type="java.lang.String" value="Network:"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JPasswordField" name="JtextPwd">
+    <Component class="javax.swing.JPasswordField" name="jtxtpwd">
     </Component>
-    <Component class="javax.swing.JComboBox" name="ComNet">
+    <Component class="javax.swing.JComboBox" name="cmntnet">
       <Properties>
         <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
           <StringArray count="4">
@@ -210,13 +210,13 @@
         </Property>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="ComNetActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="cmntnetActionPerformed"/>
       </Events>
       <AuxValues>
         <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value=""/>
       </AuxValues>
     </Component>
-    <Component class="javax.swing.JLabel" name="jLabel1">
+    <Component class="javax.swing.JLabel" name="jmain1">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Tahoma" size="36" style="1"/>
@@ -227,12 +227,12 @@
         <Property name="text" type="java.lang.String" value="Manage Enterprise Admin"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JLabel" name="enterpriseLbl">
+    <Component class="javax.swing.JLabel" name="enterpriselabel">
       <Properties>
         <Property name="text" type="java.lang.String" value="Enterprise:"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JComboBox" name="Comenter">
+    <Component class="javax.swing.JComboBox" name="comnter">
       <Properties>
         <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
           <StringArray count="4">
@@ -244,7 +244,7 @@
         </Property>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="ComenterActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="comnterActionPerformed"/>
       </Events>
       <AuxValues>
         <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value=""/>

@@ -54,76 +54,76 @@ populateHealthCareReqTbl();
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        BTNAssignment = new javax.swing.JButton();
-        Btnback = new javax.swing.JButton();
-        ProcessRequestBTN = new javax.swing.JButton();
-        ViewReqStatusBTn = new javax.swing.JButton();
-        BtnRefresh = new javax.swing.JButton();
-        MainLbl = new javax.swing.JLabel();
-        jScrollPane1 = new javax.swing.JScrollPane();
+        buttonassign = new javax.swing.JButton();
+        buttonback = new javax.swing.JButton();
+        processrequestbutton = new javax.swing.JButton();
+        viewrequeststatusbutton = new javax.swing.JButton();
+        buttonrefresh = new javax.swing.JButton();
+        mainbutton = new javax.swing.JLabel();
+        jpanelscroll1 = new javax.swing.JScrollPane();
         jTable1 = new javax.swing.JTable();
-        jLabel1 = new javax.swing.JLabel();
+        jlabel2 = new javax.swing.JLabel();
 
         setBackground(new java.awt.Color(153, 204, 255));
         setMinimumSize(new java.awt.Dimension(900, 665));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        BTNAssignment.setBackground(new java.awt.Color(0, 51, 153));
-        BTNAssignment.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        BTNAssignment.setForeground(new java.awt.Color(255, 255, 255));
-        BTNAssignment.setText("ASSIGN TO ME");
-        BTNAssignment.addActionListener(new java.awt.event.ActionListener() {
+        buttonassign.setBackground(new java.awt.Color(0, 51, 153));
+        buttonassign.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        buttonassign.setForeground(new java.awt.Color(255, 255, 255));
+        buttonassign.setText("ASSIGN TO ME");
+        buttonassign.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                BTNAssignmentActionPerformed(evt);
+                buttonassignActionPerformed(evt);
             }
         });
-        add(BTNAssignment, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 470, 167, 43));
+        add(buttonassign, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 470, 167, 43));
 
-        Btnback.setBackground(new java.awt.Color(0, 51, 153));
-        Btnback.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        Btnback.setForeground(new java.awt.Color(255, 255, 255));
-        Btnback.setText("<<Back");
-        Btnback.addActionListener(new java.awt.event.ActionListener() {
+        buttonback.setBackground(new java.awt.Color(0, 51, 153));
+        buttonback.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        buttonback.setForeground(new java.awt.Color(255, 255, 255));
+        buttonback.setText("<<Back");
+        buttonback.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                BtnbackActionPerformed(evt);
+                buttonbackActionPerformed(evt);
             }
         });
-        add(Btnback, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 470, 105, 43));
+        add(buttonback, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 470, 105, 43));
 
-        ProcessRequestBTN.setBackground(new java.awt.Color(0, 51, 153));
-        ProcessRequestBTN.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        ProcessRequestBTN.setForeground(new java.awt.Color(255, 255, 255));
-        ProcessRequestBTN.setText("PROCESS REQUEST>>>");
-        ProcessRequestBTN.addActionListener(new java.awt.event.ActionListener() {
+        processrequestbutton.setBackground(new java.awt.Color(0, 51, 153));
+        processrequestbutton.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        processrequestbutton.setForeground(new java.awt.Color(255, 255, 255));
+        processrequestbutton.setText("PROCESS REQUEST>>>");
+        processrequestbutton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                ProcessRequestBTNActionPerformed(evt);
+                processrequestbuttonActionPerformed(evt);
             }
         });
-        add(ProcessRequestBTN, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 470, 257, 43));
+        add(processrequestbutton, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 470, 257, 43));
 
-        ViewReqStatusBTn.setBackground(new java.awt.Color(0, 51, 153));
-        ViewReqStatusBTn.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        ViewReqStatusBTn.setForeground(new java.awt.Color(255, 255, 255));
-        ViewReqStatusBTn.setText("VIEW REQUEST STATUS>>");
-        ViewReqStatusBTn.addActionListener(new java.awt.event.ActionListener() {
+        viewrequeststatusbutton.setBackground(new java.awt.Color(0, 51, 153));
+        viewrequeststatusbutton.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        viewrequeststatusbutton.setForeground(new java.awt.Color(255, 255, 255));
+        viewrequeststatusbutton.setText("VIEW REQUEST STATUS>>");
+        viewrequeststatusbutton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                ViewReqStatusBTnActionPerformed(evt);
+                viewrequeststatusbuttonActionPerformed(evt);
             }
         });
-        add(ViewReqStatusBTn, new org.netbeans.lib.awtextra.AbsoluteConstraints(790, 470, -1, 43));
+        add(viewrequeststatusbutton, new org.netbeans.lib.awtextra.AbsoluteConstraints(790, 470, -1, 43));
 
-        BtnRefresh.setBackground(new java.awt.Color(0, 51, 153));
-        BtnRefresh.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        BtnRefresh.setForeground(new java.awt.Color(255, 255, 255));
-        BtnRefresh.setText("Refresh");
-        add(BtnRefresh, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 100, 130, 36));
+        buttonrefresh.setBackground(new java.awt.Color(0, 51, 153));
+        buttonrefresh.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        buttonrefresh.setForeground(new java.awt.Color(255, 255, 255));
+        buttonrefresh.setText("Refresh");
+        add(buttonrefresh, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 100, 130, 36));
 
-        MainLbl.setBackground(new java.awt.Color(153, 204, 255));
-        MainLbl.setFont(new java.awt.Font("Tahoma", 1, 36)); // NOI18N
-        MainLbl.setForeground(new java.awt.Color(0, 51, 153));
-        MainLbl.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        MainLbl.setText("REQUESTS FROM HOSPITALS");
-        add(MainLbl, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, -10, 648, 113));
+        mainbutton.setBackground(new java.awt.Color(153, 204, 255));
+        mainbutton.setFont(new java.awt.Font("Tahoma", 1, 36)); // NOI18N
+        mainbutton.setForeground(new java.awt.Color(0, 51, 153));
+        mainbutton.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        mainbutton.setText("REQUESTS FROM HOSPITALS");
+        add(mainbutton, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, -10, 648, 113));
 
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -141,16 +141,16 @@ populateHealthCareReqTbl();
                 return types [columnIndex];
             }
         });
-        jScrollPane1.setViewportView(jTable1);
+        jpanelscroll1.setViewportView(jTable1);
 
-        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 160, 909, 279));
+        add(jpanelscroll1, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 160, 909, 279));
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/steth.png"))); // NOI18N
-        jLabel1.setText("jLabel1");
-        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(1100, 60, 170, 160));
+        jlabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/steth.png"))); // NOI18N
+        jlabel2.setText("jLabel1");
+        add(jlabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(1100, 60, 170, 160));
     }// </editor-fold>//GEN-END:initComponents
 
-    private void BTNAssignmentActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BTNAssignmentActionPerformed
+    private void buttonassignActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonassignActionPerformed
         int selectedRow = jTable1.getSelectedRow();
 
         if (selectedRow < 0){
@@ -163,15 +163,15 @@ populateHealthCareReqTbl();
         request.setTransportrequestStatus("N");
 
         populateHealthCareReqTbl();        // TODO add your handling code here:
-    }//GEN-LAST:event_BTNAssignmentActionPerformed
+    }//GEN-LAST:event_buttonassignActionPerformed
 
-    private void BtnbackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnbackActionPerformed
+    private void buttonbackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonbackActionPerformed
         upperContainer.remove(this);
         CardLayout layout = (CardLayout) upperContainer.getLayout();
         layout.previous(upperContainer);        // TODO add your handling code here:
-    }//GEN-LAST:event_BtnbackActionPerformed
+    }//GEN-LAST:event_buttonbackActionPerformed
 
-    private void ProcessRequestBTNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ProcessRequestBTNActionPerformed
+    private void processrequestbuttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_processrequestbuttonActionPerformed
         int selectedRow = jTable1.getSelectedRow();
 
         if (selectedRow < 0){
@@ -228,25 +228,25 @@ populateHealthCareReqTbl();
         }
         // populateTransportWorkRequest();
         // TODO add your handling code here:
-    }//GEN-LAST:event_ProcessRequestBTNActionPerformed
+    }//GEN-LAST:event_processrequestbuttonActionPerformed
 
-    private void ViewReqStatusBTnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ViewReqStatusBTnActionPerformed
+    private void viewrequeststatusbuttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_viewrequeststatusbuttonActionPerformed
         CardLayout layout = (CardLayout) upperContainer.getLayout();
         upperContainer.add("ProcessRequest", new ViewTransportationRequestJPanel(upperContainer,acc));
         layout.next(upperContainer);        // TODO add your handling code here:
-    }//GEN-LAST:event_ViewReqStatusBTnActionPerformed
+    }//GEN-LAST:event_viewrequeststatusbuttonActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton BTNAssignment;
-    private javax.swing.JButton BtnRefresh;
-    private javax.swing.JButton Btnback;
-    private javax.swing.JLabel MainLbl;
-    private javax.swing.JButton ProcessRequestBTN;
-    private javax.swing.JButton ViewReqStatusBTn;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JButton buttonassign;
+    private javax.swing.JButton buttonback;
+    private javax.swing.JButton buttonrefresh;
     private javax.swing.JTable jTable1;
+    private javax.swing.JLabel jlabel2;
+    private javax.swing.JScrollPane jpanelscroll1;
+    private javax.swing.JLabel mainbutton;
+    private javax.swing.JButton processrequestbutton;
+    private javax.swing.JButton viewrequeststatusbutton;
     // End of variables declaration//GEN-END:variables
 
     private void populateHealthCareReqTbl() {

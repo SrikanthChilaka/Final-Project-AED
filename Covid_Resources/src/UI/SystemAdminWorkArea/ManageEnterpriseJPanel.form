@@ -25,7 +25,7 @@
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace min="-2" pref="295" max="-2" attributes="0"/>
-                      <Component id="jScrollPane1" min="-2" pref="599" max="-2" attributes="0"/>
+                      <Component id="jpanelscroll2" min="-2" pref="599" max="-2" attributes="0"/>
                   </Group>
                   <Group type="102" alignment="0" attributes="0">
                       <Group type="103" groupAlignment="1" max="-2" attributes="0">
@@ -33,13 +33,13 @@
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Group type="102" alignment="0" attributes="0">
                                       <EmptySpace min="-2" pref="452" max="-2" attributes="0"/>
-                                      <Component id="networkLbl" min="-2" max="-2" attributes="0"/>
+                                      <Component id="networklabel" min="-2" max="-2" attributes="0"/>
                                   </Group>
                                   <Group type="102" alignment="0" attributes="0">
                                       <EmptySpace min="-2" pref="453" max="-2" attributes="0"/>
                                       <Group type="103" groupAlignment="0" attributes="0">
-                                          <Component id="enterprisetypeLbl" min="-2" max="-2" attributes="0"/>
-                                          <Component id="nameLbl" min="-2" pref="99" max="-2" attributes="0"/>
+                                          <Component id="enterpriselabel1" min="-2" max="-2" attributes="0"/>
+                                          <Component id="namelabel" min="-2" pref="99" max="-2" attributes="0"/>
                                       </Group>
                                   </Group>
                               </Group>
@@ -47,22 +47,22 @@
                           </Group>
                           <Group type="102" alignment="1" attributes="0">
                               <EmptySpace min="-2" pref="453" max="-2" attributes="0"/>
-                              <Component id="BtnBack" max="32767" attributes="0"/>
+                              <Component id="buttonback" max="32767" attributes="0"/>
                               <EmptySpace type="separate" max="-2" attributes="0"/>
                           </Group>
                       </Group>
                       <Group type="103" groupAlignment="1" attributes="0">
                           <Group type="103" alignment="1" groupAlignment="0" max="-2" attributes="0">
-                              <Component id="CombEnterprise" alignment="0" pref="137" max="32767" attributes="0"/>
-                              <Component id="CmbNetk" alignment="0" max="32767" attributes="0"/>
-                              <Component id="textf1" alignment="0" max="32767" attributes="0"/>
+                              <Component id="comenterprise" alignment="0" pref="137" max="32767" attributes="0"/>
+                              <Component id="comtlabel" alignment="0" max="32767" attributes="0"/>
+                              <Component id="txt2" alignment="0" max="32767" attributes="0"/>
                           </Group>
-                          <Component id="BtnSubmit" alignment="1" min="-2" max="-2" attributes="0"/>
+                          <Component id="buttonsubmit" alignment="1" min="-2" max="-2" attributes="0"/>
                       </Group>
                   </Group>
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace min="-2" pref="343" max="-2" attributes="0"/>
-                      <Component id="MainLabel" min="-2" max="-2" attributes="0"/>
+                      <Component id="mainlabel1" min="-2" max="-2" attributes="0"/>
                   </Group>
               </Group>
               <EmptySpace max="32767" attributes="0"/>
@@ -73,28 +73,28 @@
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" alignment="0" attributes="0">
               <EmptySpace min="-2" pref="49" max="-2" attributes="0"/>
-              <Component id="MainLabel" min="-2" max="-2" attributes="0"/>
+              <Component id="mainlabel1" min="-2" max="-2" attributes="0"/>
               <EmptySpace min="-2" pref="81" max="-2" attributes="0"/>
-              <Component id="jScrollPane1" min="-2" pref="196" max="-2" attributes="0"/>
+              <Component id="jpanelscroll2" min="-2" pref="196" max="-2" attributes="0"/>
               <EmptySpace min="-2" pref="47" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="CmbNetk" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="networkLbl" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="comtlabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="networklabel" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="enterprisetypeLbl" alignment="3" min="-2" pref="32" max="-2" attributes="0"/>
-                  <Component id="CombEnterprise" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="enterpriselabel1" alignment="3" min="-2" pref="32" max="-2" attributes="0"/>
+                  <Component id="comenterprise" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="nameLbl" alignment="3" min="-2" pref="32" max="-2" attributes="0"/>
-                  <Component id="textf1" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="namelabel" alignment="3" min="-2" pref="32" max="-2" attributes="0"/>
+                  <Component id="txt2" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace min="-2" pref="31" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                  <Component id="BtnSubmit" alignment="0" max="32767" attributes="0"/>
-                  <Component id="BtnBack" alignment="0" max="32767" attributes="0"/>
+                  <Component id="buttonsubmit" alignment="0" max="32767" attributes="0"/>
+                  <Component id="buttonback" alignment="0" max="32767" attributes="0"/>
               </Group>
               <EmptySpace max="32767" attributes="0"/>
           </Group>
@@ -102,12 +102,12 @@
     </DimensionLayout>
   </Layout>
   <SubComponents>
-    <Component class="javax.swing.JLabel" name="networkLbl">
+    <Component class="javax.swing.JLabel" name="networklabel">
       <Properties>
         <Property name="text" type="java.lang.String" value="Network:"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JComboBox" name="CmbNetk">
+    <Component class="javax.swing.JComboBox" name="comtlabel">
       <Properties>
         <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
           <StringArray count="4">
@@ -122,12 +122,12 @@
         <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value=""/>
       </AuxValues>
     </Component>
-    <Component class="javax.swing.JLabel" name="enterprisetypeLbl">
+    <Component class="javax.swing.JLabel" name="enterpriselabel1">
       <Properties>
         <Property name="text" type="java.lang.String" value="Enterprise Type:"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JComboBox" name="CombEnterprise">
+    <Component class="javax.swing.JComboBox" name="comenterprise">
       <Properties>
         <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
           <StringArray count="4">
@@ -142,17 +142,17 @@
         <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value=""/>
       </AuxValues>
     </Component>
-    <Component class="javax.swing.JLabel" name="nameLbl">
+    <Component class="javax.swing.JLabel" name="namelabel">
       <Properties>
         <Property name="text" type="java.lang.String" value="Name:"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JTextField" name="textf1">
+    <Component class="javax.swing.JTextField" name="txt2">
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="textf1ActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txt2ActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JButton" name="BtnBack">
+    <Component class="javax.swing.JButton" name="buttonback">
       <Properties>
         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
           <Color blue="99" green="33" red="0" type="rgb"/>
@@ -163,10 +163,10 @@
         <Property name="text" type="java.lang.String" value="&lt;&lt; Back"/>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="BtnBackActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="buttonbackActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JButton" name="BtnSubmit">
+    <Component class="javax.swing.JButton" name="buttonsubmit">
       <Properties>
         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
           <Color blue="99" green="33" red="0" type="rgb"/>
@@ -180,10 +180,10 @@
         <Property name="text" type="java.lang.String" value="Submit"/>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="BtnSubmitActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="buttonsubmitActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JLabel" name="MainLabel">
+    <Component class="javax.swing.JLabel" name="mainlabel1">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Tahoma" size="36" style="1"/>
@@ -194,7 +194,7 @@
         <Property name="text" type="java.lang.String" value="Manage Enterprise"/>
       </Properties>
     </Component>
-    <Container class="javax.swing.JScrollPane" name="jScrollPane1">
+    <Container class="javax.swing.JScrollPane" name="jpanelscroll2">
 
       <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
       <SubComponents>

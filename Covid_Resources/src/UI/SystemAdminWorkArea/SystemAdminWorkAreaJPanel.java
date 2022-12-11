@@ -47,19 +47,19 @@ private Directory_Address addresslist;
         jPanel2 = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
         jScrollPane2 = new javax.swing.JScrollPane();
-        jTree1 = new javax.swing.JTree();
-        BtnManageNET = new javax.swing.JButton();
-        BTNEnterPrise = new javax.swing.JButton();
-        BTNEnterPriseAdmin = new javax.swing.JButton();
+        jtreed1 = new javax.swing.JTree();
+        managebtn = new javax.swing.JButton();
+        bntenterprise = new javax.swing.JButton();
+        enterpriseadminbnt = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
-        jLabel1 = new javax.swing.JLabel();
+        jpanel1 = new javax.swing.JLabel();
 
         setBackground(new java.awt.Color(153, 204, 255));
 
         jPanel2.add(jScrollPane1);
 
-        jTree1.setBackground(new java.awt.Color(153, 204, 255));
-        jTree1.setForeground(new java.awt.Color(255, 255, 255));
+        jtreed1.setBackground(new java.awt.Color(153, 204, 255));
+        jtreed1.setForeground(new java.awt.Color(255, 255, 255));
         javax.swing.tree.DefaultMutableTreeNode treeNode1 = new javax.swing.tree.DefaultMutableTreeNode("System");
         javax.swing.tree.DefaultMutableTreeNode treeNode2 = new javax.swing.tree.DefaultMutableTreeNode("Network");
         treeNode1.add(treeNode2);
@@ -69,40 +69,40 @@ private Directory_Address addresslist;
         treeNode1.add(treeNode2);
         treeNode2 = new javax.swing.tree.DefaultMutableTreeNode("Reports");
         treeNode1.add(treeNode2);
-        jTree1.setModel(new javax.swing.tree.DefaultTreeModel(treeNode1));
-        jScrollPane2.setViewportView(jTree1);
+        jtreed1.setModel(new javax.swing.tree.DefaultTreeModel(treeNode1));
+        jScrollPane2.setViewportView(jtreed1);
 
         jPanel2.add(jScrollPane2);
 
-        BtnManageNET.setBackground(new java.awt.Color(0, 51, 153));
-        BtnManageNET.setForeground(new java.awt.Color(255, 255, 255));
-        BtnManageNET.setText("Manage Network");
-        BtnManageNET.addActionListener(new java.awt.event.ActionListener() {
+        managebtn.setBackground(new java.awt.Color(0, 51, 153));
+        managebtn.setForeground(new java.awt.Color(255, 255, 255));
+        managebtn.setText("Manage Network");
+        managebtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                BtnManageNETActionPerformed(evt);
+                managebtnActionPerformed(evt);
             }
         });
 
-        BTNEnterPrise.setBackground(new java.awt.Color(0, 51, 153));
-        BTNEnterPrise.setForeground(new java.awt.Color(255, 255, 255));
-        BTNEnterPrise.setText("Manage Enterprise");
-        BTNEnterPrise.addActionListener(new java.awt.event.ActionListener() {
+        bntenterprise.setBackground(new java.awt.Color(0, 51, 153));
+        bntenterprise.setForeground(new java.awt.Color(255, 255, 255));
+        bntenterprise.setText("Manage Enterprise");
+        bntenterprise.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                BTNEnterPriseActionPerformed(evt);
+                bntenterpriseActionPerformed(evt);
             }
         });
 
-        BTNEnterPriseAdmin.setBackground(new java.awt.Color(0, 51, 153));
-        BTNEnterPriseAdmin.setForeground(new java.awt.Color(255, 255, 255));
-        BTNEnterPriseAdmin.setText("Manage Enterprise Admin");
-        BTNEnterPriseAdmin.addActionListener(new java.awt.event.ActionListener() {
+        enterpriseadminbnt.setBackground(new java.awt.Color(0, 51, 153));
+        enterpriseadminbnt.setForeground(new java.awt.Color(255, 255, 255));
+        enterpriseadminbnt.setText("Manage Enterprise Admin");
+        enterpriseadminbnt.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                BTNEnterPriseAdminActionPerformed(evt);
+                enterpriseadminbntActionPerformed(evt);
             }
         });
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/manage.png"))); // NOI18N
-        jLabel1.setText("jLabel1");
+        jpanel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/manage.png"))); // NOI18N
+        jpanel1.setText("jLabel1");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
@@ -116,16 +116,16 @@ private Directory_Address addresslist;
                             .addGroup(layout.createSequentialGroup()
                                 .addGap(240, 240, 240)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addComponent(BTNEnterPriseAdmin, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(BTNEnterPrise, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(BtnManageNET, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                                    .addComponent(enterpriseadminbnt, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(bntenterprise, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(managebtn, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                             .addGroup(layout.createSequentialGroup()
                                 .addGap(203, 203, 203)
                                 .addComponent(jLabel2)))
                         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 222, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jpanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 222, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
         );
         layout.setVerticalGroup(
@@ -134,15 +134,15 @@ private Directory_Address addresslist;
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addGap(34, 34, 34)
-                        .addComponent(BtnManageNET)
+                        .addComponent(managebtn)
                         .addGap(18, 18, 18)
-                        .addComponent(BTNEnterPrise)
+                        .addComponent(bntenterprise)
                         .addGap(18, 18, 18)
-                        .addComponent(BTNEnterPriseAdmin)
+                        .addComponent(enterpriseadminbnt)
                         .addGap(104, 104, 104)
                         .addComponent(jLabel2)
                         .addGap(54, 54, 54)
-                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 187, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(jpanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 187, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
                         .addContainerGap()
                         .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, 745, javax.swing.GroupLayout.PREFERRED_SIZE)))
@@ -150,45 +150,45 @@ private Directory_Address addresslist;
         );
     }// </editor-fold>//GEN-END:initComponents
 
-    private void BtnManageNETActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnManageNETActionPerformed
+    private void managebtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_managebtnActionPerformed
         ManageNetworkJPanel manageNtwrkJPnl = new ManageNetworkJPanel(userContainer,eco);
         userContainer.add("manageNtwrkJPnl",manageNtwrkJPnl);
         CardLayout crdlyt = (CardLayout) userContainer.getLayout();
         crdlyt.next(userContainer);
         // TODO add your handling code here:
-    }//GEN-LAST:event_BtnManageNETActionPerformed
+    }//GEN-LAST:event_managebtnActionPerformed
 
-    private void BTNEnterPriseActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BTNEnterPriseActionPerformed
+    private void bntenterpriseActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bntenterpriseActionPerformed
         ManageEnterpriseJPanel mngEntJPanel = new ManageEnterpriseJPanel(userContainer, eco);
         userContainer.add("mngEntJPanel", mngEntJPanel);
         CardLayout crdlyt = (CardLayout) userContainer.getLayout();
         crdlyt.next(userContainer);
         // TODO add your handling code here:
-    }//GEN-LAST:event_BTNEnterPriseActionPerformed
+    }//GEN-LAST:event_bntenterpriseActionPerformed
 
-    private void BTNEnterPriseAdminActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BTNEnterPriseAdminActionPerformed
+    private void enterpriseadminbntActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_enterpriseadminbntActionPerformed
         ManageEnterpriseAdminJPanel manageAdminJPnl = new ManageEnterpriseAdminJPanel(userContainer,eco);
         userContainer.add("manageNtwrkJPnl",manageAdminJPnl);
         CardLayout crdlyt = (CardLayout) userContainer.getLayout();
         crdlyt.next(userContainer);        // TODO add your handling code here:
-    }//GEN-LAST:event_BTNEnterPriseAdminActionPerformed
+    }//GEN-LAST:event_enterpriseadminbntActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton BTNEnterPrise;
-    private javax.swing.JButton BTNEnterPriseAdmin;
-    private javax.swing.JButton BtnManageNET;
-    private javax.swing.JLabel jLabel1;
+    private javax.swing.JButton bntenterprise;
+    private javax.swing.JButton enterpriseadminbnt;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
-    private javax.swing.JTree jTree1;
+    private javax.swing.JLabel jpanel1;
+    private javax.swing.JTree jtreed1;
+    private javax.swing.JButton managebtn;
     // End of variables declaration//GEN-END:variables
 
     public void populateTreewithData() {
         // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-      DefaultTreeModel model = (DefaultTreeModel) jTree1.getModel();
+      DefaultTreeModel model = (DefaultTreeModel) jtreed1.getModel();
 
 
 
