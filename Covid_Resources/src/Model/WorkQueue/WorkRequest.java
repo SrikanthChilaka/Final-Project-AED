@@ -3,44 +3,46 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
 package Model.WorkQueue;
-import Model.UserAccount.UserAccount;
+
+import Model.Account;
 import java.util.Date;
+
 
 
 /**
  *
- * @author harshinichandrika
+ * @author venkat
  */
 public class WorkRequest {
-    private String message;
-    private UserAccount sender;
-    private UserAccount receiver;
+    private String text;
+    private Account sender;
+    private Account receiving;
     private String status;
-    private String requestDate;
-    private Date resolveDate;
+    private String requestingDate;
+    private Date resolvingDate;
 
     public String getMessage() {
-        return message;
+        return text;
     }
 
     public void setMessage(String message) {
-        this.message = message;
+        this.text = message;
     }
 
-    public UserAccount getSender() {
+    public Account getSender() {
         return sender;
     }
 
-    public void setSender(UserAccount sender) {
+    public void setSender(Account sender) {
         this.sender = sender;
     }
 
-    public UserAccount getReceiver() {
-        return receiver;
+    public Account getReceiver() {
+        return receiving;
     }
 
-    public void setReceiver(UserAccount receiver) {
-        this.receiver = receiver;
+    public void setReceiver(Account receiver) {
+        this.receiving = receiver;
     }
 
     public String getStatus() {
@@ -52,24 +54,24 @@ public class WorkRequest {
     }
 
     public String getRequestDate() {
-        return requestDate;
+        return requestingDate;
     }
 
     public void setRequestDate(String requestDate) {
-        this.requestDate = requestDate;
+        this.requestingDate = requestDate;
     }
 
     public Date getResolveDate() {
-        return resolveDate;
+        return resolvingDate;
     }
 
     public void setResolveDate(Date resolveDate) {
-        this.resolveDate = resolveDate;
+        this.resolvingDate = resolveDate;
     }
     
     @Override
     public String toString(){
-        return this.message;
+        return this.text;
     }
     
     

@@ -3,84 +3,92 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
 package Model.Organization;
-import Model.Doctor.DoctorPrescription;
-import Model.Employee.EmployeeDirectory;
-import Model.Role.Role;
-import Model.UserAccount.UserAccountDirectory;
-import Model.WorkQueue.WorkQueue;
-import Model.WorkQueue.HealthcareEquipmentWorkRequest;
-import java.util.ArrayList;
 
+import Model.AccountDirectory;
+import Model.Directory_Employee;
+import Model.Role.Role;
+import java.util.ArrayList;
+import Model.Doctor;
+import Model.DocPrescription;
+import Model.WorkQueue.HealthcareEquipmentWorkRequest;
+import Model.WorkQueue.WorkQueue;
 /**
  *
- * @author harshinichandrika
+ * @author srikanthchilaka
  */
 public abstract class Organization {
-    private String name;
-private WorkQueue workQueue;
-private EmployeeDirectory employeeDirectory;
-private UserAccountDirectory userAccountDirectory;
-private int organizationID;
-private static int counter;
 
-private HealthcareEquipmentWorkRequest medreq;
-private ArrayList<DoctorPrescription> pList;
+    private String orgName;
+    private WorkQueue wq;
+    private Directory_Employee empDir;
+    private AccountDirectory userAccDir;
+    private int orgId;
+    private static int c;
 
-public enum OrganizationType{
-Admin("Admin Organization"), Doctor("Doctor Organization"),Operations("Operations Organization"),
-Pharmacy("Pharmacy Organization"),Supplier("Supplier Organization"),MedicalEquipment("Equipment Organization"),
-Transport("Transportation Organization");
+    private HealthcareEquipmentWorkRequest eqReq;
+    public ArrayList<DocPrescription> prescriptions;
 
-private String value;
+    public enum OrganizationType {
+        Admin("Admin Organization"), Doctor("Doctor Organization"), Operations("Operations Organization"),
+        Pharmacy("Pharmacy Organization"), Supplier("Supplier Organization"), MedicalEquipment("Equipment Organization"),
+        Transport("Transportation Organization"), Staff ("Staff Role"), MedicalWaste("Waste Organization");
 
-private OrganizationType(String value) {
-this.value = value;
+        private String v;
+
+        private OrganizationType(String v) {
+            this.v = v;
+        }
+
+        public String getValue() {
+            return v;
+        }
+
+    }
+    public Organization(String orgName) {
+        this.orgName = orgName;
+        wq = new WorkQueue();
+        empDir = new Directory_Employee();
+        userAccDir = new AccountDirectory();
+        orgId = c;
+        prescriptions = new ArrayList<DocPrescription>();
+        ++c;
     }
 
-public String getValue() {
-return value;
+
+    public abstract ArrayList<Role> getRole();
+
+    public AccountDirectory getUserAccDir() {
+        return userAccDir;
     }
-}
-public Organization(String name) {
-this.name = name;
-workQueue = new WorkQueue();
-employeeDirectory = new EmployeeDirectory();
-userAccountDirectory = new UserAccountDirectory();
-organizationID = counter;
-pList=new ArrayList<DoctorPrescription>();
-++counter;
-}
 
+    public int getOrgId() {
+        return orgId;
+    }
 
-public abstract ArrayList<Role> getSupportedRole();
-public UserAccountDirectory getUserAccountDirectory() {
-return userAccountDirectory;
-}
-
-public int getOrganizationID() {
-return organizationID;
-}
-
-public EmployeeDirectory getEmployeeDirectory() {
-return employeeDirectory;
-}
-public String getName() {
-return name;
-}
-public WorkQueue getWorkQueue() {
-return workQueue;
-}
-public void setName(String name) {
-this.name = name;
-}
-public void setWorkQueue(WorkQueue workQueue) {
-this.workQueue = workQueue;
-}
-
-
-@Override
-public String toString() {
-return name;
-}
+    public Directory_Employee getEmpDir() {
+        return empDir;
+    }
     
+    public void setEmpDir(Directory_Employee empDir) {
+        this.empDir = empDir;
+    }
+    
+    public String getOrgName() {
+        return orgName;
+    }
+    public WorkQueue getWQ() {
+        return wq;
+    }
+    public void setOrgName(String orgName) {
+        this.orgName = orgName;
+    }
+    public void setWQ(WorkQueue wq) {
+        this.wq = wq;
+    }
+
+
+    @Override
+    public String toString() {
+        return orgName;
+    }
 }

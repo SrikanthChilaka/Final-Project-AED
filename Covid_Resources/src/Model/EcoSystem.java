@@ -3,68 +3,57 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
 package Model;
-import Model.Network.Network;
+
 import Model.Organization.Organization;
 import Model.Role.Role;
-import Model.Role.SysAdminRole;
+import Model.Role.Role_SystemAdmin;
 import java.util.ArrayList;
+
 /**
  *
- * @author harshinichandrika
+ * @author srikanthchilaka
  */
 public class EcoSystem extends Organization {
-    private static EcoSystem business;
-        private ArrayList<Network> networkList;
-
-
-
-public static EcoSystem getInstance() {
-if (business == null) {
-business = new EcoSystem();
-}
-return business;
-}
-
-
-
-public EcoSystem() {
-super(null);
-networkList = new ArrayList<>();
-}
-
-
-
-public ArrayList<Network> getNetworkList() {
-return networkList;
-}
-
-
-
-public Network createAndAddNetwork() {
-Network network = new Network();
-networkList.add(network);
-return network;
-}
-
-
-
-@Override
-public ArrayList<Role> getSupportedRole() {
-ArrayList<Role> roleList = new ArrayList<>();
-roleList.add(new SysAdminRole());
-return roleList;
-}
-
-
-
-public boolean checkIfUsernameIsUnique(String username) {
-
-
-
-if (!this.getUserAccountDirectory().checkIFUsernameIsunique(username)) {
-return false;
-}
-return true;
-}
     
+    private ArrayList<Network> networks;
+
+    private static EcoSystem business;
+
+    public static EcoSystem getReferrence() {
+        if (business == null) {
+            business = new EcoSystem();
+        }
+        return business;
+    }
+
+    public EcoSystem() {
+        super(null);
+        networks = new ArrayList<>();
+    }
+
+    public ArrayList<Network> getNetworks() {
+        return networks;
+    }
+
+    public Network addBuildedNetwork() {
+        Network n = new Network();
+        networks.add(n);
+        return n;
+    }
+
+    @Override
+    public ArrayList<Role> getRole() {
+        ArrayList<Role> roles = new ArrayList<>();
+        roles.add(new Role_SystemAdmin());
+        return roles;
+    }
+
+    public boolean uniqueUserCheck(String u) {
+
+        if (!this.getUserAccDir().uniqueAccountCheck(u)) {
+            return false;
+        }
+        return true;
+    }
+
 }

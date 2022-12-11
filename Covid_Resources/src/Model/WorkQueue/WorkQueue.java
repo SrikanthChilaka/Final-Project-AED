@@ -3,11 +3,13 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
 package Model.WorkQueue;
+
 import java.util.ArrayList;
+
 
 /**
  *
- * @author harshinichandrika
+ * @author venkat
  */
 public class WorkQueue {
     private ArrayList<WorkRequest> workRequestList;
