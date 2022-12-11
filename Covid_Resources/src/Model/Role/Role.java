@@ -4,49 +4,47 @@
  */
 package Model.Role;
 
-import javax.swing.JPanel;
+import Model.Account;
 import Model.EcoSystem;
-import Model.UserAccount.UserAccount;
-import Model.Enterprise.Enterprise;
-import Model.Network.Network;
+import Model.EnterPrise;
+import Model.Network;
 import Model.Organization.Organization;
-import Model.UserAccount.UserAccount;
-
+import javax.swing.JPanel;
 
 /**
  *
- * @author venkat
+ * @author srikanthchilaka
  */
 public abstract class Role {
-public enum RoleType{
+    public enum RoleType{
         Admin("Admin"), 
         Doctor("Doctor"),
         Logistics("Logistics"), 
         Pharmacist("Pharmacist");
         
-        private String value;
-        private RoleType(String value){
-            this.value = value;
+        private String v;
+
+        private RoleType(String v){
+            this.v = v;
             }
 
-        public String getValue() {
-            return value;
+        public String getRoleValue() {
+            return v;
         }
 
-        public void setValue(String value) {
-            this.value = value;
+        public void setRoleValue(String v) {
+            this.v = v;
         }
         
         @Override 
         public String toString(){
-            return value;
+            return v;
         }
     }
     
-    public abstract JPanel createWorkArea (JPanel userProcessContainer, UserAccount account, Organization organization, Enterprise enterprise, EcoSystem business, Network network);
+    public abstract JPanel createWorkArea (JPanel userProcessContainer, Account account, Organization organization, EnterPrise enterprise, EcoSystem business, Network network);
     @Override
     public String toString(){
         return this.getClass().getName();
     }
 }
-

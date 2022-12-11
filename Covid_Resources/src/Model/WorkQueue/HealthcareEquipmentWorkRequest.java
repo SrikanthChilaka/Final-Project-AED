@@ -6,94 +6,94 @@ package Model.WorkQueue;
 
 /**
  *
- * @author harshinichandrika
+ * @author venkat
  */
 public class HealthcareEquipmentWorkRequest extends WorkRequest {
-    private float actualprice;
-    private float loanedprice;
-    private String equipmentName;
-    private String expectedArrivalTime;
-    private String urgencyLevel;
-    private String hospitalName;
-    private int quantity;
-    private String network;
-    private String transportrequestStatus;
+    private float actual_price;
+    private float loaned_price;
+    private String equipment_Name;
+    private String expectedArrival_Time;
+    private String urgency_Level;
+    private String hospita_lName;
+    private int quantity_1;
+    private String network_1;
+    private String transport_requestStatus;
 
     public float getActualprice() {
-        return actualprice;
+        return actual_price;
     }
 
     public void setActualprice(float actualprice) {
-        this.actualprice = actualprice;
+        this.actual_price = actualprice;
     }
 
     public float getLoanedprice() {
-        return loanedprice;
+        return loaned_price;
     }
 
     public void setLoanedprice(float loanedprice) {
-        this.loanedprice = loanedprice;
+        this.loaned_price = loanedprice;
     }
 
     public String getEquipmentName() {
-        return equipmentName;
+        return equipment_Name;
     }
 
     public void setEquipmentName(String equipmentName) {
-        this.equipmentName = equipmentName;
+        this.equipment_Name = equipmentName;
     }
 
     public String getExpectedArrivalTime() {
-        return expectedArrivalTime;
+        return expectedArrival_Time;
     }
 
     public void setExpectedArrivalTime(String expectedArrivalTime) {
-        this.expectedArrivalTime = expectedArrivalTime;
+        this.expectedArrival_Time = expectedArrivalTime;
     }
 
     public String getUrgencyLevel() {
-        return urgencyLevel;
+        return urgency_Level;
     }
 
     public void setUrgencyLevel(String urgencyLevel) {
-        this.urgencyLevel = urgencyLevel;
+        this.urgency_Level = urgencyLevel;
     }
 
     public String getHospitalName() {
-        return hospitalName;
+        return hospita_lName;
     }
 
     public void setHospitalName(String hospitalName) {
-        this.hospitalName = hospitalName;
+        this.hospita_lName = hospitalName;
     }
 
     public int getQuantity() {
-        return quantity;
+        return quantity_1;
     }
 
     public void setQuantity(int quantity) {
-        this.quantity = quantity;
+        this.quantity_1 = quantity;
     }
 
     public String getNetwork() {
-        return network;
+        return network_1;
     }
 
     public void setNetwork(String network) {
-        this.network = network;
+        this.network_1 = network;
     }
 
     public String getTransportrequestStatus() {
-        return transportrequestStatus;
+        return transport_requestStatus;
     }
 
     public void setTransportrequestStatus(String transportrequestStatus) {
-        this.transportrequestStatus = transportrequestStatus;
+        this.transport_requestStatus = transportrequestStatus;
     }
     
     @Override
     public String toString(){
-        return this.equipmentName;
+        return this.equipment_Name;
     }
     
 }

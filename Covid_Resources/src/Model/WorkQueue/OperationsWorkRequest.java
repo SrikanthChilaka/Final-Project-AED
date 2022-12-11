@@ -3,22 +3,23 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
 package Model.WorkQueue;
-import Model.UserAccount.UserAccount;
+
+import Model.Account;
 import java.util.Date;
 
 /**
  *
- * @author harshinichandrika
+ * @author venkat
  */
 public class OperationsWorkRequest extends WorkRequest {
     private String equipmentName;
     private String expectedArrivalTime;
     private String urgencyLevel;
-    private String availability;
+    private String available;
     private String status;
-    private String medicationName;
-    private UserAccount sender;
-    private UserAccount receiver;
+    private String medsName;
+    private Account sender;
+    private Account receiver;
     private Date requestDate;
     private int Quantity;
 
@@ -47,11 +48,11 @@ public class OperationsWorkRequest extends WorkRequest {
     }
 
     public String getAvailability() {
-        return availability;
+        return available;
     }
 
     public void setAvailability(String availability) {
-        this.availability = availability;
+        this.available = availability;
     }
 
     public String getStatus() {
@@ -63,26 +64,26 @@ public class OperationsWorkRequest extends WorkRequest {
     }
 
     public String getMedicationName() {
-        return medicationName;
+        return medsName;
     }
 
     public void setMedicationName(String medicationName) {
-        this.medicationName = medicationName;
+        this.medsName = medicationName;
     }
 
-    public UserAccount getSender() {
+    public Account getSender() {
         return sender;
     }
 
-    public void setSender(UserAccount sender) {
+    public void setSender(Account sender) {
         this.sender = sender;
     }
 
-    public UserAccount getReceiver() {
+    public Account getReceiver() {
         return receiver;
     }
 
-    public void setReceiver(UserAccount receiver) {
+    public void setReceiver(Account receiver) {
         this.receiver = receiver;
     }
 
@@ -98,7 +99,7 @@ public class OperationsWorkRequest extends WorkRequest {
     
     @Override
     public String toString(){
-        return this.medicationName;
+        return this.medsName;
     }
    
     

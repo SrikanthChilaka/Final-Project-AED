@@ -3,90 +3,92 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
 package Model.WorkQueue;
-import Model.UserAccount.UserAccount;
-import java.util.Date;
 
+//import Code.UserAccount.UserAccount;
 
 /**
  *
- * @author harshinichandrika
+ * @author venkat
  */
+import Model.Account;
+import java.util.Date;
+
 public class DoctorWorkRequest {
-    private UserAccount sender;
-    private UserAccount receiver;
-    private String medicationName;
-    private String patientName;
-    private String hospitalName;
-    private String status;
-    private Date requestDate;
-    private int Quantity;
+    private Account send;
+    private Account receive;
+    private String medication_Name;
+    private String patient_Name;
+    private String hospital_Name;
+    private String status_;
+    private Date request_Date;
+    private int Quantity_1;
 
-    public UserAccount getSender() {
-        return sender;
+    public Account getSender() {
+        return send;
     }
 
-    public void setSender(UserAccount sender) {
-        this.sender = sender;
+    public void setSender(Account sender) {
+        this.send = sender;
     }
 
-    public UserAccount getReceiver() {
-        return receiver;
+    public Account getReceiver() {
+        return receive;
     }
 
-    public void setReceiver(UserAccount receiver) {
-        this.receiver = receiver;
+    public void setReceiver(Account receiver) {
+        this.receive = receiver;
     }
 
     public String getMedicationName() {
-        return medicationName;
+        return medication_Name;
     }
 
     public void setMedicationName(String medicationName) {
-        this.medicationName = medicationName;
+        this.medication_Name = medicationName;
     }
 
     public String getPatientName() {
-        return patientName;
+        return patient_Name;
     }
 
     public void setPatientName(String patientName) {
-        this.patientName = patientName;
+        this.patient_Name = patientName;
     }
 
     public String getHospitalName() {
-        return hospitalName;
+        return hospital_Name;
     }
 
     public void setHospitalName(String hospitalName) {
-        this.hospitalName = hospitalName;
+        this.hospital_Name = hospitalName;
     }
 
     public String getStatus() {
-        return status;
+        return status_;
     }
 
     public void setStatus(String status) {
-        this.status = status;
+        this.status_ = status;
     }
 
     public Date getRequestDate() {
-        return requestDate;
+        return request_Date;
     }
 
     public void setRequestDate(Date requestDate) {
-        this.requestDate = requestDate;
+        this.request_Date = requestDate;
     }
 
     public int getQuantity() {
-        return Quantity;
+        return Quantity_1;
     }
 
     public void setQuantity(int Quantity) {
-        this.Quantity = Quantity;
+        this.Quantity_1= Quantity;
     }
     
     public DoctorWorkRequest(){
-        requestDate = new Date();
+        request_Date = new Date();
     }
     
 }
