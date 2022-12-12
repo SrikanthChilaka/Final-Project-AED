@@ -7,12 +7,21 @@ package UI.Transportation;
 import Model.Account;
 import Model.EcoSystem;
 import Model.Organization.Organization;
-import Model.WorkQueue.TransportationWorkRequest;
+import Model.WorkQueue.Transportation_WorkRequest;
 import java.awt.CardLayout;
 import java.awt.Component;
 import java.util.Properties;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
+import java.util.Properties;
+import javax.mail.Authenticator;
+import javax.mail.Message;
+import javax.mail.MessagingException;
+import javax.mail.PasswordAuthentication;
+import javax.mail.Session;
+import javax.mail.Transport;
+import javax.mail.internet.InternetAddress;
+import javax.mail.internet.MimeMessage;
 
 /**
  *
@@ -24,12 +33,12 @@ public class ProcessRequestJPanel extends javax.swing.JPanel {
      * Creates new form ProcessRequestJPanel
      */
     JPanel upperContainer;
-    TransportationWorkRequest request;
+    Transportation_WorkRequest request;
 private Account acc;
 private Organization oga;
 private EcoSystem eco;
 
-    public ProcessRequestJPanel(JPanel upperContainer, TransportationWorkRequest request) {
+    public ProcessRequestJPanel(JPanel upperContainer, Transportation_WorkRequest request) {
         initComponents();
         this.upperContainer = upperContainer;
  this.request = request;
@@ -44,58 +53,63 @@ private EcoSystem eco;
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        etdLbl = new javax.swing.JLabel();
-        Timecombox = new javax.swing.JComboBox<>();
-        AMPMCmbBox = new javax.swing.JComboBox<>();
-        vehiclenumLbl = new javax.swing.JLabel();
-        JText1 = new javax.swing.JTextField();
-        BtnBack = new javax.swing.JButton();
-        BtnNotify = new javax.swing.JButton();
-        trpaLbl = new javax.swing.JLabel();
+        etdlabel1 = new javax.swing.JLabel();
+        Timecombox1 = new javax.swing.JComboBox<>();
+        PMAMCmbBox = new javax.swing.JComboBox<>();
+        vehiclenumLabel = new javax.swing.JLabel();
+        JTextfield1 = new javax.swing.JTextField();
+        ButtonBack = new javax.swing.JButton();
+        ButtonNotify = new javax.swing.JButton();
+        transportlabel1 = new javax.swing.JLabel();
 
         setBackground(new java.awt.Color(153, 204, 255));
 
-        etdLbl.setText("Expected Time Of Delivery :");
+        etdlabel1.setText("Expected Time Of Delivery :");
 
-        Timecombox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "1:00", "2:00", "3:00", "4:00", "5:00", "6:00", "7:00", "8:00", "9:00", "10:00", "11:00", "12:00" }));
-        Timecombox.addActionListener(new java.awt.event.ActionListener() {
+        Timecombox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "1:00", "2:00", "3:00", "4:00", "5:00", "6:00", "7:00", "8:00", "9:00", "10:00", "11:00", "12:00" }));
+        Timecombox1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                TimecomboxActionPerformed(evt);
+                Timecombox1ActionPerformed(evt);
             }
         });
 
-        AMPMCmbBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "AM", "PM" }));
-
-        vehiclenumLbl.setText("Vehicle Number:");
-
-        JText1.addActionListener(new java.awt.event.ActionListener() {
+        PMAMCmbBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "AM", "PM" }));
+        PMAMCmbBox.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                JText1ActionPerformed(evt);
+                PMAMCmbBoxActionPerformed(evt);
             }
         });
 
-        BtnBack.setBackground(new java.awt.Color(0, 51, 153));
-        BtnBack.setForeground(new java.awt.Color(255, 255, 255));
-        BtnBack.setText("<< Back");
-        BtnBack.addActionListener(new java.awt.event.ActionListener() {
+        vehiclenumLabel.setText("Vehicle Number:");
+
+        JTextfield1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                BtnBackActionPerformed(evt);
+                JTextfield1ActionPerformed(evt);
             }
         });
 
-        BtnNotify.setBackground(new java.awt.Color(0, 51, 153));
-        BtnNotify.setForeground(new java.awt.Color(255, 255, 255));
-        BtnNotify.setText("Intimate Hospital through Mail");
-        BtnNotify.addActionListener(new java.awt.event.ActionListener() {
+        ButtonBack.setBackground(new java.awt.Color(0, 51, 153));
+        ButtonBack.setForeground(new java.awt.Color(255, 255, 255));
+        ButtonBack.setText("<< Back");
+        ButtonBack.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                BtnNotifyActionPerformed(evt);
+                ButtonBackActionPerformed(evt);
             }
         });
 
-        trpaLbl.setFont(new java.awt.Font("Tahoma", 1, 36)); // NOI18N
-        trpaLbl.setForeground(new java.awt.Color(0, 51, 153));
-        trpaLbl.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/transport.png"))); // NOI18N
-        trpaLbl.setText("TRANSPORT REQUEST PROCESS AREA");
+        ButtonNotify.setBackground(new java.awt.Color(0, 51, 153));
+        ButtonNotify.setForeground(new java.awt.Color(255, 255, 255));
+        ButtonNotify.setText("Intimate Hospital through Mail");
+        ButtonNotify.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ButtonNotifyActionPerformed(evt);
+            }
+        });
+
+        transportlabel1.setFont(new java.awt.Font("Tahoma", 1, 36)); // NOI18N
+        transportlabel1.setForeground(new java.awt.Color(0, 51, 153));
+        transportlabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/transport.png"))); // NOI18N
+        transportlabel1.setText("TRANSPORT REQUEST PROCESS AREA");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
@@ -106,57 +120,57 @@ private EcoSystem eco;
                     .addGroup(layout.createSequentialGroup()
                         .addGap(116, 116, 116)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(vehiclenumLbl)
-                            .addComponent(etdLbl)
-                            .addComponent(BtnBack))
+                            .addComponent(vehiclenumLabel)
+                            .addComponent(etdlabel1)
+                            .addComponent(ButtonBack))
                         .addGap(35, 35, 35)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(BtnNotify)
+                            .addComponent(ButtonNotify)
                             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                 .addGroup(layout.createSequentialGroup()
-                                    .addComponent(Timecombox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(Timecombox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(AMPMCmbBox, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addComponent(JText1, javax.swing.GroupLayout.PREFERRED_SIZE, 206, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                                    .addComponent(PMAMCmbBox, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addComponent(JTextfield1, javax.swing.GroupLayout.PREFERRED_SIZE, 206, javax.swing.GroupLayout.PREFERRED_SIZE))))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(105, 105, 105)
-                        .addComponent(trpaLbl, javax.swing.GroupLayout.PREFERRED_SIZE, 947, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(transportlabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 947, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(182, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(47, 47, 47)
-                .addComponent(trpaLbl)
+                .addComponent(transportlabel1)
                 .addGap(70, 70, 70)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(etdLbl)
-                    .addComponent(Timecombox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(AMPMCmbBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(etdlabel1)
+                    .addComponent(Timecombox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(PMAMCmbBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(68, 68, 68)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(vehiclenumLbl)
-                    .addComponent(JText1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(vehiclenumLabel)
+                    .addComponent(JTextfield1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addGap(70, 70, 70)
-                        .addComponent(BtnBack))
+                        .addComponent(ButtonBack))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(61, 61, 61)
-                        .addComponent(BtnNotify)))
+                        .addComponent(ButtonNotify)))
                 .addContainerGap(41, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
-    private void TimecomboxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TimecomboxActionPerformed
+    private void Timecombox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Timecombox1ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_TimecomboxActionPerformed
+    }//GEN-LAST:event_Timecombox1ActionPerformed
 
-    private void JText1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JText1ActionPerformed
+    private void JTextfield1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JTextfield1ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_JText1ActionPerformed
+    }//GEN-LAST:event_JTextfield1ActionPerformed
 
-    private void BtnBackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnBackActionPerformed
+    private void ButtonBackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButtonBackActionPerformed
         upperContainer.remove(this);
         Component[] componentArray = upperContainer.getComponents();
         Component component = componentArray[componentArray.length - 1];
@@ -165,42 +179,65 @@ private EcoSystem eco;
         CardLayout layout = (CardLayout) upperContainer.getLayout();
         layout.previous(upperContainer);
 
-    }//GEN-LAST:event_BtnBackActionPerformed
+    }//GEN-LAST:event_ButtonBackActionPerformed
 
-    private void BtnNotifyActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnNotifyActionPerformed
-        request.setTime(Timecombox.getSelectedItem().toString() +" "+ AMPMCmbBox.getSelectedItem().toString()+" "+"VehicleNumber" +JText1.getText());
-        String[] to = {"harshinichandrikaaran6118@gmail.com"};
-        sendMailToCommunityMember(to,
-            "Alert from Transportation department",
-            "The delivery details are for the equipment "+request.getEquipmentinfo()+" are" +request.getTime(),
-            "doctortesting.test@gmail.com",
-            "doctororganization");
-        JOptionPane.showMessageDialog(null,"Email sent successfully");
+    private void ButtonNotifyActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButtonNotifyActionPerformed
+        sendMailToHosp("srikanthsikki27@gmail.com","","");
 
-    }//GEN-LAST:event_BtnNotifyActionPerformed
+    }//GEN-LAST:event_ButtonNotifyActionPerformed
+
+    private void PMAMCmbBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PMAMCmbBoxActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_PMAMCmbBoxActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JComboBox<String> AMPMCmbBox;
-    private javax.swing.JButton BtnBack;
-    private javax.swing.JButton BtnNotify;
-    private javax.swing.JTextField JText1;
-    private javax.swing.JComboBox<String> Timecombox;
-    private javax.swing.JLabel etdLbl;
-    private javax.swing.JLabel trpaLbl;
-    private javax.swing.JLabel vehiclenumLbl;
+    private javax.swing.JButton ButtonBack;
+    private javax.swing.JButton ButtonNotify;
+    private javax.swing.JTextField JTextfield1;
+    private javax.swing.JComboBox<String> PMAMCmbBox;
+    private javax.swing.JComboBox<String> Timecombox1;
+    private javax.swing.JLabel etdlabel1;
+    private javax.swing.JLabel transportlabel1;
+    private javax.swing.JLabel vehiclenumLabel;
     // End of variables declaration//GEN-END:variables
 
-    private void sendMailToCommunityMember(String[] to, String Matter, String texts, String from, String pwd) {
-       // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-           String [] host = {"smtp@gmail.com"};
-            Properties props = System.getProperties();
-            props.put("mail.smtp.user", from);
-            props.put("mail.smtp.port", 674);
-            props.put("mail.smtp.host", host);
-            props.put("mail.smtp.auth", "true");
-            props.put("mail.smtp.startttls.enable", "true");
-JOptionPane.showMessageDialog(this, "New notification from Transport Department");
-     
+         public void sendMailToHosp(String toMail, String msg, String username){
+             String number=JTextfield1.getText();
+        System.out.println("Now start sending Email!");
+        final String ipcUsername = "harshinichandrika85@gmail.com";
+        final String ipcPassword = "gnywbtevobmxbmse";
+        
+        Properties props = new Properties();
+        props.put("mail.smtp.host", "smtp.gmail.com");
+        props.put("mail.smtp.port", "587");
+        //props.put("mail.smtp.socketFactory.class","javax.net.ssl.SSLSocketFactory");
+        props.put("mail.smtp.auth","true");
+        props.put("mail.smtp.starttls.enable", "true");
+        //props.put("mail.smtp.port","465");
+        
+        Session session = Session.getInstance(props, new Authenticator() {
+             @Override
+             protected PasswordAuthentication getPasswordAuthentication(){
+                 return new PasswordAuthentication(ipcUsername,ipcPassword);
+                }
+             });
+        
+        try{
+         Message message=new MimeMessage(session);
+         message.setFrom(new InternetAddress(ipcUsername));
+         message.setRecipients(Message.RecipientType.TO, InternetAddress.parse(toMail));
+         message.setSubject("Status Update ");
+         message.setContent("<font color=black> Package is shipped! <b>" +
+                 "<font color=black> Have a great day!<b>","text/html");
+//                 "<font color=black> Have a great day!<b>","text/html" + number);
+
+         Transport.send(message);
+         JOptionPane.showMessageDialog(null, "Package is shipped!");
+     }
+        catch(MessagingException e){
+        e.printStackTrace();
+
+        }
     }
 }

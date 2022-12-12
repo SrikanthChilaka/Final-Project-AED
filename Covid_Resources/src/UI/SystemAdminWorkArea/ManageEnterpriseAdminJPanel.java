@@ -9,7 +9,7 @@ import Model.EcoSystem;
 import Model.Employee;
 import Model.EnterPrise;
 import Model.Network;
-import Model.Role.Role_Admin;
+import Model.Role.Admin_Role;
 import java.awt.CardLayout;
 import java.awt.Component;
 import javax.swing.JOptionPane;
@@ -47,37 +47,37 @@ populateNetworkComnBox();
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        usernameLbl = new javax.swing.JLabel();
-        JtextUser = new javax.swing.JTextField();
-        passwordLbl = new javax.swing.JLabel();
-        nameLbl = new javax.swing.JLabel();
-        JTextName = new javax.swing.JTextField();
-        jScrollPane1 = new javax.swing.JScrollPane();
+        usernameLabel = new javax.swing.JLabel();
+        JtextfieldUser = new javax.swing.JTextField();
+        passwordLabel = new javax.swing.JLabel();
+        nameLabel = new javax.swing.JLabel();
+        JTextfieldName = new javax.swing.JTextField();
+        jpanelscroll1 = new javax.swing.JScrollPane();
         tblEnterprise = new javax.swing.JTable();
-        BtnBack = new javax.swing.JButton();
-        BtnSubmit = new javax.swing.JButton();
-        networkLbl = new javax.swing.JLabel();
-        JtextPwd = new javax.swing.JPasswordField();
-        ComNet = new javax.swing.JComboBox();
-        jLabel1 = new javax.swing.JLabel();
-        enterpriseLbl = new javax.swing.JLabel();
-        Comenter = new javax.swing.JComboBox();
+        ButtonBack = new javax.swing.JButton();
+        ButtonSubmit = new javax.swing.JButton();
+        networkLabel = new javax.swing.JLabel();
+        JtextfieldPwd = new javax.swing.JPasswordField();
+        ComNetitem = new javax.swing.JComboBox();
+        jLabel = new javax.swing.JLabel();
+        enterpriseLabel = new javax.swing.JLabel();
+        Comenteritem1 = new javax.swing.JComboBox();
 
         setBackground(new java.awt.Color(153, 204, 255));
 
-        usernameLbl.setText("Username:");
+        usernameLabel.setText("Username:");
 
-        JtextUser.addActionListener(new java.awt.event.ActionListener() {
+        JtextfieldUser.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                JtextUserActionPerformed(evt);
+                JtextfieldUserActionPerformed(evt);
             }
         });
 
-        passwordLbl.setText("Password:");
+        passwordLabel.setText("Password:");
 
-        nameLbl.setText("Name:");
+        nameLabel.setText("Name:");
 
-        jScrollPane1.setOpaque(false);
+        jpanelscroll1.setOpaque(false);
 
         tblEnterprise.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -95,46 +95,46 @@ populateNetworkComnBox();
                 return canEdit [columnIndex];
             }
         });
-        jScrollPane1.setViewportView(tblEnterprise);
+        jpanelscroll1.setViewportView(tblEnterprise);
 
-        BtnBack.setBackground(new java.awt.Color(0, 51, 153));
-        BtnBack.setForeground(new java.awt.Color(255, 255, 255));
-        BtnBack.setText("<< Back");
-        BtnBack.addActionListener(new java.awt.event.ActionListener() {
+        ButtonBack.setBackground(new java.awt.Color(0, 51, 153));
+        ButtonBack.setForeground(new java.awt.Color(255, 255, 255));
+        ButtonBack.setText("<< Back");
+        ButtonBack.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                BtnBackActionPerformed(evt);
+                ButtonBackActionPerformed(evt);
             }
         });
 
-        BtnSubmit.setBackground(new java.awt.Color(0, 51, 153));
-        BtnSubmit.setForeground(new java.awt.Color(255, 255, 255));
-        BtnSubmit.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/R.png"))); // NOI18N
-        BtnSubmit.setText("Submit");
-        BtnSubmit.addActionListener(new java.awt.event.ActionListener() {
+        ButtonSubmit.setBackground(new java.awt.Color(0, 51, 153));
+        ButtonSubmit.setForeground(new java.awt.Color(255, 255, 255));
+        ButtonSubmit.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/R.png"))); // NOI18N
+        ButtonSubmit.setText("Submit");
+        ButtonSubmit.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                BtnSubmitActionPerformed(evt);
+                ButtonSubmitActionPerformed(evt);
             }
         });
 
-        networkLbl.setText("Network:");
+        networkLabel.setText("Network:");
 
-        ComNet.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-        ComNet.addActionListener(new java.awt.event.ActionListener() {
+        ComNetitem.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        ComNetitem.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                ComNetActionPerformed(evt);
+                ComNetitemActionPerformed(evt);
             }
         });
 
-        jLabel1.setFont(new java.awt.Font("Tahoma", 1, 36)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(0, 51, 153));
-        jLabel1.setText("Manage Enterprise Admin");
+        jLabel.setFont(new java.awt.Font("Tahoma", 1, 36)); // NOI18N
+        jLabel.setForeground(new java.awt.Color(0, 51, 153));
+        jLabel.setText("Manage Enterprise Admin");
 
-        enterpriseLbl.setText("Enterprise:");
+        enterpriseLabel.setText("Enterprise:");
 
-        Comenter.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-        Comenter.addActionListener(new java.awt.event.ActionListener() {
+        Comenteritem1.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        Comenteritem1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                ComenterActionPerformed(evt);
+                Comenteritem1ActionPerformed(evt);
             }
         });
 
@@ -148,78 +148,78 @@ populateNetworkComnBox();
                         .addGap(443, 443, 443)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addGroup(layout.createSequentialGroup()
-                                .addComponent(nameLbl, javax.swing.GroupLayout.PREFERRED_SIZE, 63, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(nameLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 63, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(18, 18, 18)
-                                .addComponent(JTextName))
+                                .addComponent(JTextfieldName))
                             .addGroup(layout.createSequentialGroup()
-                                .addComponent(enterpriseLbl, javax.swing.GroupLayout.PREFERRED_SIZE, 63, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(enterpriseLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 63, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(18, 18, 18)
-                                .addComponent(Comenter, javax.swing.GroupLayout.PREFERRED_SIZE, 86, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addComponent(Comenteritem1, javax.swing.GroupLayout.PREFERRED_SIZE, 86, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(layout.createSequentialGroup()
-                                .addComponent(networkLbl, javax.swing.GroupLayout.PREFERRED_SIZE, 63, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(networkLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 63, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(18, 18, 18)
-                                .addComponent(ComNet, javax.swing.GroupLayout.PREFERRED_SIZE, 86, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addComponent(ComNetitem, javax.swing.GroupLayout.PREFERRED_SIZE, 86, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(layout.createSequentialGroup()
-                                .addComponent(usernameLbl, javax.swing.GroupLayout.PREFERRED_SIZE, 63, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(usernameLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 63, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(18, 18, 18)
-                                .addComponent(JtextUser))
+                                .addComponent(JtextfieldUser))
                             .addGroup(layout.createSequentialGroup()
-                                .addComponent(passwordLbl, javax.swing.GroupLayout.PREFERRED_SIZE, 63, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(passwordLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 63, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(18, 18, 18)
-                                .addComponent(JtextPwd))))
+                                .addComponent(JtextfieldPwd))))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(419, 419, 419)
-                        .addComponent(BtnBack, javax.swing.GroupLayout.PREFERRED_SIZE, 123, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(ButtonBack, javax.swing.GroupLayout.PREFERRED_SIZE, 123, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(92, 92, 92)
-                        .addComponent(BtnSubmit))
+                        .addComponent(ButtonSubmit))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(322, 322, 322)
-                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(jpanelscroll1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(314, 314, 314)
-                        .addComponent(jLabel1)))
+                        .addComponent(jLabel)))
                 .addContainerGap(77, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(21, 21, 21)
-                .addComponent(jLabel1)
+                .addComponent(jLabel)
                 .addGap(47, 47, 47)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 205, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jpanelscroll1, javax.swing.GroupLayout.PREFERRED_SIZE, 205, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(networkLbl, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(ComNet, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(networkLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(ComNetitem, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(enterpriseLbl, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(Comenter, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(enterpriseLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(Comenteritem1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(usernameLbl, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(JtextUser, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(usernameLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(JtextfieldUser, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(passwordLbl, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(JtextPwd, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(passwordLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(JtextfieldPwd, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(nameLbl, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(JTextName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(nameLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(JTextfieldName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(44, 44, 44)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(BtnBack, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(BtnSubmit))
+                    .addComponent(ButtonBack, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(ButtonSubmit))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
-    private void JtextUserActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JtextUserActionPerformed
+    private void JtextfieldUserActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JtextfieldUserActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_JtextUserActionPerformed
+    }//GEN-LAST:event_JtextfieldUserActionPerformed
 
-    private void BtnBackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnBackActionPerformed
+    private void ButtonBackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButtonBackActionPerformed
         userConatiner.remove(this);
         Component[] cmpArray = userConatiner.getComponents();
         Component component = cmpArray[cmpArray.length-1];
@@ -228,55 +228,55 @@ populateNetworkComnBox();
         CardLayout card = (CardLayout) userConatiner.getLayout();
         card.previous(userConatiner);
         // TODO add your handling code here:
-    }//GEN-LAST:event_BtnBackActionPerformed
+    }//GEN-LAST:event_ButtonBackActionPerformed
 
-    private void BtnSubmitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnSubmitActionPerformed
-        EnterPrise ent = (EnterPrise) Comenter.getSelectedItem();
-        String username = JtextUser.getText();
-        String password = String.valueOf(JtextPwd.getPassword());
-        String name = JTextName.getText();
+    private void ButtonSubmitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButtonSubmitActionPerformed
+        EnterPrise ent = (EnterPrise) Comenteritem1.getSelectedItem();
+        String username = JtextfieldUser.getText();
+        String password = String.valueOf(JtextfieldPwd.getPassword());
+        String name = JTextfieldName.getText();
         for (Account ua: ent.getUserAccDir().getAccountList()) {
-            if (ua.getUsrnm().equals(name)) {
+            if (ua.getUsernm().equals(name)) {
                 JOptionPane.showMessageDialog(this, "Username is already taken, please select a different username");
                 return;
             }
         }
-        Employee employee = ent.getEmpDir().AddEmployee(name);
-        Account ua = ent.getUserAccDir().createUserAccount(username, password, employee, new Role_Admin());
+        Employee employee = ent.getEmpRepo().AddEmployee(name);
+        Account ua = ent.getUserAccDir().createUserAccount(username, password, employee, new Admin_Role());
         populateTable();// TODO add your handling code here:
-    }//GEN-LAST:event_BtnSubmitActionPerformed
+    }//GEN-LAST:event_ButtonSubmitActionPerformed
 
-    private void ComNetActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ComNetActionPerformed
-        Network network =(Network) ComNet.getSelectedItem();
+    private void ComNetitemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ComNetitemActionPerformed
+        Network network =(Network) ComNetitem.getSelectedItem();
         if(network != null){
             populateEnterpriseComboBox (network);
         }// TODO add your handling code here:
-    }//GEN-LAST:event_ComNetActionPerformed
+    }//GEN-LAST:event_ComNetitemActionPerformed
 
-    private void ComenterActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ComenterActionPerformed
-        EnterPrise ent = (EnterPrise) Comenter.getSelectedItem();
+    private void Comenteritem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Comenteritem1ActionPerformed
+        EnterPrise ent = (EnterPrise) Comenteritem1.getSelectedItem();
         if(ent != null){
             // TODO add your handling code here:
-    }//GEN-LAST:event_ComenterActionPerformed
+    }//GEN-LAST:event_Comenteritem1ActionPerformed
 
 
 }
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton BtnBack;
-    private javax.swing.JButton BtnSubmit;
-    private javax.swing.JComboBox ComNet;
-    private javax.swing.JComboBox Comenter;
-    private javax.swing.JTextField JTextName;
-    private javax.swing.JPasswordField JtextPwd;
-    private javax.swing.JTextField JtextUser;
-    private javax.swing.JLabel enterpriseLbl;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JLabel nameLbl;
-    private javax.swing.JLabel networkLbl;
-    private javax.swing.JLabel passwordLbl;
+    private javax.swing.JButton ButtonBack;
+    private javax.swing.JButton ButtonSubmit;
+    private javax.swing.JComboBox ComNetitem;
+    private javax.swing.JComboBox Comenteritem1;
+    private javax.swing.JTextField JTextfieldName;
+    private javax.swing.JPasswordField JtextfieldPwd;
+    private javax.swing.JTextField JtextfieldUser;
+    private javax.swing.JLabel enterpriseLabel;
+    private javax.swing.JLabel jLabel;
+    private javax.swing.JScrollPane jpanelscroll1;
+    private javax.swing.JLabel nameLabel;
+    private javax.swing.JLabel networkLabel;
+    private javax.swing.JLabel passwordLabel;
     private javax.swing.JTable tblEnterprise;
-    private javax.swing.JLabel usernameLbl;
+    private javax.swing.JLabel usernameLabel;
     // End of variables declaration//GEN-END:variables
 
     private void populateTable() {
@@ -286,12 +286,12 @@ populateNetworkComnBox();
 DefaultTableModel model = (DefaultTableModel) tblEnterprise.getModel();
 model.setRowCount(0);
 for(Network ntw : eco.getNetworks()){
-    for(EnterPrise ent : ntw.getDirectoEnterpri().getEnterpList()){
+    for(EnterPrise ent : ntw.getEnterpriseRepo().getEnterpRepo()){
         for(Account ua : ent.getUserAccDir().getAccountList()){
             Object[] row = new Object[3];
             row[0] = ent.getOrgName();
-            row[1]= ntw.getNetwork_Name();
-            row[2] = ua.getUsrnm();
+            row[1]= ntw.getNetwork_name();
+            row[2] = ua.getUsernm();
             model.addRow(row);
         }
     }
@@ -300,9 +300,9 @@ for(Network ntw : eco.getNetworks()){
     private void populateNetworkComnBox() {
         
  // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-  ComNet.removeAllItems();
+  ComNetitem.removeAllItems();
         for (Network network : eco.getNetworks()){
-            ComNet.addItem(network);
+            ComNetitem.addItem(network);
         }
 
 
@@ -310,9 +310,9 @@ for(Network ntw : eco.getNetworks()){
 
     private void populateEnterpriseComboBox(Network network) {
          // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-Comenter.removeAllItems();
-    for(EnterPrise enterprise : network.getDirectoEnterpri().getEnterpList()){
-     Comenter.addItem(enterprise);
+Comenteritem1.removeAllItems();
+    for(EnterPrise enterprise : network.getEnterpriseRepo().getEnterpRepo()){
+     Comenteritem1.addItem(enterprise);
 System.out.println("I Came here");
 }
     }

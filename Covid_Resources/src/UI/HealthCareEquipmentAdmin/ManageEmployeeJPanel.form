@@ -25,36 +25,36 @@
               <EmptySpace max="32767" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="1" attributes="0">
-                      <Component id="orgLbl" min="-2" max="-2" attributes="0"/>
+                      <Component id="orgLabel1" min="-2" max="-2" attributes="0"/>
                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                      <Component id="orgCmbBox" min="-2" max="-2" attributes="0"/>
+                      <Component id="orgCmb" min="-2" max="-2" attributes="0"/>
                       <EmptySpace min="-2" pref="448" max="-2" attributes="0"/>
                   </Group>
                   <Group type="102" alignment="1" attributes="0">
                       <Group type="103" groupAlignment="1" attributes="0">
-                          <Component id="org1Lbl" alignment="1" min="-2" max="-2" attributes="0"/>
-                          <Component id="name" alignment="1" min="-2" max="-2" attributes="0"/>
+                          <Component id="org1label2" alignment="1" min="-2" max="-2" attributes="0"/>
+                          <Component id="namelabel" alignment="1" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="cmbbox" alignment="0" min="-2" max="-2" attributes="0"/>
-                          <Component id="nametextfield" alignment="0" min="-2" pref="221" max="-2" attributes="0"/>
+                          <Component id="orgcmg" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="txtfieldname" alignment="0" min="-2" pref="221" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace min="-2" pref="359" max="-2" attributes="0"/>
                   </Group>
                   <Group type="102" alignment="1" attributes="0">
                       <Group type="103" groupAlignment="1" attributes="0">
                           <Group type="102" alignment="0" attributes="0">
-                              <Component id="BtnBack" min="-2" pref="149" max="-2" attributes="0"/>
+                              <Component id="backbutton" min="-2" pref="149" max="-2" attributes="0"/>
                               <EmptySpace min="-2" pref="182" max="-2" attributes="0"/>
-                              <Component id="BtnCreateEmployee" min="-2" max="-2" attributes="0"/>
+                              <Component id="empcreatebutton" min="-2" max="-2" attributes="0"/>
                           </Group>
-                          <Component id="jScrollPane1" alignment="1" min="-2" pref="550" max="-2" attributes="0"/>
+                          <Component id="jPanelScroll2" alignment="1" min="-2" pref="550" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace min="-2" pref="258" max="-2" attributes="0"/>
                   </Group>
                   <Group type="102" alignment="1" attributes="0">
-                      <Component id="MainLabel" min="-2" max="-2" attributes="0"/>
+                      <Component id="Mainemplabel1" min="-2" max="-2" attributes="0"/>
                       <EmptySpace min="-2" pref="392" max="-2" attributes="0"/>
                   </Group>
               </Group>
@@ -65,28 +65,28 @@
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" alignment="0" attributes="0">
               <EmptySpace min="-2" pref="31" max="-2" attributes="0"/>
-              <Component id="MainLabel" min="-2" max="-2" attributes="0"/>
+              <Component id="Mainemplabel1" min="-2" max="-2" attributes="0"/>
               <EmptySpace min="-2" pref="32" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="orgLbl" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="orgCmbBox" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="orgLabel1" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="orgCmb" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace min="-2" pref="47" max="-2" attributes="0"/>
-              <Component id="jScrollPane1" min="-2" pref="177" max="-2" attributes="0"/>
+              <Component id="jPanelScroll2" min="-2" pref="177" max="-2" attributes="0"/>
               <EmptySpace min="-2" pref="69" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="cmbbox" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="org1Lbl" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="orgcmg" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="org1label2" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace min="-2" pref="49" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="name" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="nametextfield" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="namelabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="txtfieldname" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace min="-2" pref="55" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="BtnBack" alignment="3" min="-2" pref="101" max="-2" attributes="0"/>
-                  <Component id="BtnCreateEmployee" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="backbutton" alignment="3" min="-2" pref="101" max="-2" attributes="0"/>
+                  <Component id="empcreatebutton" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace max="32767" attributes="0"/>
           </Group>
@@ -94,7 +94,7 @@
     </DimensionLayout>
   </Layout>
   <SubComponents>
-    <Container class="javax.swing.JScrollPane" name="jScrollPane1">
+    <Container class="javax.swing.JScrollPane" name="jPanelScroll2">
 
       <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
       <SubComponents>
@@ -113,7 +113,7 @@
         </Component>
       </SubComponents>
     </Container>
-    <Component class="javax.swing.JLabel" name="org1Lbl">
+    <Component class="javax.swing.JLabel" name="org1label2">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Tahoma" size="16" style="1"/>
@@ -124,7 +124,7 @@
         <Property name="text" type="java.lang.String" value="Organization :"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JComboBox" name="cmbbox">
+    <Component class="javax.swing.JComboBox" name="orgcmg">
       <Properties>
         <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
           <StringArray count="4">
@@ -139,7 +139,7 @@
         <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value=""/>
       </AuxValues>
     </Component>
-    <Component class="javax.swing.JLabel" name="name">
+    <Component class="javax.swing.JLabel" name="namelabel">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Tahoma" size="16" style="1"/>
@@ -150,12 +150,12 @@
         <Property name="text" type="java.lang.String" value=" Name             :"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JTextField" name="nametextfield">
+    <Component class="javax.swing.JTextField" name="txtfieldname">
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="nametextfieldActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtfieldnameActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JButton" name="BtnBack">
+    <Component class="javax.swing.JButton" name="backbutton">
       <Properties>
         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
           <Color blue="99" green="33" red="0" type="rgb"/>
@@ -166,10 +166,10 @@
         <Property name="text" type="java.lang.String" value="&lt;&lt; Back"/>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="BtnBackActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="backbuttonActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JButton" name="BtnCreateEmployee">
+    <Component class="javax.swing.JButton" name="empcreatebutton">
       <Properties>
         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
           <Color blue="99" green="33" red="0" type="rgb"/>
@@ -183,10 +183,10 @@
         <Property name="text" type="java.lang.String" value="Create Employee"/>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="BtnCreateEmployeeActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="empcreatebuttonActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JLabel" name="MainLabel">
+    <Component class="javax.swing.JLabel" name="Mainemplabel1">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Tahoma" size="36" style="1"/>
@@ -197,7 +197,7 @@
         <Property name="text" type="java.lang.String" value="Manage Employee"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JLabel" name="orgLbl">
+    <Component class="javax.swing.JLabel" name="orgLabel1">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Tahoma" size="16" style="1"/>
@@ -208,7 +208,7 @@
         <Property name="text" type="java.lang.String" value="Organization :"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JComboBox" name="orgCmbBox">
+    <Component class="javax.swing.JComboBox" name="orgCmb">
       <Properties>
         <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
           <StringArray count="4">
@@ -220,7 +220,7 @@
         </Property>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="orgCmbBoxActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="orgCmbActionPerformed"/>
       </Events>
       <AuxValues>
         <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value=""/>

@@ -9,9 +9,9 @@ import Model.EcoSystem;
 import Model.EnterPrise;
 import Model.Network;
 import Model.Organization.Organization;
-import Model.WorkQueue.HealthcareEquipmentWorkRequest;
-import Model.WorkQueue.WorkRequest;
-import Model.WorkQueue.TransportationWorkRequest;
+import Model.WorkQueue.HealthCareEquipment_WorkRequest;
+import Model.WorkQueue.Work_Request;
+import Model.WorkQueue.Transportation_WorkRequest;
 import java.awt.CardLayout;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
@@ -54,13 +54,13 @@ populateHealthCareReqTbl();
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        BTNAssignment = new javax.swing.JButton();
-        Btnback = new javax.swing.JButton();
-        ProcessRequestBTN = new javax.swing.JButton();
-        ViewReqStatusBTn = new javax.swing.JButton();
-        BtnRefresh = new javax.swing.JButton();
-        MainLbl = new javax.swing.JLabel();
-        jScrollPane1 = new javax.swing.JScrollPane();
+        ButtonAssignment = new javax.swing.JButton();
+        Buttonback = new javax.swing.JButton();
+        ProcessRequestButton = new javax.swing.JButton();
+        ViewReqStatusButton = new javax.swing.JButton();
+        buttonRefresh = new javax.swing.JButton();
+        MainLabel = new javax.swing.JLabel();
+        jpanelscroll1 = new javax.swing.JScrollPane();
         jTable1 = new javax.swing.JTable();
         jLabel1 = new javax.swing.JLabel();
 
@@ -68,62 +68,62 @@ populateHealthCareReqTbl();
         setMinimumSize(new java.awt.Dimension(900, 665));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        BTNAssignment.setBackground(new java.awt.Color(0, 51, 153));
-        BTNAssignment.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        BTNAssignment.setForeground(new java.awt.Color(255, 255, 255));
-        BTNAssignment.setText("ASSIGN TO ME");
-        BTNAssignment.addActionListener(new java.awt.event.ActionListener() {
+        ButtonAssignment.setBackground(new java.awt.Color(0, 51, 153));
+        ButtonAssignment.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        ButtonAssignment.setForeground(new java.awt.Color(255, 255, 255));
+        ButtonAssignment.setText("ASSIGN TO ME");
+        ButtonAssignment.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                BTNAssignmentActionPerformed(evt);
+                ButtonAssignmentActionPerformed(evt);
             }
         });
-        add(BTNAssignment, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 470, 167, 43));
+        add(ButtonAssignment, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 470, 167, 43));
 
-        Btnback.setBackground(new java.awt.Color(0, 51, 153));
-        Btnback.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        Btnback.setForeground(new java.awt.Color(255, 255, 255));
-        Btnback.setText("<<Back");
-        Btnback.addActionListener(new java.awt.event.ActionListener() {
+        Buttonback.setBackground(new java.awt.Color(0, 51, 153));
+        Buttonback.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        Buttonback.setForeground(new java.awt.Color(255, 255, 255));
+        Buttonback.setText("<<Back");
+        Buttonback.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                BtnbackActionPerformed(evt);
+                ButtonbackActionPerformed(evt);
             }
         });
-        add(Btnback, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 470, 105, 43));
+        add(Buttonback, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 470, 105, 43));
 
-        ProcessRequestBTN.setBackground(new java.awt.Color(0, 51, 153));
-        ProcessRequestBTN.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        ProcessRequestBTN.setForeground(new java.awt.Color(255, 255, 255));
-        ProcessRequestBTN.setText("PROCESS REQUEST>>>");
-        ProcessRequestBTN.addActionListener(new java.awt.event.ActionListener() {
+        ProcessRequestButton.setBackground(new java.awt.Color(0, 51, 153));
+        ProcessRequestButton.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        ProcessRequestButton.setForeground(new java.awt.Color(255, 255, 255));
+        ProcessRequestButton.setText("PROCESS REQUEST>>>");
+        ProcessRequestButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                ProcessRequestBTNActionPerformed(evt);
+                ProcessRequestButtonActionPerformed(evt);
             }
         });
-        add(ProcessRequestBTN, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 470, 257, 43));
+        add(ProcessRequestButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 470, 257, 43));
 
-        ViewReqStatusBTn.setBackground(new java.awt.Color(0, 51, 153));
-        ViewReqStatusBTn.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        ViewReqStatusBTn.setForeground(new java.awt.Color(255, 255, 255));
-        ViewReqStatusBTn.setText("VIEW REQUEST STATUS>>");
-        ViewReqStatusBTn.addActionListener(new java.awt.event.ActionListener() {
+        ViewReqStatusButton.setBackground(new java.awt.Color(0, 51, 153));
+        ViewReqStatusButton.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        ViewReqStatusButton.setForeground(new java.awt.Color(255, 255, 255));
+        ViewReqStatusButton.setText("VIEW REQUEST STATUS>>");
+        ViewReqStatusButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                ViewReqStatusBTnActionPerformed(evt);
+                ViewReqStatusButtonActionPerformed(evt);
             }
         });
-        add(ViewReqStatusBTn, new org.netbeans.lib.awtextra.AbsoluteConstraints(790, 470, -1, 43));
+        add(ViewReqStatusButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(790, 470, -1, 43));
 
-        BtnRefresh.setBackground(new java.awt.Color(0, 51, 153));
-        BtnRefresh.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        BtnRefresh.setForeground(new java.awt.Color(255, 255, 255));
-        BtnRefresh.setText("Refresh");
-        add(BtnRefresh, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 100, 130, 36));
+        buttonRefresh.setBackground(new java.awt.Color(0, 51, 153));
+        buttonRefresh.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        buttonRefresh.setForeground(new java.awt.Color(255, 255, 255));
+        buttonRefresh.setText("Refresh");
+        add(buttonRefresh, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 100, 130, 36));
 
-        MainLbl.setBackground(new java.awt.Color(153, 204, 255));
-        MainLbl.setFont(new java.awt.Font("Tahoma", 1, 36)); // NOI18N
-        MainLbl.setForeground(new java.awt.Color(0, 51, 153));
-        MainLbl.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        MainLbl.setText("REQUESTS FROM HOSPITALS");
-        add(MainLbl, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, -10, 648, 113));
+        MainLabel.setBackground(new java.awt.Color(153, 204, 255));
+        MainLabel.setFont(new java.awt.Font("Tahoma", 1, 36)); // NOI18N
+        MainLabel.setForeground(new java.awt.Color(0, 51, 153));
+        MainLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        MainLabel.setText("REQUESTS FROM HOSPITALS");
+        add(MainLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, -10, 648, 113));
 
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -141,37 +141,37 @@ populateHealthCareReqTbl();
                 return types [columnIndex];
             }
         });
-        jScrollPane1.setViewportView(jTable1);
+        jpanelscroll1.setViewportView(jTable1);
 
-        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 160, 909, 279));
+        add(jpanelscroll1, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 160, 909, 279));
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/steth.png"))); // NOI18N
         jLabel1.setText("jLabel1");
         add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(1100, 60, 170, 160));
     }// </editor-fold>//GEN-END:initComponents
 
-    private void BTNAssignmentActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BTNAssignmentActionPerformed
+    private void ButtonAssignmentActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButtonAssignmentActionPerformed
         int selectedRow = jTable1.getSelectedRow();
 
         if (selectedRow < 0){
             JOptionPane.showMessageDialog(null, "Please select a row!");
         }
 
-        HealthcareEquipmentWorkRequest request = (HealthcareEquipmentWorkRequest)jTable1.getValueAt(selectedRow, 0);
+        HealthCareEquipment_WorkRequest request = (HealthCareEquipment_WorkRequest)jTable1.getValueAt(selectedRow, 0);
         request.setReceiver(acc);
         request.setStatus("Pending");
         request.setTransportrequestStatus("N");
 
         populateHealthCareReqTbl();        // TODO add your handling code here:
-    }//GEN-LAST:event_BTNAssignmentActionPerformed
+    }//GEN-LAST:event_ButtonAssignmentActionPerformed
 
-    private void BtnbackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnbackActionPerformed
+    private void ButtonbackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButtonbackActionPerformed
         upperContainer.remove(this);
         CardLayout layout = (CardLayout) upperContainer.getLayout();
         layout.previous(upperContainer);        // TODO add your handling code here:
-    }//GEN-LAST:event_BtnbackActionPerformed
+    }//GEN-LAST:event_ButtonbackActionPerformed
 
-    private void ProcessRequestBTNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ProcessRequestBTNActionPerformed
+    private void ProcessRequestButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ProcessRequestButtonActionPerformed
         int selectedRow = jTable1.getSelectedRow();
 
         if (selectedRow < 0){
@@ -179,22 +179,22 @@ populateHealthCareReqTbl();
             return;
         }
 
-        HealthcareEquipmentWorkRequest request = (HealthcareEquipmentWorkRequest)jTable1.getValueAt(selectedRow, 0);
+        HealthCareEquipment_WorkRequest request = (HealthCareEquipment_WorkRequest)jTable1.getValueAt(selectedRow, 0);
         System.out.println("hello");
         request.setStatus("Request sent to transport department for delivery");
-        TransportationWorkRequest transportrequest=new TransportationWorkRequest();
-        transportrequest=new TransportationWorkRequest();
+        Transportation_WorkRequest transportrequest=new Transportation_WorkRequest();
+        transportrequest=new Transportation_WorkRequest();
      transportrequest.setSender(acc);
 
         transportrequest.setHospitalName(request.getHospitalName());
 
         transportrequest.setUrgency(request.getUrgencyLevel());
         transportrequest.setStatus("Sent");
-        transportrequest.setEquipmentinfo(("Name: "+request.getEquipmentName())+","+ "Qauntity: " +( request.getQuantity()));
+        transportrequest.setEquipmentinfo(("Name: "+request.getEquipName())+","+ "Qauntity: " +( request.getQuantity()));
         request.setExpectedArrivalTime(request.getMessage());
         request.setTransportrequestStatus("Y");
-        if(ntk.getNetwork_Name().equals(this.ntk.getNetwork_Name())){
-            for(EnterPrise enterprise :ntk.getDirectoEnterpri().getEnterpList() ){
+        if(ntk.getNetwork_name().equals(this.ntk.getNetwork_name())){
+            for(EnterPrise enterprise :ntk.getEnterpriseRepo().getEnterpRepo() ){
                 System.out.println("****" +enterprise.getOrgName());
                 System.out.println("******"+enterprise.getEnterprise_type());
                 for(Organization organization:enterprise.getOrgaDirectory().getOrganizations()){
@@ -207,7 +207,7 @@ populateHealthCareReqTbl();
                         int requestId=transportrequest.getUniqueId();
                         System.out.println("***" +requestId);
                         transportrequest.setRequestId(requestId);
-                        acc.getWorkQueue().getWorkRequestList().add(transportrequest);
+                        acc.getWorkQ().getWorkRequestList().add(transportrequest);
                         organization.getWQ().getWorkRequestList().add(transportrequest);
 
                     }
@@ -228,25 +228,25 @@ populateHealthCareReqTbl();
         }
         // populateTransportWorkRequest();
         // TODO add your handling code here:
-    }//GEN-LAST:event_ProcessRequestBTNActionPerformed
+    }//GEN-LAST:event_ProcessRequestButtonActionPerformed
 
-    private void ViewReqStatusBTnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ViewReqStatusBTnActionPerformed
+    private void ViewReqStatusButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ViewReqStatusButtonActionPerformed
         CardLayout layout = (CardLayout) upperContainer.getLayout();
         upperContainer.add("ProcessRequest", new ViewTransportationRequestJPanel(upperContainer,acc));
         layout.next(upperContainer);        // TODO add your handling code here:
-    }//GEN-LAST:event_ViewReqStatusBTnActionPerformed
+    }//GEN-LAST:event_ViewReqStatusButtonActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton BTNAssignment;
-    private javax.swing.JButton BtnRefresh;
-    private javax.swing.JButton Btnback;
-    private javax.swing.JLabel MainLbl;
-    private javax.swing.JButton ProcessRequestBTN;
-    private javax.swing.JButton ViewReqStatusBTn;
+    private javax.swing.JButton ButtonAssignment;
+    private javax.swing.JButton Buttonback;
+    private javax.swing.JLabel MainLabel;
+    private javax.swing.JButton ProcessRequestButton;
+    private javax.swing.JButton ViewReqStatusButton;
+    private javax.swing.JButton buttonRefresh;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTable jTable1;
+    private javax.swing.JScrollPane jpanelscroll1;
     // End of variables declaration//GEN-END:variables
 
     private void populateHealthCareReqTbl() {
@@ -256,16 +256,16 @@ populateHealthCareReqTbl();
         
         model.setRowCount(0);
         System.out.println(org.getWQ().getWorkRequestList().size());
-        for(WorkRequest request : org.getWQ().getWorkRequestList()){
+        for(Work_Request request : org.getWQ().getWorkRequestList()){
             Object[] row = new Object[6];
-            row[0]=((HealthcareEquipmentWorkRequest) request);
-            String urgencyLevel = ((HealthcareEquipmentWorkRequest) request).getUrgencyLevel();
-            int quantity = ((HealthcareEquipmentWorkRequest) request).getQuantity();
+            row[0]=((HealthCareEquipment_WorkRequest) request);
+            String urgencyLevel = ((HealthCareEquipment_WorkRequest) request).getUrgencyLevel();
+            int quantity = ((HealthCareEquipment_WorkRequest) request).getQuantity();
             row[1] = urgencyLevel;
             row[2]=quantity;
-            row[3]=request.getSender().getUsrnm();
+            row[3]=request.getSender().getUsernm();
             
-//            row[4]=request.getReceiver().getUsrnm();
+//            row[4]=request.getReceiver().getUsernm();
             
             model.addRow(row);
         }

@@ -10,16 +10,16 @@ package Model;
  */
 public class Staff {
 
-  private int Monthly_Salary;
+  private int Monthly_Sal;
   private String name ;
   private String id;
 
-    public int getMonthly_Salary() {
-        return Monthly_Salary;
+    public int getMonthly_Sal() {
+        return Monthly_Sal;
     }
 
-    public void setMonthly_Salary(int Monthly_Salary) {
-        this.Monthly_Salary = Monthly_Salary;
+    public void setMonthly_Sal(int Monthly_Sal) {
+        this.Monthly_Sal = Monthly_Sal;
     }
 
     public String getName() {

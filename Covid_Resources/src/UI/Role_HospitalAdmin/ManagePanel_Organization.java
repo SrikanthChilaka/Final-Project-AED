@@ -4,7 +4,7 @@
  */
 package UI.Role_HospitalAdmin;
 
-import Model.Organization.Directory_Organization;
+import Model.Organization.RepositoryOrganization;
 import Model.Organization.Organization;
 import Model.Organization.Organization.OrganizationType;
 import java.awt.CardLayout;
@@ -17,13 +17,13 @@ import javax.swing.table.DefaultTableModel;
  */
 public class ManagePanel_Organization extends javax.swing.JPanel {
     
-    private Directory_Organization od;
+    private RepositoryOrganization od;
     private JPanel panel;
 
     /**
      * Creates new form ManagePanel_Organization
      */
-    public ManagePanel_Organization(JPanel p, Directory_Organization od) {
+    public ManagePanel_Organization(JPanel p, RepositoryOrganization od) {
         initComponents();
         this.panel=p;
         this.od = od;
@@ -43,10 +43,10 @@ public class ManagePanel_Organization extends javax.swing.JPanel {
     }
 
     private void fillCmb() {
-        cmbOrg.removeAllItems();
+        cmbBoxOrg.removeAllItems();
         for (OrganizationType t : Organization.OrganizationType.values()) {
             if (!OrganizationType.Admin.getValue().equals(t.getValue())) {
-                cmbOrg.addItem(t);
+                cmbBoxOrg.addItem(t);
             }
         }
     }
@@ -60,24 +60,24 @@ public class ManagePanel_Organization extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        lblHeader = new javax.swing.JLabel();
-        lblOrgType = new javax.swing.JLabel();
-        scrollPane = new javax.swing.JScrollPane();
+        labelHeader = new javax.swing.JLabel();
+        labelOrgType = new javax.swing.JLabel();
+        scrollPane1 = new javax.swing.JScrollPane();
         tblOrg = new javax.swing.JTable();
-        cmbOrg = new javax.swing.JComboBox();
-        btnBack = new javax.swing.JButton();
-        btnOrgAdd = new javax.swing.JButton();
+        cmbBoxOrg = new javax.swing.JComboBox();
+        buttonBack = new javax.swing.JButton();
+        buttonOrgAdd = new javax.swing.JButton();
 
         setBackground(new java.awt.Color(153, 204, 255));
 
-        lblHeader.setFont(new java.awt.Font("Tahoma", 1, 36)); // NOI18N
-        lblHeader.setForeground(new java.awt.Color(0, 51, 153));
-        lblHeader.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        lblHeader.setText("Manage Organization");
+        labelHeader.setFont(new java.awt.Font("Tahoma", 1, 36)); // NOI18N
+        labelHeader.setForeground(new java.awt.Color(0, 51, 153));
+        labelHeader.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        labelHeader.setText("Manage Organization");
 
-        lblOrgType.setFont(new java.awt.Font("Tahoma", 1, 16)); // NOI18N
-        lblOrgType.setForeground(new java.awt.Color(0, 51, 153));
-        lblOrgType.setText("Organization Type ");
+        labelOrgType.setFont(new java.awt.Font("Tahoma", 1, 16)); // NOI18N
+        labelOrgType.setForeground(new java.awt.Color(0, 51, 153));
+        labelOrgType.setText("Organization Type ");
 
         tblOrg.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -102,31 +102,31 @@ public class ManagePanel_Organization extends javax.swing.JPanel {
                 return canEdit [columnIndex];
             }
         });
-        scrollPane.setViewportView(tblOrg);
+        scrollPane1.setViewportView(tblOrg);
 
-        cmbOrg.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-        cmbOrg.addActionListener(new java.awt.event.ActionListener() {
+        cmbBoxOrg.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        cmbBoxOrg.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                cmbOrgActionPerformed(evt);
+                cmbBoxOrgActionPerformed(evt);
             }
         });
 
-        btnBack.setBackground(new java.awt.Color(0, 51, 153));
-        btnBack.setForeground(new java.awt.Color(255, 255, 255));
-        btnBack.setText("<<Back");
-        btnBack.addActionListener(new java.awt.event.ActionListener() {
+        buttonBack.setBackground(new java.awt.Color(0, 51, 153));
+        buttonBack.setForeground(new java.awt.Color(255, 255, 255));
+        buttonBack.setText("<<Back");
+        buttonBack.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnBackActionPerformed(evt);
+                buttonBackActionPerformed(evt);
             }
         });
 
-        btnOrgAdd.setBackground(new java.awt.Color(0, 51, 153));
-        btnOrgAdd.setForeground(new java.awt.Color(255, 255, 255));
-        btnOrgAdd.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/add.png"))); // NOI18N
-        btnOrgAdd.setText("Add Organization");
-        btnOrgAdd.addActionListener(new java.awt.event.ActionListener() {
+        buttonOrgAdd.setBackground(new java.awt.Color(0, 51, 153));
+        buttonOrgAdd.setForeground(new java.awt.Color(255, 255, 255));
+        buttonOrgAdd.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/add.png"))); // NOI18N
+        buttonOrgAdd.setText("Add Organization");
+        buttonOrgAdd.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnOrgAddActionPerformed(evt);
+                buttonOrgAddActionPerformed(evt);
             }
         });
 
@@ -134,68 +134,68 @@ public class ManagePanel_Organization extends javax.swing.JPanel {
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(lblHeader, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(labelHeader, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap(237, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(btnBack, javax.swing.GroupLayout.PREFERRED_SIZE, 108, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(scrollPane, javax.swing.GroupLayout.PREFERRED_SIZE, 531, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(buttonBack, javax.swing.GroupLayout.PREFERRED_SIZE, 108, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(scrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 531, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(232, 232, 232))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(cmbOrg, javax.swing.GroupLayout.PREFERRED_SIZE, 159, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(lblOrgType, javax.swing.GroupLayout.PREFERRED_SIZE, 187, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(cmbBoxOrg, javax.swing.GroupLayout.PREFERRED_SIZE, 159, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(labelOrgType, javax.swing.GroupLayout.PREFERRED_SIZE, 187, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(404, 404, 404))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addComponent(btnOrgAdd, javax.swing.GroupLayout.PREFERRED_SIZE, 245, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(buttonOrgAdd, javax.swing.GroupLayout.PREFERRED_SIZE, 245, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(211, 211, 211))))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(52, 52, 52)
-                .addComponent(lblHeader)
+                .addComponent(labelHeader)
                 .addGap(44, 44, 44)
-                .addComponent(scrollPane, javax.swing.GroupLayout.PREFERRED_SIZE, 145, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(scrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 145, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(37, 37, 37)
-                .addComponent(lblOrgType)
+                .addComponent(labelOrgType)
                 .addGap(18, 18, 18)
-                .addComponent(cmbOrg, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(cmbBoxOrg, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(49, 49, 49)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btnBack, javax.swing.GroupLayout.PREFERRED_SIZE, 99, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btnOrgAdd))
+                    .addComponent(buttonBack, javax.swing.GroupLayout.PREFERRED_SIZE, 99, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(buttonOrgAdd))
                 .addContainerGap(23, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
-    private void cmbOrgActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cmbOrgActionPerformed
+    private void cmbBoxOrgActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cmbBoxOrgActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_cmbOrgActionPerformed
+    }//GEN-LAST:event_cmbBoxOrgActionPerformed
 
-    private void btnBackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBackActionPerformed
+    private void buttonBackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonBackActionPerformed
 
         panel.remove(this);
         CardLayout layout = (CardLayout) panel.getLayout();
         layout.previous(panel);
-    }//GEN-LAST:event_btnBackActionPerformed
+    }//GEN-LAST:event_buttonBackActionPerformed
 
-    private void btnOrgAddActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnOrgAddActionPerformed
-        OrganizationType ot = (OrganizationType) cmbOrg.getSelectedItem();
+    private void buttonOrgAddActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonOrgAddActionPerformed
+        OrganizationType ot = (OrganizationType) cmbBoxOrg.getSelectedItem();
         od.addOrg(ot);
         fillRows();
-    }//GEN-LAST:event_btnOrgAddActionPerformed
+    }//GEN-LAST:event_buttonOrgAddActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btnBack;
-    private javax.swing.JButton btnOrgAdd;
-    private javax.swing.JComboBox cmbOrg;
-    private javax.swing.JLabel lblHeader;
-    private javax.swing.JLabel lblOrgType;
-    private javax.swing.JScrollPane scrollPane;
+    private javax.swing.JButton buttonBack;
+    private javax.swing.JButton buttonOrgAdd;
+    private javax.swing.JComboBox cmbBoxOrg;
+    private javax.swing.JLabel labelHeader;
+    private javax.swing.JLabel labelOrgType;
+    private javax.swing.JScrollPane scrollPane1;
     private javax.swing.JTable tblOrg;
     // End of variables declaration//GEN-END:variables
 }
