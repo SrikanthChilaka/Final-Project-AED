@@ -44,27 +44,27 @@ populateOrganizationCMBbox();
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        pwdText = new javax.swing.JTextField();
+        pwdTextdfield = new javax.swing.JTextField();
         backBtn = new javax.swing.JButton();
-        orgLbl = new javax.swing.JLabel();
+        orgLabel1 = new javax.swing.JLabel();
         createuserBtn = new javax.swing.JButton();
-        CmbboxOrganization = new javax.swing.JComboBox();
-        headerLbl = new javax.swing.JLabel();
-        empLbl = new javax.swing.JLabel();
-        CmbboxEmployee = new javax.swing.JComboBox();
-        roleLbl = new javax.swing.JLabel();
-        CmbboxRole = new javax.swing.JComboBox();
-        usernameLbl = new javax.swing.JLabel();
-        UsernameTextField = new javax.swing.JTextField();
-        passwordLbl = new javax.swing.JLabel();
-        jScrollPane1 = new javax.swing.JScrollPane();
+        CmbboxOrga1 = new javax.swing.JComboBox();
+        header_managelabel1 = new javax.swing.JLabel();
+        empLabel1 = new javax.swing.JLabel();
+        cmbboxemp2 = new javax.swing.JComboBox();
+        roleLabel1 = new javax.swing.JLabel();
+        cmbBoxrole3 = new javax.swing.JComboBox();
+        usernameLabel1 = new javax.swing.JLabel();
+        txtfield_username = new javax.swing.JTextField();
+        passwordLabel1 = new javax.swing.JLabel();
+        jpanelscroll1 = new javax.swing.JScrollPane();
         userTbl = new javax.swing.JTable();
 
         setBackground(new java.awt.Color(153, 204, 255));
 
-        pwdText.addActionListener(new java.awt.event.ActionListener() {
+        pwdTextdfield.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                pwdTextActionPerformed(evt);
+                pwdTextdfieldActionPerformed(evt);
             }
         });
 
@@ -77,7 +77,7 @@ populateOrganizationCMBbox();
             }
         });
 
-        orgLbl.setText("Organization  :");
+        orgLabel1.setText("Organization  :");
 
         createuserBtn.setBackground(new java.awt.Color(0, 51, 153));
         createuserBtn.setForeground(new java.awt.Color(255, 255, 255));
@@ -89,28 +89,28 @@ populateOrganizationCMBbox();
             }
         });
 
-        CmbboxOrganization.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-        CmbboxOrganization.addActionListener(new java.awt.event.ActionListener() {
+        CmbboxOrga1.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        CmbboxOrga1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                CmbboxOrganizationActionPerformed(evt);
+                CmbboxOrga1ActionPerformed(evt);
             }
         });
 
-        headerLbl.setFont(new java.awt.Font("Tahoma", 1, 36)); // NOI18N
-        headerLbl.setForeground(new java.awt.Color(0, 51, 153));
-        headerLbl.setText("Manage User Account");
+        header_managelabel1.setFont(new java.awt.Font("Tahoma", 1, 36)); // NOI18N
+        header_managelabel1.setForeground(new java.awt.Color(0, 51, 153));
+        header_managelabel1.setText("Manage User Account");
 
-        empLbl.setText("Employee      :");
+        empLabel1.setText("Employee      :");
 
-        CmbboxEmployee.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        cmbboxemp2.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
 
-        roleLbl.setText("Role             :");
+        roleLabel1.setText("Role             :");
 
-        CmbboxRole.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        cmbBoxrole3.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
 
-        usernameLbl.setText("User Name    :");
+        usernameLabel1.setText("User Name    :");
 
-        passwordLbl.setText("Password      :");
+        passwordLabel1.setText("Password      :");
 
         userTbl.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -135,7 +135,7 @@ populateOrganizationCMBbox();
                 return canEdit [columnIndex];
             }
         });
-        jScrollPane1.setViewportView(userTbl);
+        jpanelscroll1.setViewportView(userTbl);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
@@ -143,74 +143,74 @@ populateOrganizationCMBbox();
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addGap(0, 222, Short.MAX_VALUE)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 537, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jpanelscroll1, javax.swing.GroupLayout.PREFERRED_SIZE, 537, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(127, 127, 127))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(headerLbl)
+                .addComponent(header_managelabel1)
                 .addGap(175, 175, 175))
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addGap(232, 232, 232)
-                        .addComponent(orgLbl))
+                        .addComponent(orgLabel1))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(121, 121, 121)
                         .addComponent(backBtn)
                         .addGap(30, 30, 30)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                .addComponent(empLbl, javax.swing.GroupLayout.PREFERRED_SIZE, 106, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(roleLbl))
+                                .addComponent(empLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 106, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(roleLabel1))
                             .addGroup(layout.createSequentialGroup()
                                 .addGap(4, 4, 4)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(createuserBtn)
                                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                         .addGroup(layout.createSequentialGroup()
-                                            .addComponent(passwordLbl)
+                                            .addComponent(passwordLabel1)
                                             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                            .addComponent(pwdText, javax.swing.GroupLayout.PREFERRED_SIZE, 196, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                            .addComponent(pwdTextdfield, javax.swing.GroupLayout.PREFERRED_SIZE, 196, javax.swing.GroupLayout.PREFERRED_SIZE))
                                         .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                                            .addComponent(usernameLbl)
+                                            .addComponent(usernameLabel1)
                                             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 54, Short.MAX_VALUE)
                                             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                                .addComponent(CmbboxRole, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                .addComponent(UsernameTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 196, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                .addComponent(CmbboxEmployee, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                .addComponent(CmbboxOrganization, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))))))))
+                                                .addComponent(cmbBoxrole3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addComponent(txtfield_username, javax.swing.GroupLayout.PREFERRED_SIZE, 196, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addComponent(cmbboxemp2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addComponent(CmbboxOrga1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))))))))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(39, 39, 39)
-                .addComponent(headerLbl)
+                .addComponent(header_managelabel1)
                 .addGap(40, 40, 40)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 226, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jpanelscroll1, javax.swing.GroupLayout.PREFERRED_SIZE, 226, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(51, 51, 51)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(orgLbl)
-                    .addComponent(CmbboxOrganization, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(orgLabel1)
+                    .addComponent(CmbboxOrga1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(34, 34, 34)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(empLbl)
-                    .addComponent(CmbboxEmployee, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(empLabel1)
+                    .addComponent(cmbboxemp2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(41, 41, 41)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(CmbboxRole, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(roleLbl))
+                    .addComponent(cmbBoxrole3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(roleLabel1))
                 .addGap(44, 44, 44)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(UsernameTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(usernameLbl))
+                    .addComponent(txtfield_username, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(usernameLabel1))
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addGap(36, 36, 36)
-                        .addComponent(passwordLbl))
+                        .addComponent(passwordLabel1))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(29, 29, 29)
-                        .addComponent(pwdText, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(pwdTextdfield, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(33, 33, 33)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(createuserBtn)
@@ -219,9 +219,9 @@ populateOrganizationCMBbox();
         );
     }// </editor-fold>//GEN-END:initComponents
 
-    private void pwdTextActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pwdTextActionPerformed
+    private void pwdTextdfieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pwdTextdfieldActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_pwdTextActionPerformed
+    }//GEN-LAST:event_pwdTextdfieldActionPerformed
 
     private void backBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backBtnActionPerformed
         panel.remove(this);
@@ -230,42 +230,42 @@ populateOrganizationCMBbox();
     }//GEN-LAST:event_backBtnActionPerformed
 
     private void createuserBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_createuserBtnActionPerformed
-        String userName = UsernameTextField.getText();
-        String password = pwdText.getText();
-        Organization organization = (Organization) CmbboxOrganization.getSelectedItem();
-        Employee employee = (Employee) CmbboxEmployee.getSelectedItem();
-        Role role = (Role) CmbboxRole.getSelectedItem();
+        String userName = txtfield_username.getText();
+        String password = pwdTextdfield.getText();
+        Organization organization = (Organization) CmbboxOrga1.getSelectedItem();
+        Employee employee = (Employee) cmbboxemp2.getSelectedItem();
+        Role role = (Role) cmbBoxrole3.getSelectedItem();
 
         organization.getUserAccDir().createUserAccount(userName, password, employee, role);
         populateTableData();
 
     }//GEN-LAST:event_createuserBtnActionPerformed
 
-    private void CmbboxOrganizationActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CmbboxOrganizationActionPerformed
-        Organization organization = (Organization) CmbboxOrganization.getSelectedItem();
+    private void CmbboxOrga1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CmbboxOrga1ActionPerformed
+        Organization organization = (Organization) CmbboxOrga1.getSelectedItem();
         if (organization != null){
             populateEmployeeComboBox(organization);
             populateRoleComboBox(organization);
         }
-    }//GEN-LAST:event_CmbboxOrganizationActionPerformed
+    }//GEN-LAST:event_CmbboxOrga1ActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JComboBox CmbboxEmployee;
-    private javax.swing.JComboBox CmbboxOrganization;
-    private javax.swing.JComboBox CmbboxRole;
-    private javax.swing.JTextField UsernameTextField;
+    private javax.swing.JComboBox CmbboxOrga1;
     private javax.swing.JButton backBtn;
+    private javax.swing.JComboBox cmbBoxrole3;
+    private javax.swing.JComboBox cmbboxemp2;
     private javax.swing.JButton createuserBtn;
-    private javax.swing.JLabel empLbl;
-    private javax.swing.JLabel headerLbl;
-    private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JLabel orgLbl;
-    private javax.swing.JLabel passwordLbl;
-    private javax.swing.JTextField pwdText;
-    private javax.swing.JLabel roleLbl;
+    private javax.swing.JLabel empLabel1;
+    private javax.swing.JLabel header_managelabel1;
+    private javax.swing.JScrollPane jpanelscroll1;
+    private javax.swing.JLabel orgLabel1;
+    private javax.swing.JLabel passwordLabel1;
+    private javax.swing.JTextField pwdTextdfield;
+    private javax.swing.JLabel roleLabel1;
+    private javax.swing.JTextField txtfield_username;
     private javax.swing.JTable userTbl;
-    private javax.swing.JLabel usernameLbl;
+    private javax.swing.JLabel usernameLabel1;
     // End of variables declaration//GEN-END:variables
 
     private void populateTableData() {
@@ -285,26 +285,26 @@ populateOrganizationCMBbox();
 
     private void populateEmployeeComboBox(Organization organization) {
          // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-         CmbboxEmployee.removeAllItems();
-        for (Employee employee : organization.getEmpDir().getE_List()){
-            CmbboxEmployee.addItem(employee);
+         cmbboxemp2.removeAllItems();
+        for (Employee employee : organization.getEmpRepo().getE_Repo()){
+            cmbboxemp2.addItem(employee);
         }
     }
 
     private void populateRoleComboBox(Organization organization) {
        // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
- CmbboxRole.removeAllItems();
+ cmbBoxrole3.removeAllItems();
         for (Role role : organization.getRole()){
-            CmbboxRole.addItem(role);
+            cmbBoxrole3.addItem(role);
         
     }
     }
 
     private void populateOrganizationCMBbox() {
        // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-    CmbboxOrganization.removeAllItems();
+    CmbboxOrga1.removeAllItems();
         for (Organization organization : enter.getOrgaDirectory().getOrganizations()){
-            CmbboxOrganization.addItem(organization);
+            CmbboxOrga1.addItem(organization);
         }
 }
 }

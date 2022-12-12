@@ -5,11 +5,11 @@
 package UI.Role_Pharmacy;
 
 import Model.Account;
-import Model.DrugPantry;
+import Model.Drug_Store;
 import Model.DrugPantryList;
 import Model.EnterPrise;
 import Model.Organization.Organization;
-import Model.Organization.Organization_Pharmacy;
+import Model.Organization.PharmacyOrganization;
 import java.awt.CardLayout;
 import java.awt.Component;
 import javax.swing.JOptionPane;
@@ -21,18 +21,18 @@ import javax.swing.JPanel;
  */
 public class EntryPanel_Update extends javax.swing.JPanel {
 
-    private DrugPantry dp;
+    private Drug_Store dp;
     JPanel panel;
     private Account acc;
     private EnterPrise enterprise;
     private DrugPantryList dpl;
     private Organization orgz;
-    private Organization_Pharmacy op;
+    private PharmacyOrganization op;
 
     /**
      * Creates new form EntryPanel_Update
      */
-    public EntryPanel_Update(JPanel panel, Account acc, EnterPrise enterprise, DrugPantry dp) {
+    public EntryPanel_Update(JPanel panel, Account acc, EnterPrise enterprise, Drug_Store dp) {
         initComponents();
         this.panel=panel;
         this.acc=acc;
@@ -40,9 +40,9 @@ public class EntryPanel_Update extends javax.swing.JPanel {
         this.dpl= dpl;
         this.op= op;
         this.dp=dp;
-        txtSerialNum.setText(String.valueOf(dp.getSerialNo()));
-        txtAvail.setText(String.valueOf(dp.getQuantitypresent()));
-        txtMedicineName.setText(dp.getDrugName());
+        txtfieldSerialNum.setText(String.valueOf(dp.getSerialNo()));
+        txtfieldAvail.setText(String.valueOf(dp.getQuantitypresent()));
+        txtfieldMedicineName.setText(dp.getDrugName());
     }
 
     /**
@@ -54,64 +54,70 @@ public class EntryPanel_Update extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        lblHeader = new javax.swing.JLabel();
-        lblSerialNum = new javax.swing.JLabel();
-        txtSerialNum = new javax.swing.JTextField();
-        lblMedicineName = new javax.swing.JLabel();
-        txtMedicineName = new javax.swing.JTextField();
-        lblAvail = new javax.swing.JLabel();
-        txtAvail = new javax.swing.JTextField();
-        btnBack = new javax.swing.JButton();
-        btnSave = new javax.swing.JButton();
-        btnUpdate = new javax.swing.JButton();
+        labelHeader = new javax.swing.JLabel();
+        labelserialNum = new javax.swing.JLabel();
+        txtfieldSerialNum = new javax.swing.JTextField();
+        labelMedicineName = new javax.swing.JLabel();
+        txtfieldMedicineName = new javax.swing.JTextField();
+        labelAvialability = new javax.swing.JLabel();
+        txtfieldAvail = new javax.swing.JTextField();
+        buttonBack = new javax.swing.JButton();
+        buttonSave = new javax.swing.JButton();
+        buttonUpdate = new javax.swing.JButton();
 
         setBackground(new java.awt.Color(153, 204, 255));
         setForeground(new java.awt.Color(0, 51, 153));
 
-        lblHeader.setFont(new java.awt.Font("Tahoma", 1, 36)); // NOI18N
-        lblHeader.setForeground(new java.awt.Color(0, 51, 153));
-        lblHeader.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        lblHeader.setText("Update Details");
+        labelHeader.setFont(new java.awt.Font("Tahoma", 1, 36)); // NOI18N
+        labelHeader.setForeground(new java.awt.Color(0, 51, 153));
+        labelHeader.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        labelHeader.setText("Update Details");
 
-        lblSerialNum.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        lblSerialNum.setForeground(new java.awt.Color(0, 51, 153));
-        lblSerialNum.setText("Serial Number:");
+        labelserialNum.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        labelserialNum.setForeground(new java.awt.Color(0, 51, 153));
+        labelserialNum.setText("Serial Number:");
 
-        lblMedicineName.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        lblMedicineName.setForeground(new java.awt.Color(0, 51, 153));
-        lblMedicineName.setText("Medicine Name:");
-
-        lblAvail.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        lblAvail.setForeground(new java.awt.Color(0, 51, 153));
-        lblAvail.setText("Availability:");
-
-        btnBack.setBackground(new java.awt.Color(0, 51, 153));
-        btnBack.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        btnBack.setForeground(new java.awt.Color(255, 255, 255));
-        btnBack.setText("<<Back");
-        btnBack.addActionListener(new java.awt.event.ActionListener() {
+        txtfieldSerialNum.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnBackActionPerformed(evt);
+                txtfieldSerialNumActionPerformed(evt);
             }
         });
 
-        btnSave.setBackground(new java.awt.Color(0, 51, 153));
-        btnSave.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        btnSave.setForeground(new java.awt.Color(255, 255, 255));
-        btnSave.setText("Save");
-        btnSave.addActionListener(new java.awt.event.ActionListener() {
+        labelMedicineName.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        labelMedicineName.setForeground(new java.awt.Color(0, 51, 153));
+        labelMedicineName.setText("Medicine Name:");
+
+        labelAvialability.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        labelAvialability.setForeground(new java.awt.Color(0, 51, 153));
+        labelAvialability.setText("Availability:");
+
+        buttonBack.setBackground(new java.awt.Color(0, 51, 153));
+        buttonBack.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        buttonBack.setForeground(new java.awt.Color(255, 255, 255));
+        buttonBack.setText("<<Back");
+        buttonBack.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnSaveActionPerformed(evt);
+                buttonBackActionPerformed(evt);
             }
         });
 
-        btnUpdate.setBackground(new java.awt.Color(0, 51, 153));
-        btnUpdate.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        btnUpdate.setForeground(new java.awt.Color(255, 255, 255));
-        btnUpdate.setText("Update");
-        btnUpdate.addActionListener(new java.awt.event.ActionListener() {
+        buttonSave.setBackground(new java.awt.Color(0, 51, 153));
+        buttonSave.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        buttonSave.setForeground(new java.awt.Color(255, 255, 255));
+        buttonSave.setText("Save");
+        buttonSave.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnUpdateActionPerformed(evt);
+                buttonSaveActionPerformed(evt);
+            }
+        });
+
+        buttonUpdate.setBackground(new java.awt.Color(0, 51, 153));
+        buttonUpdate.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        buttonUpdate.setForeground(new java.awt.Color(255, 255, 255));
+        buttonUpdate.setText("Update");
+        buttonUpdate.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                buttonUpdateActionPerformed(evt);
             }
         });
 
@@ -123,53 +129,53 @@ public class EntryPanel_Update extends javax.swing.JPanel {
                 .addGap(274, 274, 274)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(btnBack)
+                        .addComponent(buttonBack)
                         .addGap(56, 56, 56)
-                        .addComponent(btnSave, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(buttonSave, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(42, 42, 42)
-                        .addComponent(btnUpdate, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(buttonUpdate, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(lblSerialNum, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(lblMedicineName)
-                            .addComponent(lblAvail))
+                            .addComponent(labelserialNum, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(labelMedicineName)
+                            .addComponent(labelAvialability))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(txtAvail, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(txtMedicineName, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(txtSerialNum, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                            .addComponent(txtfieldAvail, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(txtfieldMedicineName, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(txtfieldSerialNum, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addContainerGap(456, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addComponent(lblHeader, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(labelHeader, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGap(112, 112, 112))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(68, 68, 68)
-                .addComponent(lblHeader, javax.swing.GroupLayout.PREFERRED_SIZE, 63, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(labelHeader, javax.swing.GroupLayout.PREFERRED_SIZE, 63, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(70, 70, 70)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(txtSerialNum, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(lblSerialNum))
+                    .addComponent(txtfieldSerialNum, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(labelserialNum))
                 .addGap(31, 31, 31)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(lblMedicineName)
-                    .addComponent(txtMedicineName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(labelMedicineName)
+                    .addComponent(txtfieldMedicineName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(39, 39, 39)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(lblAvail)
-                    .addComponent(txtAvail, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(labelAvialability)
+                    .addComponent(txtfieldAvail, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 107, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btnBack, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btnSave, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btnUpdate, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(buttonBack, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(buttonSave, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(buttonUpdate, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(62, 62, 62))
         );
     }// </editor-fold>//GEN-END:initComponents
 
-    private void btnBackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBackActionPerformed
+    private void buttonBackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonBackActionPerformed
         panel.remove(this);
         Component[] ca = panel.getComponents();
         Component cp = ca[ca.length - 1];
@@ -177,13 +183,13 @@ public class EntryPanel_Update extends javax.swing.JPanel {
         wap.arrangeRows();
         CardLayout c = (CardLayout) panel.getLayout();
         c.previous(panel);        // TODO add your handling code here:
-    }//GEN-LAST:event_btnBackActionPerformed
+    }//GEN-LAST:event_buttonBackActionPerformed
 
-    private void btnSaveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSaveActionPerformed
-        dp.setDrugName(txtMedicineName.getText());
-        int aq= Integer.parseInt(txtAvail.getText());
+    private void buttonSaveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonSaveActionPerformed
+        dp.setDrugName(txtfieldMedicineName.getText());
+        int aq= Integer.parseInt(txtfieldAvail.getText());
         dp.setQuantitypresent(aq);
-        int sn= Integer.parseInt(txtSerialNum.getText());
+        int sn= Integer.parseInt(txtfieldSerialNum.getText());
         dp.setSerialNo(sn);
 
         JOptionPane.showMessageDialog(null, "Medicine updated Successfully", "Warning", JOptionPane.INFORMATION_MESSAGE);
@@ -191,27 +197,31 @@ public class EntryPanel_Update extends javax.swing.JPanel {
         if(dp.getQuantitypresent()<=dp.getReorderQuantity()){
 
         }        // TODO add your handling code here:
-    }//GEN-LAST:event_btnSaveActionPerformed
+    }//GEN-LAST:event_buttonSaveActionPerformed
 
-    private void btnUpdateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnUpdateActionPerformed
+    private void buttonUpdateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonUpdateActionPerformed
 
-        btnSave.setEnabled(true);        // TODO add your handling code here:
-        txtMedicineName.setEditable(false);
-        txtSerialNum.setEditable(false);
-        txtAvail.setEditable(true);
-    }//GEN-LAST:event_btnUpdateActionPerformed
+        buttonSave.setEnabled(true);        // TODO add your handling code here:
+        txtfieldMedicineName.setEditable(false);
+        txtfieldSerialNum.setEditable(false);
+        txtfieldAvail.setEditable(true);
+    }//GEN-LAST:event_buttonUpdateActionPerformed
+
+    private void txtfieldSerialNumActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtfieldSerialNumActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtfieldSerialNumActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btnBack;
-    private javax.swing.JButton btnSave;
-    private javax.swing.JButton btnUpdate;
-    private javax.swing.JLabel lblAvail;
-    private javax.swing.JLabel lblHeader;
-    private javax.swing.JLabel lblMedicineName;
-    private javax.swing.JLabel lblSerialNum;
-    private javax.swing.JTextField txtAvail;
-    private javax.swing.JTextField txtMedicineName;
-    private javax.swing.JTextField txtSerialNum;
+    private javax.swing.JButton buttonBack;
+    private javax.swing.JButton buttonSave;
+    private javax.swing.JButton buttonUpdate;
+    private javax.swing.JLabel labelAvialability;
+    private javax.swing.JLabel labelHeader;
+    private javax.swing.JLabel labelMedicineName;
+    private javax.swing.JLabel labelserialNum;
+    private javax.swing.JTextField txtfieldAvail;
+    private javax.swing.JTextField txtfieldMedicineName;
+    private javax.swing.JTextField txtfieldSerialNum;
     // End of variables declaration//GEN-END:variables
 }

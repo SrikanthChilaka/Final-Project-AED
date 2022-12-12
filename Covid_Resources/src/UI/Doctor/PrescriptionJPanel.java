@@ -5,15 +5,15 @@
 package UI.Doctor;
 
 import Model.Account;
-import Model.DocPrescription;
+import Model.DoctorPrescription;
 import Model.EnterPrise;
 import Model.Organization.Organization;
-import Model.Organization.Organization_Doctor;
-import Model.Organization.Organization_Pharmacy;
-import Model.PrescriptionList;
-import Model.WorkQueue.DoctorWorkRequest;
-import Model.WorkQueue.PharmacyWorkRequest;
-import Model.WorkQueue.WorkRequest;
+import Model.Organization.DoctorOrganization;
+import Model.Organization.PharmacyOrganization;
+import Model.PrescriptionRepo;
+import Model.WorkQueue.Doctor_WorkRequest;
+import Model.WorkQueue.Pharmacy_WorkRequest;
+import Model.WorkQueue.Work_Request;
 import java.awt.CardLayout;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
@@ -24,12 +24,12 @@ import javax.swing.table.DefaultTableModel;
  * @author srikanthchilaka
  */
 public class PrescriptionJPanel extends javax.swing.JPanel {
-private PrescriptionList prescribedlist;
-private Organization_Doctor doctororg;
+private PrescriptionRepo prescribedlist;
+private DoctorOrganization doctororg;
 private EnterPrise enter;
 private JPanel uppercontainer;
-private DocPrescription docpres;
-private DoctorWorkRequest docreq;
+private DoctorPrescription docpres;
+private Doctor_WorkRequest docreq;
 private Account ua;
 
 
@@ -38,8 +38,8 @@ private Account ua;
      * Creates new form PrescriptionJPanel
      */
     public PrescriptionJPanel(
-JPanel upperContainer, PrescriptionList prescribedList, Account ua
-, EnterPrise enter, Organization_Doctor doctororg) {
+JPanel upperContainer, PrescriptionRepo prescribedList, Account ua
+, EnterPrise enter, DoctorOrganization doctororg) {
 
 
 
@@ -64,83 +64,83 @@ populateWorkReqTable();
     private void initComponents() {
 
         jScrollPane2 = new javax.swing.JScrollPane();
-        jTextField1 = new javax.swing.JTextField();
-        backBtn = new javax.swing.JButton();
-        medicationLbl = new javax.swing.JLabel();
-        headerLbl = new javax.swing.JLabel();
-        medicationCmbBox = new javax.swing.JComboBox<>();
-        nameLbl = new javax.swing.JLabel();
-        timesLbl = new javax.swing.JLabel();
-        nameTxt = new javax.swing.JTextField();
-        timesSpin = new javax.swing.JSpinner();
-        ageLbl = new javax.swing.JLabel();
-        forLbl = new javax.swing.JLabel();
-        ageTxt = new javax.swing.JTextField();
-        forSpin = new javax.swing.JSpinner();
-        sexLbl = new javax.swing.JLabel();
-        saveBtn = new javax.swing.JButton();
-        sexCmbBox = new javax.swing.JComboBox<>();
-        jScrollPane1 = new javax.swing.JScrollPane();
+        jdiagtextfield1 = new javax.swing.JTextField();
+        buttonback = new javax.swing.JButton();
+        labelmedication1 = new javax.swing.JLabel();
+        labelheader1 = new javax.swing.JLabel();
+        medCmbBox = new javax.swing.JComboBox<>();
+        labelname1 = new javax.swing.JLabel();
+        timesLabel1 = new javax.swing.JLabel();
+        textfieldname = new javax.swing.JTextField();
+        timescmbspin = new javax.swing.JSpinner();
+        labelage1 = new javax.swing.JLabel();
+        forlabel = new javax.swing.JLabel();
+        textfieldage = new javax.swing.JTextField();
+        forSpincmb = new javax.swing.JSpinner();
+        labelsex1 = new javax.swing.JLabel();
+        saveButton = new javax.swing.JButton();
+        sexcmbbutton = new javax.swing.JComboBox<>();
+        jScrollPane3 = new javax.swing.JScrollPane();
         jTable1 = new javax.swing.JTable();
-        diagnosisLbl = new javax.swing.JLabel();
+        diagnosisLabel1 = new javax.swing.JLabel();
 
         setBackground(new java.awt.Color(153, 204, 255));
         setPreferredSize(new java.awt.Dimension(1060, 900));
 
-        jTextField1.addActionListener(new java.awt.event.ActionListener() {
+        jdiagtextfield1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField1ActionPerformed(evt);
+                jdiagtextfield1ActionPerformed(evt);
             }
         });
-        jScrollPane2.setViewportView(jTextField1);
+        jScrollPane2.setViewportView(jdiagtextfield1);
 
-        backBtn.setBackground(new java.awt.Color(0, 51, 153));
-        backBtn.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        backBtn.setForeground(new java.awt.Color(255, 255, 255));
-        backBtn.setText("<<BACK");
-        backBtn.addActionListener(new java.awt.event.ActionListener() {
+        buttonback.setBackground(new java.awt.Color(0, 51, 153));
+        buttonback.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        buttonback.setForeground(new java.awt.Color(255, 255, 255));
+        buttonback.setText("<<BACK");
+        buttonback.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                backBtnActionPerformed(evt);
-            }
-        });
-
-        medicationLbl.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        medicationLbl.setText("Medication:");
-
-        headerLbl.setFont(new java.awt.Font("Tahoma", 1, 36)); // NOI18N
-        headerLbl.setForeground(new java.awt.Color(0, 51, 153));
-        headerLbl.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        headerLbl.setText("Doctor Prescription");
-
-        medicationCmbBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "--Please selcet--", "Paracetomol", "Crocin", "Synthroid", "Crestor", "Ventolin", "Esomeprazole", "Insulin", "Infliximab", "Fluticasone", "Rusovastatin", "Januvia(diabetes)", "Lantus(diabetes)", "Abilify(psychosis, depression)", "Symbicort(asthma)", "Tamiflu(influenza)", "Cialis(erectile dysrunction)", "Viagra(erectile dysrunction)", "Suboxone(opiate addiction)", " " }));
-
-        nameLbl.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        nameLbl.setText("Name:");
-
-        timesLbl.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        timesLbl.setText("Times a Day:");
-
-        ageLbl.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        ageLbl.setText("Age:");
-
-        forLbl.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        forLbl.setText("For:");
-
-        sexLbl.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        sexLbl.setText("Sex:");
-
-        saveBtn.setBackground(new java.awt.Color(0, 51, 153));
-        saveBtn.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        saveBtn.setForeground(new java.awt.Color(255, 255, 255));
-        saveBtn.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/prescription.png"))); // NOI18N
-        saveBtn.setText("SAVE PRESCRIPTION");
-        saveBtn.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                saveBtnActionPerformed(evt);
+                buttonbackActionPerformed(evt);
             }
         });
 
-        sexCmbBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "--Please selcet--", "Male", "Female" }));
+        labelmedication1.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        labelmedication1.setText("Medication:");
+
+        labelheader1.setFont(new java.awt.Font("Tahoma", 1, 36)); // NOI18N
+        labelheader1.setForeground(new java.awt.Color(0, 51, 153));
+        labelheader1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        labelheader1.setText("Doctor Prescription");
+
+        medCmbBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "--Please selcet--", "Paracetomol", "Crocin", "Synthroid", "Crestor", "Ventolin", "Esomeprazole", "Insulin", "Infliximab", "Fluticasone", "Rusovastatin", "Januvia(diabetes)", "Lantus(diabetes)", "Abilify(psychosis, depression)", "Symbicort(asthma)", "Tamiflu(influenza)", "Cialis(erectile dysrunction)", "Viagra(erectile dysrunction)", "Suboxone(opiate addiction)", " " }));
+
+        labelname1.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        labelname1.setText("Name:");
+
+        timesLabel1.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        timesLabel1.setText("Times a Day:");
+
+        labelage1.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        labelage1.setText("Age:");
+
+        forlabel.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        forlabel.setText("For:");
+
+        labelsex1.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        labelsex1.setText("Sex:");
+
+        saveButton.setBackground(new java.awt.Color(0, 51, 153));
+        saveButton.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        saveButton.setForeground(new java.awt.Color(255, 255, 255));
+        saveButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/prescription.png"))); // NOI18N
+        saveButton.setText("SAVE PRESCRIPTION");
+        saveButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                saveButtonActionPerformed(evt);
+            }
+        });
+
+        sexcmbbutton.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "--Please selcet--", "Male", "Female" }));
 
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -158,10 +158,10 @@ populateWorkReqTable();
                 return canEdit [columnIndex];
             }
         });
-        jScrollPane1.setViewportView(jTable1);
+        jScrollPane3.setViewportView(jTable1);
 
-        diagnosisLbl.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        diagnosisLbl.setText("Diagnosis:");
+        diagnosisLabel1.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        diagnosisLabel1.setText("Diagnosis:");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
@@ -169,24 +169,24 @@ populateWorkReqTable();
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(140, 140, 140)
-                .addComponent(medicationLbl)
+                .addComponent(labelmedication1)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addGap(301, 301, 301)
-                        .addComponent(timesLbl)
+                        .addComponent(timesLabel1)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(timesSpin, javax.swing.GroupLayout.PREFERRED_SIZE, 146, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(timescmbspin, javax.swing.GroupLayout.PREFERRED_SIZE, 146, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(34, 34, 34)
-                        .addComponent(forLbl)
+                        .addComponent(forlabel)
                         .addGap(18, 18, 18)
-                        .addComponent(forSpin, javax.swing.GroupLayout.PREFERRED_SIZE, 146, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(forSpincmb, javax.swing.GroupLayout.PREFERRED_SIZE, 146, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(18, 18, 18)
-                        .addComponent(medicationCmbBox, javax.swing.GroupLayout.PREFERRED_SIZE, 257, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(medCmbBox, javax.swing.GroupLayout.PREFERRED_SIZE, 257, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(44, Short.MAX_VALUE))
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(headerLbl, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(labelheader1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addContainerGap())
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -195,94 +195,94 @@ populateWorkReqTable();
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addGroup(layout.createSequentialGroup()
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(diagnosisLbl)
-                                    .addComponent(sexLbl))
+                                    .addComponent(diagnosisLabel1)
+                                    .addComponent(labelsex1))
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addGroup(layout.createSequentialGroup()
                                         .addGap(30, 30, 30)
                                         .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 253, javax.swing.GroupLayout.PREFERRED_SIZE))
                                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                        .addComponent(sexCmbBox, javax.swing.GroupLayout.PREFERRED_SIZE, 253, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                                        .addComponent(sexcmbbutton, javax.swing.GroupLayout.PREFERRED_SIZE, 253, javax.swing.GroupLayout.PREFERRED_SIZE))))
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                                .addComponent(nameLbl, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(labelname1, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(nameTxt, javax.swing.GroupLayout.PREFERRED_SIZE, 254, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addComponent(textfieldname, javax.swing.GroupLayout.PREFERRED_SIZE, 254, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(layout.createSequentialGroup()
-                                .addComponent(ageLbl, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(labelage1, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(67, 67, 67)
-                                .addComponent(ageTxt, javax.swing.GroupLayout.PREFERRED_SIZE, 254, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addComponent(textfieldage, javax.swing.GroupLayout.PREFERRED_SIZE, 254, javax.swing.GroupLayout.PREFERRED_SIZE)))
                         .addGap(394, 394, 394))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                             .addGroup(layout.createSequentialGroup()
-                                .addComponent(backBtn)
+                                .addComponent(buttonback)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(saveBtn))
-                            .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 761, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addComponent(saveButton))
+                            .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 761, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(145, 145, 145))))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(36, 36, 36)
-                .addComponent(headerLbl)
+                .addComponent(labelheader1)
                 .addGap(62, 62, 62)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(nameLbl, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(nameTxt, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(labelname1, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(textfieldname, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(ageLbl, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(ageTxt, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(labelage1, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(textfieldage, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(sexLbl, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(sexCmbBox, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(labelsex1, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(sexcmbbutton, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(diagnosisLbl)
+                    .addComponent(diagnosisLabel1)
                     .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(24, 24, 24)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(medicationLbl, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(medicationCmbBox, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(timesLbl, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(timesSpin, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(forLbl, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(forSpin, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(labelmedication1, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(medCmbBox, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(timesLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(timescmbspin, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(forlabel, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(forSpincmb, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(27, 27, 27)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(saveBtn)
-                    .addComponent(backBtn))
+                    .addComponent(saveButton)
+                    .addComponent(buttonback))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 132, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 132, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(777, 777, 777))
         );
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
+    private void jdiagtextfield1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jdiagtextfield1ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField1ActionPerformed
+    }//GEN-LAST:event_jdiagtextfield1ActionPerformed
 
-    private void backBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backBtnActionPerformed
+    private void buttonbackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonbackActionPerformed
         uppercontainer.remove(this);
         CardLayout crd = (CardLayout) uppercontainer.getLayout();
         crd.previous(uppercontainer);        // TODO add your handling code here:
-    }//GEN-LAST:event_backBtnActionPerformed
+    }//GEN-LAST:event_buttonbackActionPerformed
 
-    private void saveBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_saveBtnActionPerformed
-        DocPrescription p = new DocPrescription();
+    private void saveButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_saveButtonActionPerformed
+        DoctorPrescription p = new DoctorPrescription();
 
-        p.setDiagnosis(jTextField1.getText());
+        p.setDiagnosis(jdiagtextfield1.getText());
 
-        p.setDrug(medicationCmbBox.getSelectedItem().toString());
+        p.setDrug(medCmbBox.getSelectedItem().toString());
 
-        p.setTotal_days((Integer) timesSpin.getValue());
+        p.setTotal_days((Integer) timescmbspin.getValue());
 
-        p.setFrequency_day((Integer) forSpin.getValue());
-        p.setName_Netk(enter.getOrgName());
-        String age = ageTxt.getText();
+        p.setFrequency_day((Integer) forSpincmb.getValue());
+        p.setName_Netw(enter.getOrgName());
+        String age = textfieldage.getText();
         boolean flag = true;
         try {
             Integer.parseInt(age);
@@ -294,7 +294,7 @@ populateWorkReqTable();
         if (p.getDiagnosis().equals("")) {
             JOptionPane.showMessageDialog(null, " Diagnosis cannot be empty!");
             flag = false;
-        } else if (nameTxt.getText().equals("")) {
+        } else if (textfieldname.getText().equals("")) {
             JOptionPane.showMessageDialog(null, "Patient name cannot be empty!");
             flag = false;
 
@@ -302,10 +302,10 @@ populateWorkReqTable();
         if (flag == true) {
             doctororg.addPrescription(p);
 
-            PharmacyWorkRequest request = new PharmacyWorkRequest();
+            Pharmacy_WorkRequest request = new Pharmacy_WorkRequest();
 
-            request.setMedicationName(medicationCmbBox.getSelectedItem().toString());
-            request.setQuantity(((Integer) timesSpin.getValue()) * ((Integer) forSpin.getValue()));
+            request.setMedicationName(medCmbBox.getSelectedItem().toString());
+            request.setQuantity(((Integer) timescmbspin.getValue()) * ((Integer) forSpincmb.getValue()));
             request.setSender(ua);
             request.setStatus("Sent");
 
@@ -315,7 +315,7 @@ populateWorkReqTable();
             Organization org = null;
 
             for (Organization organization : enter.getOrgaDirectory().getOrganizations()) {
-                if (organization instanceof Organization_Pharmacy) {
+                if (organization instanceof PharmacyOrganization) {
                     org = organization;
                     System.out.println("****" + org);
                     break;
@@ -324,36 +324,36 @@ populateWorkReqTable();
             if (org != null) {
 
                 org.getWQ().getWorkRequestList().add(request);
-                ua.getWorkQueue().getWorkRequestList().add(request);
+                ua.getWorkQ().getWorkRequestList().add(request);
             }
 
             populateWorkReqTable();
         }
         // TODO add your handling code here:
-    }//GEN-LAST:event_saveBtnActionPerformed
+    }//GEN-LAST:event_saveButtonActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel ageLbl;
-    private javax.swing.JTextField ageTxt;
-    private javax.swing.JButton backBtn;
-    private javax.swing.JLabel diagnosisLbl;
-    private javax.swing.JLabel forLbl;
-    private javax.swing.JSpinner forSpin;
-    private javax.swing.JLabel headerLbl;
-    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JButton buttonback;
+    private javax.swing.JLabel diagnosisLabel1;
+    private javax.swing.JSpinner forSpincmb;
+    private javax.swing.JLabel forlabel;
     private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JTable jTable1;
-    private javax.swing.JTextField jTextField1;
-    private javax.swing.JComboBox<String> medicationCmbBox;
-    private javax.swing.JLabel medicationLbl;
-    private javax.swing.JLabel nameLbl;
-    private javax.swing.JTextField nameTxt;
-    private javax.swing.JButton saveBtn;
-    private javax.swing.JComboBox<String> sexCmbBox;
-    private javax.swing.JLabel sexLbl;
-    private javax.swing.JLabel timesLbl;
-    private javax.swing.JSpinner timesSpin;
+    private javax.swing.JTextField jdiagtextfield1;
+    private javax.swing.JLabel labelage1;
+    private javax.swing.JLabel labelheader1;
+    private javax.swing.JLabel labelmedication1;
+    private javax.swing.JLabel labelname1;
+    private javax.swing.JLabel labelsex1;
+    private javax.swing.JComboBox<String> medCmbBox;
+    private javax.swing.JButton saveButton;
+    private javax.swing.JComboBox<String> sexcmbbutton;
+    private javax.swing.JTextField textfieldage;
+    private javax.swing.JTextField textfieldname;
+    private javax.swing.JLabel timesLabel1;
+    private javax.swing.JSpinner timescmbspin;
     // End of variables declaration//GEN-END:variables
 
     private void populateWorkReqTable() {
@@ -361,15 +361,15 @@ populateWorkReqTable();
         DefaultTableModel model = (DefaultTableModel) jTable1.getModel();
 
         model.setRowCount(0);
-        System.out.println("+++++"+ ua.getWorkQueue());
+        System.out.println("+++++"+ ua.getWorkQ());
     
-     for (WorkRequest request : ua.getWorkQueue().getWorkRequestList()) {
+     for (Work_Request request : ua.getWorkQ().getWorkRequestList()) {
             try {
             Object[] row = new Object[4];
-            String medication = ((PharmacyWorkRequest) request).getMedicationName();
+            String medication = ((Pharmacy_WorkRequest) request).getMedicationName();
             System.out.println("****" + medication);
-            row[0] = (PharmacyWorkRequest) request;
-            int quantity = ((PharmacyWorkRequest) request).getQuantity();
+            row[0] = (Pharmacy_WorkRequest) request;
+            int quantity = ((Pharmacy_WorkRequest) request).getQuantity();
             row[1] = quantity;
             row[2] = request.getReceiver();
             String result = request.getStatus();

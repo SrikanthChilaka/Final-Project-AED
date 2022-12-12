@@ -23,19 +23,19 @@
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" alignment="1" attributes="0">
               <EmptySpace min="0" pref="222" max="32767" attributes="0"/>
-              <Component id="jScrollPane1" min="-2" pref="537" max="-2" attributes="0"/>
+              <Component id="jpanelscroll1" min="-2" pref="537" max="-2" attributes="0"/>
               <EmptySpace min="-2" pref="127" max="-2" attributes="0"/>
           </Group>
           <Group type="102" alignment="1" attributes="0">
               <EmptySpace max="32767" attributes="0"/>
-              <Component id="headerLbl" min="-2" max="-2" attributes="0"/>
+              <Component id="header_managelabel1" min="-2" max="-2" attributes="0"/>
               <EmptySpace min="-2" pref="175" max="-2" attributes="0"/>
           </Group>
           <Group type="102" attributes="0">
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace min="-2" pref="232" max="-2" attributes="0"/>
-                      <Component id="orgLbl" min="-2" max="-2" attributes="0"/>
+                      <Component id="orgLabel1" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <Group type="102" attributes="0">
                       <EmptySpace min="-2" pref="121" max="-2" attributes="0"/>
@@ -43,8 +43,8 @@
                       <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="103" groupAlignment="1" attributes="0">
-                              <Component id="empLbl" min="-2" pref="106" max="-2" attributes="0"/>
-                              <Component id="roleLbl" min="-2" max="-2" attributes="0"/>
+                              <Component id="empLabel1" min="-2" pref="106" max="-2" attributes="0"/>
+                              <Component id="roleLabel1" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <Group type="102" alignment="0" attributes="0">
                               <EmptySpace min="-2" pref="4" max="-2" attributes="0"/>
@@ -52,18 +52,18 @@
                                   <Component id="createuserBtn" min="-2" max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="0" max="-2" attributes="0">
                                       <Group type="102" attributes="0">
-                                          <Component id="passwordLbl" min="-2" max="-2" attributes="0"/>
+                                          <Component id="passwordLabel1" min="-2" max="-2" attributes="0"/>
                                           <EmptySpace max="32767" attributes="0"/>
-                                          <Component id="pwdText" min="-2" pref="196" max="-2" attributes="0"/>
+                                          <Component id="pwdTextdfield" min="-2" pref="196" max="-2" attributes="0"/>
                                       </Group>
                                       <Group type="102" alignment="1" attributes="0">
-                                          <Component id="usernameLbl" min="-2" max="-2" attributes="0"/>
+                                          <Component id="usernameLabel1" min="-2" max="-2" attributes="0"/>
                                           <EmptySpace pref="54" max="32767" attributes="0"/>
                                           <Group type="103" groupAlignment="0" attributes="0">
-                                              <Component id="CmbboxRole" min="-2" max="-2" attributes="0"/>
-                                              <Component id="UsernameTextField" min="-2" pref="196" max="-2" attributes="0"/>
-                                              <Component id="CmbboxEmployee" alignment="0" min="-2" max="-2" attributes="0"/>
-                                              <Component id="CmbboxOrganization" alignment="0" min="-2" max="-2" attributes="0"/>
+                                              <Component id="cmbBoxrole3" min="-2" max="-2" attributes="0"/>
+                                              <Component id="txtfield_username" min="-2" pref="196" max="-2" attributes="0"/>
+                                              <Component id="cmbboxemp2" alignment="0" min="-2" max="-2" attributes="0"/>
+                                              <Component id="CmbboxOrga1" alignment="0" min="-2" max="-2" attributes="0"/>
                                           </Group>
                                       </Group>
                                   </Group>
@@ -80,37 +80,37 @@
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" alignment="0" attributes="0">
               <EmptySpace min="-2" pref="39" max="-2" attributes="0"/>
-              <Component id="headerLbl" min="-2" max="-2" attributes="0"/>
+              <Component id="header_managelabel1" min="-2" max="-2" attributes="0"/>
               <EmptySpace min="-2" pref="40" max="-2" attributes="0"/>
-              <Component id="jScrollPane1" min="-2" pref="226" max="-2" attributes="0"/>
+              <Component id="jpanelscroll1" min="-2" pref="226" max="-2" attributes="0"/>
               <EmptySpace min="-2" pref="51" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="orgLbl" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="CmbboxOrganization" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="orgLabel1" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="CmbboxOrga1" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace min="-2" pref="34" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="empLbl" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="CmbboxEmployee" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="empLabel1" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="cmbboxemp2" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace min="-2" pref="41" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="CmbboxRole" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="roleLbl" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="cmbBoxrole3" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="roleLabel1" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace min="-2" pref="44" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="UsernameTextField" min="-2" max="-2" attributes="0"/>
-                  <Component id="usernameLbl" min="-2" max="-2" attributes="0"/>
+                  <Component id="txtfield_username" min="-2" max="-2" attributes="0"/>
+                  <Component id="usernameLabel1" min="-2" max="-2" attributes="0"/>
               </Group>
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" attributes="0">
                       <EmptySpace min="-2" pref="36" max="-2" attributes="0"/>
-                      <Component id="passwordLbl" min="-2" max="-2" attributes="0"/>
+                      <Component id="passwordLabel1" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace min="-2" pref="29" max="-2" attributes="0"/>
-                      <Component id="pwdText" min="-2" max="-2" attributes="0"/>
+                      <Component id="pwdTextdfield" min="-2" max="-2" attributes="0"/>
                   </Group>
               </Group>
               <EmptySpace min="-2" pref="33" max="-2" attributes="0"/>
@@ -124,9 +124,9 @@
     </DimensionLayout>
   </Layout>
   <SubComponents>
-    <Component class="javax.swing.JTextField" name="pwdText">
+    <Component class="javax.swing.JTextField" name="pwdTextdfield">
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="pwdTextActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="pwdTextdfieldActionPerformed"/>
       </Events>
     </Component>
     <Component class="javax.swing.JButton" name="backBtn">
@@ -143,7 +143,7 @@
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="backBtnActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JLabel" name="orgLbl">
+    <Component class="javax.swing.JLabel" name="orgLabel1">
       <Properties>
         <Property name="text" type="java.lang.String" value="Organization  :"/>
       </Properties>
@@ -165,7 +165,7 @@
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="createuserBtnActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JComboBox" name="CmbboxOrganization">
+    <Component class="javax.swing.JComboBox" name="CmbboxOrga1">
       <Properties>
         <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
           <StringArray count="4">
@@ -177,13 +177,13 @@
         </Property>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="CmbboxOrganizationActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="CmbboxOrga1ActionPerformed"/>
       </Events>
       <AuxValues>
         <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value=""/>
       </AuxValues>
     </Component>
-    <Component class="javax.swing.JLabel" name="headerLbl">
+    <Component class="javax.swing.JLabel" name="header_managelabel1">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Tahoma" size="36" style="1"/>
@@ -194,12 +194,12 @@
         <Property name="text" type="java.lang.String" value="Manage User Account"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JLabel" name="empLbl">
+    <Component class="javax.swing.JLabel" name="empLabel1">
       <Properties>
         <Property name="text" type="java.lang.String" value="Employee      :"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JComboBox" name="CmbboxEmployee">
+    <Component class="javax.swing.JComboBox" name="cmbboxemp2">
       <Properties>
         <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
           <StringArray count="4">
@@ -214,12 +214,12 @@
         <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value=""/>
       </AuxValues>
     </Component>
-    <Component class="javax.swing.JLabel" name="roleLbl">
+    <Component class="javax.swing.JLabel" name="roleLabel1">
       <Properties>
         <Property name="text" type="java.lang.String" value="Role             :"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JComboBox" name="CmbboxRole">
+    <Component class="javax.swing.JComboBox" name="cmbBoxrole3">
       <Properties>
         <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
           <StringArray count="4">
@@ -234,19 +234,19 @@
         <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value=""/>
       </AuxValues>
     </Component>
-    <Component class="javax.swing.JLabel" name="usernameLbl">
+    <Component class="javax.swing.JLabel" name="usernameLabel1">
       <Properties>
         <Property name="text" type="java.lang.String" value="User Name    :"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JTextField" name="UsernameTextField">
+    <Component class="javax.swing.JTextField" name="txtfield_username">
     </Component>
-    <Component class="javax.swing.JLabel" name="passwordLbl">
+    <Component class="javax.swing.JLabel" name="passwordLabel1">
       <Properties>
         <Property name="text" type="java.lang.String" value="Password      :"/>
       </Properties>
     </Component>
-    <Container class="javax.swing.JScrollPane" name="jScrollPane1">
+    <Container class="javax.swing.JScrollPane" name="jpanelscroll1">
 
       <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
       <SubComponents>

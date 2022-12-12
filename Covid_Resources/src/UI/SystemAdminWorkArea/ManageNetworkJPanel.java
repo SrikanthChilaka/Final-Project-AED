@@ -43,11 +43,11 @@ populateNetworkTable();
 
         jpanelscroll1 = new javax.swing.JScrollPane();
         nameTbl = new javax.swing.JTable();
-        namelabel = new javax.swing.JLabel();
-        jtxtfield1 = new javax.swing.JTextField();
-        backbutton = new javax.swing.JButton();
-        submitbutton = new javax.swing.JButton();
-        jlabel2 = new javax.swing.JLabel();
+        nameLabel = new javax.swing.JLabel();
+        JTextField1 = new javax.swing.JTextField();
+        backButton = new javax.swing.JButton();
+        submitButton = new javax.swing.JButton();
+        jLabel3 = new javax.swing.JLabel();
 
         setBackground(new java.awt.Color(153, 204, 255));
 
@@ -61,30 +61,36 @@ populateNetworkTable();
         ));
         jpanelscroll1.setViewportView(nameTbl);
 
-        namelabel.setText("Name:");
+        nameLabel.setText("Name:");
 
-        backbutton.setBackground(new java.awt.Color(0, 51, 153));
-        backbutton.setForeground(new java.awt.Color(255, 255, 255));
-        backbutton.setText("<< Back");
-        backbutton.addActionListener(new java.awt.event.ActionListener() {
+        JTextField1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                backbuttonActionPerformed(evt);
+                JTextField1ActionPerformed(evt);
             }
         });
 
-        submitbutton.setBackground(new java.awt.Color(0, 51, 153));
-        submitbutton.setForeground(new java.awt.Color(255, 255, 255));
-        submitbutton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/R.png"))); // NOI18N
-        submitbutton.setText("Submit");
-        submitbutton.addActionListener(new java.awt.event.ActionListener() {
+        backButton.setBackground(new java.awt.Color(0, 51, 153));
+        backButton.setForeground(new java.awt.Color(255, 255, 255));
+        backButton.setText("<< Back");
+        backButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                submitbuttonActionPerformed(evt);
+                backButtonActionPerformed(evt);
             }
         });
 
-        jlabel2.setFont(new java.awt.Font("Tahoma", 1, 36)); // NOI18N
-        jlabel2.setForeground(new java.awt.Color(0, 51, 153));
-        jlabel2.setText("Manage Network");
+        submitButton.setBackground(new java.awt.Color(0, 51, 153));
+        submitButton.setForeground(new java.awt.Color(255, 255, 255));
+        submitButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/R.png"))); // NOI18N
+        submitButton.setText("Submit");
+        submitButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                submitButtonActionPerformed(evt);
+            }
+        });
+
+        jLabel3.setFont(new java.awt.Font("Tahoma", 1, 36)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(0, 51, 153));
+        jLabel3.setText("Manage Network");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
@@ -99,39 +105,39 @@ populateNetworkTable();
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(layout.createSequentialGroup()
                                 .addGap(357, 357, 357)
-                                .addComponent(backbutton, javax.swing.GroupLayout.PREFERRED_SIZE, 81, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addComponent(backButton, javax.swing.GroupLayout.PREFERRED_SIZE, 81, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                                 .addGap(342, 342, 342)
-                                .addComponent(namelabel, javax.swing.GroupLayout.PREFERRED_SIZE, 96, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addComponent(nameLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 96, javax.swing.GroupLayout.PREFERRED_SIZE)))
                         .addGap(18, 18, 18)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jtxtfield1, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(submitbutton)))
+                            .addComponent(JTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(submitButton)))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(334, 334, 334)
-                        .addComponent(jlabel2)))
+                        .addComponent(jLabel3)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(57, 57, 57)
-                .addComponent(jlabel2)
+                .addComponent(jLabel3)
                 .addGap(73, 73, 73)
                 .addComponent(jpanelscroll1, javax.swing.GroupLayout.PREFERRED_SIZE, 260, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(46, 46, 46)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(namelabel, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jtxtfield1, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(nameLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(JTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(34, 34, 34)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(backbutton, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(submitbutton))
+                    .addComponent(backButton, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(submitButton))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
-    private void backbuttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backbuttonActionPerformed
+    private void backButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backButtonActionPerformed
         userContainer.remove(this);
         Component[] compArray = userContainer.getComponents();
         Component component = compArray[compArray.length-1];
@@ -139,12 +145,12 @@ populateNetworkTable();
         sysadminWrkPnl.populateTreewithData();
         CardLayout crdLO = (CardLayout) userContainer.getLayout();
         crdLO.previous(userContainer); // TODO add your handling code here:
-    }//GEN-LAST:event_backbuttonActionPerformed
+    }//GEN-LAST:event_backButtonActionPerformed
 
-    private void submitbuttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_submitbuttonActionPerformed
-        String networkName = jtxtfield1.getText();
+    private void submitButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_submitButtonActionPerformed
+        String networkName = JTextField1.getText();
         for (Network n: eco.getNetworks()) {
-            if (n.getNetwork_Name().equals(networkName)) {
+            if (n.getNetwork_name().equals(networkName)) {
                 JOptionPane.showMessageDialog(this, "Can not insert copies.");
                 return;
             }
@@ -152,19 +158,23 @@ populateNetworkTable();
 
 //probable error;
         Network network = eco.addBuildedNetwork();
-        network.setNetwork_Name(networkName);
+        network.setNetwork_name(networkName);
         populateNetworkTable();// TODO add your handling code here:
-    }//GEN-LAST:event_submitbuttonActionPerformed
+    }//GEN-LAST:event_submitButtonActionPerformed
+
+    private void JTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JTextField1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_JTextField1ActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton backbutton;
-    private javax.swing.JLabel jlabel2;
+    private javax.swing.JTextField JTextField1;
+    private javax.swing.JButton backButton;
+    private javax.swing.JLabel jLabel3;
     private javax.swing.JScrollPane jpanelscroll1;
-    private javax.swing.JTextField jtxtfield1;
+    private javax.swing.JLabel nameLabel;
     private javax.swing.JTable nameTbl;
-    private javax.swing.JLabel namelabel;
-    private javax.swing.JButton submitbutton;
+    private javax.swing.JButton submitButton;
     // End of variables declaration//GEN-END:variables
 
     private void populateNetworkTable() {
@@ -174,7 +184,7 @@ populateNetworkTable();
        model.setRowCount(0);
        for(Network network : eco.getNetworks()){
            Object[] row = new Object[1];
-           row[0] = network.getNetwork_Name();
+           row[0] = network.getNetwork_name();
            model.addRow(row);
            
        }

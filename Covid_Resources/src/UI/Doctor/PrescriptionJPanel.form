@@ -26,28 +26,28 @@
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" alignment="0" attributes="0">
               <EmptySpace min="-2" pref="140" max="-2" attributes="0"/>
-              <Component id="medicationLbl" min="-2" max="-2" attributes="0"/>
+              <Component id="labelmedication1" min="-2" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace min="-2" pref="301" max="-2" attributes="0"/>
-                      <Component id="timesLbl" min="-2" max="-2" attributes="0"/>
+                      <Component id="timesLabel1" min="-2" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
-                      <Component id="timesSpin" min="-2" pref="146" max="-2" attributes="0"/>
+                      <Component id="timescmbspin" min="-2" pref="146" max="-2" attributes="0"/>
                       <EmptySpace min="-2" pref="34" max="-2" attributes="0"/>
-                      <Component id="forLbl" min="-2" max="-2" attributes="0"/>
+                      <Component id="forlabel" min="-2" max="-2" attributes="0"/>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
-                      <Component id="forSpin" min="-2" pref="146" max="-2" attributes="0"/>
+                      <Component id="forSpincmb" min="-2" pref="146" max="-2" attributes="0"/>
                   </Group>
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace type="separate" max="-2" attributes="0"/>
-                      <Component id="medicationCmbBox" min="-2" pref="257" max="-2" attributes="0"/>
+                      <Component id="medCmbBox" min="-2" pref="257" max="-2" attributes="0"/>
                   </Group>
               </Group>
               <EmptySpace pref="44" max="32767" attributes="0"/>
           </Group>
           <Group type="102" alignment="0" attributes="0">
               <EmptySpace max="-2" attributes="0"/>
-              <Component id="headerLbl" max="32767" attributes="0"/>
+              <Component id="labelheader1" max="32767" attributes="0"/>
               <EmptySpace max="-2" attributes="0"/>
           </Group>
           <Group type="102" alignment="1" attributes="0">
@@ -57,8 +57,8 @@
                       <Group type="103" groupAlignment="0" max="-2" attributes="0">
                           <Group type="102" alignment="0" attributes="0">
                               <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="diagnosisLbl" alignment="0" min="-2" max="-2" attributes="0"/>
-                                  <Component id="sexLbl" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="diagnosisLabel1" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="labelsex1" alignment="0" min="-2" max="-2" attributes="0"/>
                               </Group>
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Group type="102" attributes="0">
@@ -67,19 +67,19 @@
                                   </Group>
                                   <Group type="102" alignment="1" attributes="0">
                                       <EmptySpace max="32767" attributes="0"/>
-                                      <Component id="sexCmbBox" min="-2" pref="253" max="-2" attributes="0"/>
+                                      <Component id="sexcmbbutton" min="-2" pref="253" max="-2" attributes="0"/>
                                   </Group>
                               </Group>
                           </Group>
                           <Group type="102" alignment="1" attributes="0">
-                              <Component id="nameLbl" min="-2" pref="80" max="-2" attributes="0"/>
+                              <Component id="labelname1" min="-2" pref="80" max="-2" attributes="0"/>
                               <EmptySpace max="32767" attributes="0"/>
-                              <Component id="nameTxt" min="-2" pref="254" max="-2" attributes="0"/>
+                              <Component id="textfieldname" min="-2" pref="254" max="-2" attributes="0"/>
                           </Group>
                           <Group type="102" alignment="0" attributes="0">
-                              <Component id="ageLbl" min="-2" pref="44" max="-2" attributes="0"/>
+                              <Component id="labelage1" min="-2" pref="44" max="-2" attributes="0"/>
                               <EmptySpace min="-2" pref="67" max="-2" attributes="0"/>
-                              <Component id="ageTxt" min="-2" pref="254" max="-2" attributes="0"/>
+                              <Component id="textfieldage" min="-2" pref="254" max="-2" attributes="0"/>
                           </Group>
                       </Group>
                       <EmptySpace min="-2" pref="394" max="-2" attributes="0"/>
@@ -87,11 +87,11 @@
                   <Group type="102" alignment="1" attributes="0">
                       <Group type="103" groupAlignment="1" max="-2" attributes="0">
                           <Group type="102" attributes="0">
-                              <Component id="backBtn" min="-2" max="-2" attributes="0"/>
+                              <Component id="buttonback" min="-2" max="-2" attributes="0"/>
                               <EmptySpace max="32767" attributes="0"/>
-                              <Component id="saveBtn" min="-2" max="-2" attributes="0"/>
+                              <Component id="saveButton" min="-2" max="-2" attributes="0"/>
                           </Group>
-                          <Component id="jScrollPane1" min="-2" pref="761" max="-2" attributes="0"/>
+                          <Component id="jScrollPane3" min="-2" pref="761" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace min="-2" pref="145" max="-2" attributes="0"/>
                   </Group>
@@ -103,43 +103,43 @@
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" alignment="0" attributes="0">
               <EmptySpace min="-2" pref="36" max="-2" attributes="0"/>
-              <Component id="headerLbl" min="-2" max="-2" attributes="0"/>
+              <Component id="labelheader1" min="-2" max="-2" attributes="0"/>
               <EmptySpace min="-2" pref="62" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="nameLbl" alignment="3" min="-2" pref="29" max="-2" attributes="0"/>
-                  <Component id="nameTxt" alignment="3" min="-2" pref="29" max="-2" attributes="0"/>
+                  <Component id="labelname1" alignment="3" min="-2" pref="29" max="-2" attributes="0"/>
+                  <Component id="textfieldname" alignment="3" min="-2" pref="29" max="-2" attributes="0"/>
               </Group>
               <EmptySpace type="unrelated" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="ageLbl" alignment="3" min="-2" pref="29" max="-2" attributes="0"/>
-                  <Component id="ageTxt" alignment="3" min="-2" pref="29" max="-2" attributes="0"/>
+                  <Component id="labelage1" alignment="3" min="-2" pref="29" max="-2" attributes="0"/>
+                  <Component id="textfieldage" alignment="3" min="-2" pref="29" max="-2" attributes="0"/>
               </Group>
               <EmptySpace type="separate" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="sexLbl" alignment="3" min="-2" pref="30" max="-2" attributes="0"/>
-                  <Component id="sexCmbBox" alignment="3" min="-2" pref="30" max="-2" attributes="0"/>
+                  <Component id="labelsex1" alignment="3" min="-2" pref="30" max="-2" attributes="0"/>
+                  <Component id="sexcmbbutton" alignment="3" min="-2" pref="30" max="-2" attributes="0"/>
               </Group>
               <EmptySpace max="32767" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="diagnosisLbl" min="-2" max="-2" attributes="0"/>
+                  <Component id="diagnosisLabel1" min="-2" max="-2" attributes="0"/>
                   <Component id="jScrollPane2" min="-2" pref="100" max="-2" attributes="0"/>
               </Group>
               <EmptySpace min="-2" pref="24" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="medicationLbl" alignment="3" min="-2" pref="38" max="-2" attributes="0"/>
-                  <Component id="medicationCmbBox" alignment="3" min="-2" pref="38" max="-2" attributes="0"/>
-                  <Component id="timesLbl" alignment="3" min="-2" pref="38" max="-2" attributes="0"/>
-                  <Component id="timesSpin" alignment="3" min="-2" pref="41" max="-2" attributes="0"/>
-                  <Component id="forLbl" alignment="3" min="-2" pref="38" max="-2" attributes="0"/>
-                  <Component id="forSpin" alignment="3" min="-2" pref="41" max="-2" attributes="0"/>
+                  <Component id="labelmedication1" alignment="3" min="-2" pref="38" max="-2" attributes="0"/>
+                  <Component id="medCmbBox" alignment="3" min="-2" pref="38" max="-2" attributes="0"/>
+                  <Component id="timesLabel1" alignment="3" min="-2" pref="38" max="-2" attributes="0"/>
+                  <Component id="timescmbspin" alignment="3" min="-2" pref="41" max="-2" attributes="0"/>
+                  <Component id="forlabel" alignment="3" min="-2" pref="38" max="-2" attributes="0"/>
+                  <Component id="forSpincmb" alignment="3" min="-2" pref="41" max="-2" attributes="0"/>
               </Group>
               <EmptySpace min="-2" pref="27" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="saveBtn" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="backBtn" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="saveButton" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="buttonback" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace type="unrelated" max="-2" attributes="0"/>
-              <Component id="jScrollPane1" min="-2" pref="132" max="-2" attributes="0"/>
+              <Component id="jScrollPane3" min="-2" pref="132" max="-2" attributes="0"/>
               <EmptySpace min="-2" pref="777" max="-2" attributes="0"/>
           </Group>
       </Group>
@@ -150,14 +150,14 @@
 
       <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
       <SubComponents>
-        <Component class="javax.swing.JTextField" name="jTextField1">
+        <Component class="javax.swing.JTextField" name="jdiagtextfield1">
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jTextField1ActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jdiagtextfield1ActionPerformed"/>
           </Events>
         </Component>
       </SubComponents>
     </Container>
-    <Component class="javax.swing.JButton" name="backBtn">
+    <Component class="javax.swing.JButton" name="buttonback">
       <Properties>
         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
           <Color blue="99" green="33" red="0" type="rgb"/>
@@ -171,10 +171,10 @@
         <Property name="text" type="java.lang.String" value="&lt;&lt;BACK"/>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="backBtnActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="buttonbackActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JLabel" name="medicationLbl">
+    <Component class="javax.swing.JLabel" name="labelmedication1">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Tahoma" size="18" style="0"/>
@@ -182,7 +182,7 @@
         <Property name="text" type="java.lang.String" value="Medication:"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JLabel" name="headerLbl">
+    <Component class="javax.swing.JLabel" name="labelheader1">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Tahoma" size="36" style="1"/>
@@ -194,7 +194,7 @@
         <Property name="text" type="java.lang.String" value="Doctor Prescription"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JComboBox" name="medicationCmbBox">
+    <Component class="javax.swing.JComboBox" name="medCmbBox">
       <Properties>
         <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
           <StringArray count="20">
@@ -225,7 +225,7 @@
         <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
       </AuxValues>
     </Component>
-    <Component class="javax.swing.JLabel" name="nameLbl">
+    <Component class="javax.swing.JLabel" name="labelname1">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Tahoma" size="18" style="0"/>
@@ -233,7 +233,7 @@
         <Property name="text" type="java.lang.String" value="Name:"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JLabel" name="timesLbl">
+    <Component class="javax.swing.JLabel" name="timesLabel1">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Tahoma" size="18" style="0"/>
@@ -241,11 +241,11 @@
         <Property name="text" type="java.lang.String" value="Times a Day:"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JTextField" name="nameTxt">
+    <Component class="javax.swing.JTextField" name="textfieldname">
     </Component>
-    <Component class="javax.swing.JSpinner" name="timesSpin">
+    <Component class="javax.swing.JSpinner" name="timescmbspin">
     </Component>
-    <Component class="javax.swing.JLabel" name="ageLbl">
+    <Component class="javax.swing.JLabel" name="labelage1">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Tahoma" size="18" style="0"/>
@@ -253,7 +253,7 @@
         <Property name="text" type="java.lang.String" value="Age:"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JLabel" name="forLbl">
+    <Component class="javax.swing.JLabel" name="forlabel">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Tahoma" size="18" style="0"/>
@@ -261,11 +261,11 @@
         <Property name="text" type="java.lang.String" value="For:"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JTextField" name="ageTxt">
+    <Component class="javax.swing.JTextField" name="textfieldage">
     </Component>
-    <Component class="javax.swing.JSpinner" name="forSpin">
+    <Component class="javax.swing.JSpinner" name="forSpincmb">
     </Component>
-    <Component class="javax.swing.JLabel" name="sexLbl">
+    <Component class="javax.swing.JLabel" name="labelsex1">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Tahoma" size="18" style="0"/>
@@ -273,7 +273,7 @@
         <Property name="text" type="java.lang.String" value="Sex:"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JButton" name="saveBtn">
+    <Component class="javax.swing.JButton" name="saveButton">
       <Properties>
         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
           <Color blue="99" green="33" red="0" type="rgb"/>
@@ -290,10 +290,10 @@
         <Property name="text" type="java.lang.String" value="SAVE PRESCRIPTION"/>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="saveBtnActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="saveButtonActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JComboBox" name="sexCmbBox">
+    <Component class="javax.swing.JComboBox" name="sexcmbbutton">
       <Properties>
         <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
           <StringArray count="3">
@@ -307,7 +307,7 @@
         <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
       </AuxValues>
     </Component>
-    <Container class="javax.swing.JScrollPane" name="jScrollPane1">
+    <Container class="javax.swing.JScrollPane" name="jScrollPane3">
 
       <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
       <SubComponents>
@@ -327,7 +327,7 @@
         </Component>
       </SubComponents>
     </Container>
-    <Component class="javax.swing.JLabel" name="diagnosisLbl">
+    <Component class="javax.swing.JLabel" name="diagnosisLabel1">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Tahoma" size="18" style="0"/>

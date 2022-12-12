@@ -4,7 +4,7 @@
  */
 package UI.SystemAdminWorkArea;
 
-import Model.Directory_Address;
+import Model.AddressRepo;
 import Model.EcoSystem;
 import Model.EnterPrise;
 import Model.Network;
@@ -27,7 +27,7 @@ public class SystemAdminWorkAreaJPanel extends javax.swing.JPanel {
      */
 JPanel userContainer;
 EcoSystem eco;
-private Directory_Address addresslist;
+private AddressRepo addresslist;
     public SystemAdminWorkAreaJPanel(JPanel userContainer, EcoSystem eco) {
         initComponents();
         this.userContainer = userContainer;
@@ -47,19 +47,19 @@ private Directory_Address addresslist;
         jPanel2 = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
         jScrollPane2 = new javax.swing.JScrollPane();
-        jtreed1 = new javax.swing.JTree();
-        managebtn = new javax.swing.JButton();
-        bntenterprise = new javax.swing.JButton();
-        enterpriseadminbnt = new javax.swing.JButton();
+        jTreediagram1 = new javax.swing.JTree();
+        ButtonManageNET = new javax.swing.JButton();
+        ButtonEnterPrise = new javax.swing.JButton();
+        buttonEnterPriseAdmin = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
-        jpanel1 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
 
         setBackground(new java.awt.Color(153, 204, 255));
 
         jPanel2.add(jScrollPane1);
 
-        jtreed1.setBackground(new java.awt.Color(153, 204, 255));
-        jtreed1.setForeground(new java.awt.Color(255, 255, 255));
+        jTreediagram1.setBackground(new java.awt.Color(153, 204, 255));
+        jTreediagram1.setForeground(new java.awt.Color(255, 255, 255));
         javax.swing.tree.DefaultMutableTreeNode treeNode1 = new javax.swing.tree.DefaultMutableTreeNode("System");
         javax.swing.tree.DefaultMutableTreeNode treeNode2 = new javax.swing.tree.DefaultMutableTreeNode("Network");
         treeNode1.add(treeNode2);
@@ -69,40 +69,40 @@ private Directory_Address addresslist;
         treeNode1.add(treeNode2);
         treeNode2 = new javax.swing.tree.DefaultMutableTreeNode("Reports");
         treeNode1.add(treeNode2);
-        jtreed1.setModel(new javax.swing.tree.DefaultTreeModel(treeNode1));
-        jScrollPane2.setViewportView(jtreed1);
+        jTreediagram1.setModel(new javax.swing.tree.DefaultTreeModel(treeNode1));
+        jScrollPane2.setViewportView(jTreediagram1);
 
         jPanel2.add(jScrollPane2);
 
-        managebtn.setBackground(new java.awt.Color(0, 51, 153));
-        managebtn.setForeground(new java.awt.Color(255, 255, 255));
-        managebtn.setText("Manage Network");
-        managebtn.addActionListener(new java.awt.event.ActionListener() {
+        ButtonManageNET.setBackground(new java.awt.Color(0, 51, 153));
+        ButtonManageNET.setForeground(new java.awt.Color(255, 255, 255));
+        ButtonManageNET.setText("Manage Network");
+        ButtonManageNET.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                managebtnActionPerformed(evt);
+                ButtonManageNETActionPerformed(evt);
             }
         });
 
-        bntenterprise.setBackground(new java.awt.Color(0, 51, 153));
-        bntenterprise.setForeground(new java.awt.Color(255, 255, 255));
-        bntenterprise.setText("Manage Enterprise");
-        bntenterprise.addActionListener(new java.awt.event.ActionListener() {
+        ButtonEnterPrise.setBackground(new java.awt.Color(0, 51, 153));
+        ButtonEnterPrise.setForeground(new java.awt.Color(255, 255, 255));
+        ButtonEnterPrise.setText("Manage Enterprise");
+        ButtonEnterPrise.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                bntenterpriseActionPerformed(evt);
+                ButtonEnterPriseActionPerformed(evt);
             }
         });
 
-        enterpriseadminbnt.setBackground(new java.awt.Color(0, 51, 153));
-        enterpriseadminbnt.setForeground(new java.awt.Color(255, 255, 255));
-        enterpriseadminbnt.setText("Manage Enterprise Admin");
-        enterpriseadminbnt.addActionListener(new java.awt.event.ActionListener() {
+        buttonEnterPriseAdmin.setBackground(new java.awt.Color(0, 51, 153));
+        buttonEnterPriseAdmin.setForeground(new java.awt.Color(255, 255, 255));
+        buttonEnterPriseAdmin.setText("Manage Enterprise Admin");
+        buttonEnterPriseAdmin.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                enterpriseadminbntActionPerformed(evt);
+                buttonEnterPriseAdminActionPerformed(evt);
             }
         });
 
-        jpanel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/manage.png"))); // NOI18N
-        jpanel1.setText("jLabel1");
+        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/manage.png"))); // NOI18N
+        jLabel4.setText("jLabel1");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
@@ -116,16 +116,16 @@ private Directory_Address addresslist;
                             .addGroup(layout.createSequentialGroup()
                                 .addGap(240, 240, 240)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addComponent(enterpriseadminbnt, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(bntenterprise, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(managebtn, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                                    .addComponent(buttonEnterPriseAdmin, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(ButtonEnterPrise, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(ButtonManageNET, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                             .addGroup(layout.createSequentialGroup()
                                 .addGap(203, 203, 203)
                                 .addComponent(jLabel2)))
                         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jpanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 222, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 222, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
         );
         layout.setVerticalGroup(
@@ -134,15 +134,15 @@ private Directory_Address addresslist;
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addGap(34, 34, 34)
-                        .addComponent(managebtn)
+                        .addComponent(ButtonManageNET)
                         .addGap(18, 18, 18)
-                        .addComponent(bntenterprise)
+                        .addComponent(ButtonEnterPrise)
                         .addGap(18, 18, 18)
-                        .addComponent(enterpriseadminbnt)
+                        .addComponent(buttonEnterPriseAdmin)
                         .addGap(104, 104, 104)
                         .addComponent(jLabel2)
                         .addGap(54, 54, 54)
-                        .addComponent(jpanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 187, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 187, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
                         .addContainerGap()
                         .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, 745, javax.swing.GroupLayout.PREFERRED_SIZE)))
@@ -150,45 +150,45 @@ private Directory_Address addresslist;
         );
     }// </editor-fold>//GEN-END:initComponents
 
-    private void managebtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_managebtnActionPerformed
+    private void ButtonManageNETActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButtonManageNETActionPerformed
         ManageNetworkJPanel manageNtwrkJPnl = new ManageNetworkJPanel(userContainer,eco);
         userContainer.add("manageNtwrkJPnl",manageNtwrkJPnl);
         CardLayout crdlyt = (CardLayout) userContainer.getLayout();
         crdlyt.next(userContainer);
         // TODO add your handling code here:
-    }//GEN-LAST:event_managebtnActionPerformed
+    }//GEN-LAST:event_ButtonManageNETActionPerformed
 
-    private void bntenterpriseActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bntenterpriseActionPerformed
+    private void ButtonEnterPriseActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButtonEnterPriseActionPerformed
         ManageEnterpriseJPanel mngEntJPanel = new ManageEnterpriseJPanel(userContainer, eco);
         userContainer.add("mngEntJPanel", mngEntJPanel);
         CardLayout crdlyt = (CardLayout) userContainer.getLayout();
         crdlyt.next(userContainer);
         // TODO add your handling code here:
-    }//GEN-LAST:event_bntenterpriseActionPerformed
+    }//GEN-LAST:event_ButtonEnterPriseActionPerformed
 
-    private void enterpriseadminbntActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_enterpriseadminbntActionPerformed
+    private void buttonEnterPriseAdminActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonEnterPriseAdminActionPerformed
         ManageEnterpriseAdminJPanel manageAdminJPnl = new ManageEnterpriseAdminJPanel(userContainer,eco);
         userContainer.add("manageNtwrkJPnl",manageAdminJPnl);
         CardLayout crdlyt = (CardLayout) userContainer.getLayout();
         crdlyt.next(userContainer);        // TODO add your handling code here:
-    }//GEN-LAST:event_enterpriseadminbntActionPerformed
+    }//GEN-LAST:event_buttonEnterPriseAdminActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton bntenterprise;
-    private javax.swing.JButton enterpriseadminbnt;
+    private javax.swing.JButton ButtonEnterPrise;
+    private javax.swing.JButton ButtonManageNET;
+    private javax.swing.JButton buttonEnterPriseAdmin;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel4;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
-    private javax.swing.JLabel jpanel1;
-    private javax.swing.JTree jtreed1;
-    private javax.swing.JButton managebtn;
+    private javax.swing.JTree jTreediagram1;
     // End of variables declaration//GEN-END:variables
 
     public void populateTreewithData() {
         // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-      DefaultTreeModel model = (DefaultTreeModel) jtreed1.getModel();
+      DefaultTreeModel model = (DefaultTreeModel) jTreediagram1.getModel();
 
 
 
@@ -213,12 +213,12 @@ private Directory_Address addresslist;
         DefaultMutableTreeNode organizationNode;
         for (int i = 0; i < networkList.size(); i++) {
         network = networkList.get(i);
-        networkNode = new DefaultMutableTreeNode(network.getNetwork_Name());
+        networkNode = new DefaultMutableTreeNode(network.getNetwork_name());
         networks.insert(networkNode, i);
 
 
 
-        enterpriseList = network.getDirectoEnterpri().getEnterpList();
+        enterpriseList = network.getEnterpriseRepo().getEnterpRepo();
 
 
 

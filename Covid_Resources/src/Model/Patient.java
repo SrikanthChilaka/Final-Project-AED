@@ -14,7 +14,7 @@ public class Patient {
 private int PId;
 private int PAge;
 private String PName;
-private String PGender;
+private String PGend;
 
   
 
@@ -42,11 +42,11 @@ private String PGender;
         this.PId = PId;
     }
     
- public String getPGender() {
-        return PGender;
+ public String getPGend() {
+        return PGend;
     }
 
-    public void setPGender(String PGender) {
-        this.PGender = PGender;
+    public void setPGend(String PGend) {
+        this.PGend = PGend;
     }
 }

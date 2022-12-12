@@ -48,15 +48,15 @@ public class MainJFrame extends javax.swing.JFrame {
 
         splitPane = new javax.swing.JSplitPane();
         loginPanel = new javax.swing.JPanel();
-        lblImage1 = new javax.swing.JLabel();
-        lblUsername = new javax.swing.JLabel();
-        txtUsername = new javax.swing.JTextField();
-        lblPassword = new javax.swing.JLabel();
-        lblImage2 = new javax.swing.JLabel();
-        btnLogin = new javax.swing.JButton();
-        btnLogout = new javax.swing.JButton();
-        fieldPassword = new javax.swing.JPasswordField();
-        containerPanel = new javax.swing.JPanel();
+        labelImage1 = new javax.swing.JLabel();
+        labelusername1 = new javax.swing.JLabel();
+        textusername = new javax.swing.JTextField();
+        labelpassword = new javax.swing.JLabel();
+        labelimage2 = new javax.swing.JLabel();
+        buttonback = new javax.swing.JButton();
+        buttonlogout = new javax.swing.JButton();
+        txtfieldpassword = new javax.swing.JPasswordField();
+        containerpanel1 = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(204, 204, 255));
@@ -65,35 +65,35 @@ public class MainJFrame extends javax.swing.JFrame {
 
         loginPanel.setBackground(new java.awt.Color(0, 102, 204));
 
-        lblImage1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/doctor.png"))); // NOI18N
+        labelImage1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/doctor.png"))); // NOI18N
 
-        lblUsername.setFont(new java.awt.Font("Nirmala UI", 0, 18)); // NOI18N
-        lblUsername.setForeground(new java.awt.Color(255, 255, 255));
-        lblUsername.setText("Username");
+        labelusername1.setFont(new java.awt.Font("Nirmala UI", 0, 18)); // NOI18N
+        labelusername1.setForeground(new java.awt.Color(255, 255, 255));
+        labelusername1.setText("Username");
 
-        txtUsername.addActionListener(new java.awt.event.ActionListener() {
+        textusername.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtUsernameActionPerformed(evt);
+                textusernameActionPerformed(evt);
             }
         });
 
-        lblPassword.setFont(new java.awt.Font("Nirmala UI", 0, 18)); // NOI18N
-        lblPassword.setForeground(new java.awt.Color(255, 255, 255));
-        lblPassword.setText("Password");
+        labelpassword.setFont(new java.awt.Font("Nirmala UI", 0, 18)); // NOI18N
+        labelpassword.setForeground(new java.awt.Color(255, 255, 255));
+        labelpassword.setText("Password");
 
-        lblImage2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/hospital.png"))); // NOI18N
+        labelimage2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/hospital.png"))); // NOI18N
 
-        btnLogin.setText("Login");
-        btnLogin.addActionListener(new java.awt.event.ActionListener() {
+        buttonback.setText("Login");
+        buttonback.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnLoginActionPerformed(evt);
+                buttonbackActionPerformed(evt);
             }
         });
 
-        btnLogout.setText("Logout");
-        btnLogout.addActionListener(new java.awt.event.ActionListener() {
+        buttonlogout.setText("Logout");
+        buttonlogout.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnLogoutActionPerformed(evt);
+                buttonlogoutActionPerformed(evt);
             }
         });
 
@@ -104,57 +104,57 @@ public class MainJFrame extends javax.swing.JFrame {
             .addGroup(loginPanelLayout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(loginPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(lblImage1, javax.swing.GroupLayout.DEFAULT_SIZE, 129, Short.MAX_VALUE)
-                    .addComponent(lblUsername, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(txtUsername)
-                    .addComponent(lblPassword, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(lblImage2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(btnLogin, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(btnLogout, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(fieldPassword))
+                    .addComponent(labelImage1, javax.swing.GroupLayout.DEFAULT_SIZE, 129, Short.MAX_VALUE)
+                    .addComponent(labelusername1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(textusername)
+                    .addComponent(labelpassword, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(labelimage2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(buttonback, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(buttonlogout, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(txtfieldpassword))
                 .addContainerGap())
         );
         loginPanelLayout.setVerticalGroup(
             loginPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(loginPanelLayout.createSequentialGroup()
                 .addGap(28, 28, 28)
-                .addComponent(lblImage1, javax.swing.GroupLayout.PREFERRED_SIZE, 109, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(labelImage1, javax.swing.GroupLayout.PREFERRED_SIZE, 109, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(74, 74, 74)
-                .addComponent(lblUsername)
+                .addComponent(labelusername1)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(txtUsername, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(textusername, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(lblPassword)
+                .addComponent(labelpassword)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(fieldPassword, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(txtfieldpassword, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(33, 33, 33)
-                .addComponent(btnLogin)
+                .addComponent(buttonback)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(btnLogout)
+                .addComponent(buttonlogout)
                 .addGap(12, 12, 12)
-                .addComponent(lblImage2, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(labelimage2, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         splitPane.setLeftComponent(loginPanel);
 
-        containerPanel.setBackground(new java.awt.Color(153, 204, 255));
-        containerPanel.setLayout(new java.awt.CardLayout());
-        splitPane.setRightComponent(containerPanel);
+        containerpanel1.setBackground(new java.awt.Color(153, 204, 255));
+        containerpanel1.setLayout(new java.awt.CardLayout());
+        splitPane.setRightComponent(containerpanel1);
 
         getContentPane().add(splitPane, java.awt.BorderLayout.CENTER);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void txtUsernameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtUsernameActionPerformed
+    private void textusernameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_textusernameActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_txtUsernameActionPerformed
+    }//GEN-LAST:event_textusernameActionPerformed
 
-    private void btnLoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLoginActionPerformed
+    private void buttonbackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonbackActionPerformed
         // TODO add your handling code here:
-        String usr = txtUsername.getText();
-        char[] arr = fieldPassword.getPassword();
+        String usr = textusername.getText();
+        char[] arr = txtfieldpassword.getPassword();
         String pwd = String.valueOf(arr);
 
         Account acc = eco.getUserAccDir().validateAccount(usr, pwd);
@@ -164,7 +164,7 @@ public class MainJFrame extends javax.swing.JFrame {
 
         if (acc == null) {
             for (Network n : eco.getNetworks()) {
-                for (EnterPrise e : n.getDirectoEnterpri().getEnterpList()) {
+                for (EnterPrise e : n.getEnterpriseRepo().getEnterpRepo()) {
                     acc = e.getUserAccDir().validateAccount(usr, pwd);
                     if (acc == null) {
                         for (Organization org : e.getOrgaDirectory().getOrganizations()) {
@@ -173,7 +173,7 @@ public class MainJFrame extends javax.swing.JFrame {
                                 net = n;
                                 ent = e;
                                 orgz = org;
-                                System.out.println("***" + n.getNetwork_Name());
+                                System.out.println("***" + n.getNetwork_name());
                                 break;
                             }
                         }
@@ -194,47 +194,47 @@ public class MainJFrame extends javax.swing.JFrame {
 // TODO add your handling code here:
         if (acc != null) {
 //error casting
-            CardLayout layout = (CardLayout) containerPanel.getLayout();
-            containerPanel.add(acc.getRole().toString() + "workArea", acc.getRole().createWorkArea(containerPanel, acc, orgz, ent, eco, net));
-            layout.next(containerPanel);
+            CardLayout layout = (CardLayout) containerpanel1.getLayout();
+            containerpanel1.add(acc.getRole().toString() + "workArea", acc.getRole().createWorkArea(containerpanel1, acc, orgz, ent, eco, net));
+            layout.next(containerpanel1);
         } else {
             if (usr.equalsIgnoreCase("mw")) {
                 WorkAreaPanel_MedicalWaste mwp = new WorkAreaPanel_MedicalWaste(null, null, null, null);
-                CardLayout layout = (CardLayout) containerPanel.getLayout();
-                containerPanel.add(mwp);
-                layout.next(containerPanel);
+                CardLayout layout = (CardLayout) containerpanel1.getLayout();
+                containerpanel1.add(mwp);
+                layout.next(containerpanel1);
             } else if (usr.equalsIgnoreCase("st")) {
                 WorkAreaPanelStaff mwp = new WorkAreaPanelStaff();
-                CardLayout layout = (CardLayout) containerPanel.getLayout();
-                containerPanel.add(mwp);
-                layout.next(containerPanel);
+                CardLayout layout = (CardLayout) containerpanel1.getLayout();
+                containerpanel1.add(mwp);
+                layout.next(containerpanel1);
             } else {
                 JOptionPane.showMessageDialog(null, "Credentials invalid");
                 return;
             }
         }
-        lblUsername.setEnabled(false);
-        btnLogin.setEnabled(false);
-        lblPassword.setEnabled(false);
-        btnLogout.setEnabled(true);
-    }//GEN-LAST:event_btnLoginActionPerformed
+        labelusername1.setEnabled(false);
+        buttonback.setEnabled(false);
+        labelpassword.setEnabled(false);
+        buttonlogout.setEnabled(true);
+    }//GEN-LAST:event_buttonbackActionPerformed
 
-    private void btnLogoutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLogoutActionPerformed
+    private void buttonlogoutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonlogoutActionPerformed
         // TODO add your handling code here:
-        btnLogout.setEnabled(false);
-        txtUsername.setText("");
-        fieldPassword.setText("");
-        txtUsername.setEnabled(true);
+        buttonlogout.setEnabled(false);
+        textusername.setText("");
+        txtfieldpassword.setText("");
+        textusername.setEnabled(true);
         db.storeSystem(eco);
-        btnLogin.setEnabled(true);
-        containerPanel.removeAll();
-        fieldPassword.setEnabled(true);
+        buttonback.setEnabled(true);
+        containerpanel1.removeAll();
+        txtfieldpassword.setEnabled(true);
         JPanel p = new JPanel();
-        containerPanel.add("blank", p);
-        CardLayout layoutCard = (CardLayout) containerPanel.getLayout();
-        layoutCard.next(containerPanel);
+        containerpanel1.add("blank", p);
+        CardLayout layoutCard = (CardLayout) containerpanel1.getLayout();
+        layoutCard.next(containerpanel1);
         db.storeSystem(eco);
-    }//GEN-LAST:event_btnLogoutActionPerformed
+    }//GEN-LAST:event_buttonlogoutActionPerformed
 
     /**
      * @param args the command line arguments
@@ -272,16 +272,16 @@ public class MainJFrame extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btnLogin;
-    private javax.swing.JButton btnLogout;
-    private javax.swing.JPanel containerPanel;
-    private javax.swing.JPasswordField fieldPassword;
-    private javax.swing.JLabel lblImage1;
-    private javax.swing.JLabel lblImage2;
-    private javax.swing.JLabel lblPassword;
-    private javax.swing.JLabel lblUsername;
+    private javax.swing.JButton buttonback;
+    private javax.swing.JButton buttonlogout;
+    private javax.swing.JPanel containerpanel1;
+    private javax.swing.JLabel labelImage1;
+    private javax.swing.JLabel labelimage2;
+    private javax.swing.JLabel labelpassword;
+    private javax.swing.JLabel labelusername1;
     private javax.swing.JPanel loginPanel;
     private javax.swing.JSplitPane splitPane;
-    private javax.swing.JTextField txtUsername;
+    private javax.swing.JTextField textusername;
+    private javax.swing.JPasswordField txtfieldpassword;
     // End of variables declaration//GEN-END:variables
 }

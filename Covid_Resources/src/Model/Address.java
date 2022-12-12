@@ -10,9 +10,9 @@ package Model;
  */
 public class Address {
     private String name;
-    private String line_1;
-    private String line_2;
-    private String pincode;
+    private String line1;
+    private String line2;
+    private String pin_code;
 
     public String getName() {
         return name;
@@ -23,26 +23,26 @@ public class Address {
     }
 
     public String getLine_1() {
-        return line_1;
+        return line1;
     }
 
-    public void setLine_1(String line_1) {
-        this.line_1 = line_1;
+    public void setLine_1(String line1) {
+        this.line1 = line1;
     }
 
     public String getLine_2() {
-        return line_2;
+        return line2;
     }
 
-    public void setLine_2(String line_2) {
-        this.line_2 = line_2;
+    public void setLine_2(String line2) {
+        this.line2 = line2;
     }
 
     public String getPincode() {
-        return pincode;
+        return pin_code;
     }
 
-    public void setPincode(String pincode) {
-        this.pincode = pincode;
+    public void setPincode(String pin_code) {
+        this.pin_code = pin_code;
     }
 }

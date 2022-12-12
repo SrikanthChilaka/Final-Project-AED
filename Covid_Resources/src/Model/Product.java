@@ -11,43 +11,43 @@ import java.util.Date;
  * @author srikanthchilaka
  */
 public class Product {
-    private int productId;
-    private String SerialNo;
-    private Date dateExpired;
+    private int prodId;
+    private String SNo;
+    private Date date_Expiry;
     private int barCode;
     private String drugName;
     private String description;
-    private static int c = 0;
+    private static int p = 0;
     private String vaccineName;
     private String hospitalName;
     
     public Product(){
-        c++;
-        productId=c;
+        p++;
+        prodId=p;
     }
 
-    public int getProductId() {
-        return productId;
+    public int getProdId() {
+        return prodId;
     }
 
-    public void setProductId(int productId) {
-        this.productId = productId;
+    public void setProdId(int prodId) {
+        this.prodId = prodId;
     }
 
-    public String getSerialNo() {
-        return SerialNo;
+    public String getSNo() {
+        return SNo;
     }
 
-    public void setSerialNo(String SerialNo) {
-        this.SerialNo = SerialNo;
+    public void setSNo(String SNo) {
+        this.SNo = SNo;
     }
 
-    public Date getDateExpired() {
-        return dateExpired;
+    public Date getDate_Expiry() {
+        return date_Expiry;
     }
 
-    public void setDateExpired(Date dateExpired) {
-        this.dateExpired = dateExpired;
+    public void setDate_Expiry(Date date_Expiry) {
+        this.date_Expiry = date_Expiry;
     }
 
     public int getBarCode() {

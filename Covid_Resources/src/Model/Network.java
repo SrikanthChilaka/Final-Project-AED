@@ -10,35 +10,35 @@ package Model;
  */
 public class Network {
 
-   private Directory_EnterPrise directoEnterpri;
-   private String Network_Name;
+   private EnterpriseRepo enterpriseRepo;
+   private String Network_name;
     
   
 
 public Network(){
-  directoEnterpri = new Directory_EnterPrise();
+  enterpriseRepo = new EnterpriseRepo();
 
 }
 
-    public String getNetwork_Name() {
-        return Network_Name;
+    public String getNetwork_name() {
+        return Network_name;
     }
 
-    public void setNetwork_Name(String Network_Name) {
-        this.Network_Name = Network_Name;
+    public void setNetwork_name(String Network_name) {
+        this.Network_name = Network_name;
     }
 
-    public Directory_EnterPrise getDirectoEnterpri() {
-        return directoEnterpri;
+    public EnterpriseRepo getEnterpriseRepo() {
+        return enterpriseRepo;
     }
 
-    public void setDirectoEnterpri(Directory_EnterPrise directoEnterpri) {
-        this.directoEnterpri = directoEnterpri;
+    public void setEnterpriseRepo(EnterpriseRepo enterpriseRepo) {
+        this.enterpriseRepo = enterpriseRepo;
     }
 
   @Override 
  public String toString(){
 
- return Network_Name;}
+ return Network_name;}
 
 }

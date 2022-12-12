@@ -24,7 +24,7 @@ public class WorkAreaPanel_Admin extends javax.swing.JPanel {
         initComponents();
         this.panel=panel;
         this.enterprise=e;
-        lblVal.setText(enterprise.getOrgName());
+        labelVal.setText(enterprise.getOrgName());
     }
 
     /**
@@ -36,57 +36,57 @@ public class WorkAreaPanel_Admin extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        lblHeader = new javax.swing.JLabel();
-        lblVal = new javax.swing.JLabel();
-        lblEnt = new javax.swing.JLabel();
-        btnOrgMng = new javax.swing.JButton();
-        btnMngEmp = new javax.swing.JButton();
-        BtnMngUsr = new javax.swing.JButton();
-        jLabel1 = new javax.swing.JLabel();
+        labelHeader1 = new javax.swing.JLabel();
+        labelVal = new javax.swing.JLabel();
+        labelEnt = new javax.swing.JLabel();
+        buttonOrgMng = new javax.swing.JButton();
+        buttonMngEmp = new javax.swing.JButton();
+        ButtonMngUsr = new javax.swing.JButton();
+        jpanelLabel1 = new javax.swing.JLabel();
 
         setBackground(new java.awt.Color(153, 204, 255));
 
-        lblHeader.setFont(new java.awt.Font("Tahoma", 1, 36)); // NOI18N
-        lblHeader.setForeground(new java.awt.Color(0, 51, 153));
-        lblHeader.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        lblHeader.setText("Hospital Work Area - Administrative Role");
+        labelHeader1.setFont(new java.awt.Font("Tahoma", 1, 36)); // NOI18N
+        labelHeader1.setForeground(new java.awt.Color(0, 51, 153));
+        labelHeader1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        labelHeader1.setText("Hospital Work Area - Administrative Role");
 
-        lblVal.setForeground(new java.awt.Color(0, 51, 153));
-        lblVal.setText("<Value>");
+        labelVal.setForeground(new java.awt.Color(0, 51, 153));
+        labelVal.setText("<Value>");
 
-        lblEnt.setFont(new java.awt.Font("Tahoma", 1, 16)); // NOI18N
-        lblEnt.setForeground(new java.awt.Color(0, 51, 153));
-        lblEnt.setText("Enterprise : ");
+        labelEnt.setFont(new java.awt.Font("Tahoma", 1, 16)); // NOI18N
+        labelEnt.setForeground(new java.awt.Color(0, 51, 153));
+        labelEnt.setText("Enterprise : ");
 
-        btnOrgMng.setBackground(new java.awt.Color(0, 51, 153));
-        btnOrgMng.setForeground(new java.awt.Color(255, 255, 255));
-        btnOrgMng.setText("Manage Organization");
-        btnOrgMng.addActionListener(new java.awt.event.ActionListener() {
+        buttonOrgMng.setBackground(new java.awt.Color(0, 51, 153));
+        buttonOrgMng.setForeground(new java.awt.Color(255, 255, 255));
+        buttonOrgMng.setText("Manage Organization");
+        buttonOrgMng.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnOrgMngActionPerformed(evt);
+                buttonOrgMngActionPerformed(evt);
             }
         });
 
-        btnMngEmp.setBackground(new java.awt.Color(0, 51, 153));
-        btnMngEmp.setForeground(new java.awt.Color(255, 255, 255));
-        btnMngEmp.setText("Manage Employee");
-        btnMngEmp.addActionListener(new java.awt.event.ActionListener() {
+        buttonMngEmp.setBackground(new java.awt.Color(0, 51, 153));
+        buttonMngEmp.setForeground(new java.awt.Color(255, 255, 255));
+        buttonMngEmp.setText("Manage Employee");
+        buttonMngEmp.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnMngEmpActionPerformed(evt);
+                buttonMngEmpActionPerformed(evt);
             }
         });
 
-        BtnMngUsr.setBackground(new java.awt.Color(0, 51, 153));
-        BtnMngUsr.setForeground(new java.awt.Color(255, 255, 255));
-        BtnMngUsr.setText("Manage User");
-        BtnMngUsr.addActionListener(new java.awt.event.ActionListener() {
+        ButtonMngUsr.setBackground(new java.awt.Color(0, 51, 153));
+        ButtonMngUsr.setForeground(new java.awt.Color(255, 255, 255));
+        ButtonMngUsr.setText("Manage User");
+        ButtonMngUsr.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                BtnMngUsrActionPerformed(evt);
+                ButtonMngUsrActionPerformed(evt);
             }
         });
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/manage.png"))); // NOI18N
-        jLabel1.setText("jLabel1");
+        jpanelLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/manage.png"))); // NOI18N
+        jpanelLabel1.setText("jLabel1");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
@@ -96,76 +96,76 @@ public class WorkAreaPanel_Admin extends javax.swing.JPanel {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addContainerGap()
-                        .addComponent(lblHeader, javax.swing.GroupLayout.PREFERRED_SIZE, 1027, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(labelHeader1, javax.swing.GroupLayout.PREFERRED_SIZE, 1027, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(120, 120, 120)
-                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 136, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jpanelLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 136, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(159, 159, 159)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(btnOrgMng, javax.swing.GroupLayout.PREFERRED_SIZE, 230, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(btnMngEmp, javax.swing.GroupLayout.PREFERRED_SIZE, 230, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(BtnMngUsr, javax.swing.GroupLayout.PREFERRED_SIZE, 230, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(buttonOrgMng, javax.swing.GroupLayout.PREFERRED_SIZE, 230, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(buttonMngEmp, javax.swing.GroupLayout.PREFERRED_SIZE, 230, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(ButtonMngUsr, javax.swing.GroupLayout.PREFERRED_SIZE, 230, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGroup(layout.createSequentialGroup()
-                                .addComponent(lblEnt)
+                                .addComponent(labelEnt)
                                 .addGap(33, 33, 33)
-                                .addComponent(lblVal)))))
+                                .addComponent(labelVal)))))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(27, 27, 27)
-                .addComponent(lblHeader, javax.swing.GroupLayout.PREFERRED_SIZE, 86, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(labelHeader1, javax.swing.GroupLayout.PREFERRED_SIZE, 86, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(42, 42, 42)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(lblEnt)
-                    .addComponent(lblVal, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(labelEnt)
+                    .addComponent(labelVal, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addGap(46, 46, 46)
-                        .addComponent(btnOrgMng)
+                        .addComponent(buttonOrgMng)
                         .addGap(53, 53, 53)
-                        .addComponent(btnMngEmp)
+                        .addComponent(buttonMngEmp)
                         .addGap(55, 55, 55)
-                        .addComponent(BtnMngUsr))
+                        .addComponent(ButtonMngUsr))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(69, 69, 69)
-                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 147, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(jpanelLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 147, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(158, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
-    private void btnOrgMngActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnOrgMngActionPerformed
+    private void buttonOrgMngActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonOrgMngActionPerformed
         ManagePanel_Organization m = new ManagePanel_Organization(panel, enterprise.getOrgaDirectory());
         panel.add("managePanel_Organization", m);
         CardLayout layout = (CardLayout) panel.getLayout();
         layout.next(panel);
-    }//GEN-LAST:event_btnOrgMngActionPerformed
+    }//GEN-LAST:event_buttonOrgMngActionPerformed
 
-    private void btnMngEmpActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMngEmpActionPerformed
+    private void buttonMngEmpActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonMngEmpActionPerformed
         ManagePanel_Employee m = new ManagePanel_Employee(panel, enterprise.getOrgaDirectory());
         panel.add("managePanel_Employee", m);
         CardLayout lyt = (CardLayout) panel.getLayout();
         lyt.next(panel);
         // TODO add your handling code here:
-    }//GEN-LAST:event_btnMngEmpActionPerformed
+    }//GEN-LAST:event_buttonMngEmpActionPerformed
 
-    private void BtnMngUsrActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnMngUsrActionPerformed
+    private void ButtonMngUsrActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButtonMngUsrActionPerformed
         ManagePanel_Account  m = new   ManagePanel_Account(panel, enterprise) ;
         panel.add("managePanel_Account",m);
         CardLayout cly = (CardLayout) panel.getLayout();
         cly.next(panel);
         // TODO add your handling code here:
-    }//GEN-LAST:event_BtnMngUsrActionPerformed
+    }//GEN-LAST:event_ButtonMngUsrActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton BtnMngUsr;
-    private javax.swing.JButton btnMngEmp;
-    private javax.swing.JButton btnOrgMng;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel lblEnt;
-    private javax.swing.JLabel lblHeader;
-    private javax.swing.JLabel lblVal;
+    private javax.swing.JButton ButtonMngUsr;
+    private javax.swing.JButton buttonMngEmp;
+    private javax.swing.JButton buttonOrgMng;
+    private javax.swing.JLabel jpanelLabel1;
+    private javax.swing.JLabel labelEnt;
+    private javax.swing.JLabel labelHeader1;
+    private javax.swing.JLabel labelVal;
     // End of variables declaration//GEN-END:variables
 }

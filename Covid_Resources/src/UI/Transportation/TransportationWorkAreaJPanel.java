@@ -7,8 +7,8 @@ package UI.Transportation;
 import Model.Account;
 import Model.EcoSystem;
 import Model.Organization.Organization;
-import Model.WorkQueue.TransportationWorkRequest;
-import Model.WorkQueue.WorkRequest;
+import Model.WorkQueue.Transportation_WorkRequest;
+import Model.WorkQueue.Work_Request;
 import java.awt.CardLayout;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
@@ -46,29 +46,29 @@ private EcoSystem eco;
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        buttonrequestbutton = new javax.swing.JButton();
-        mainlabel = new javax.swing.JLabel();
-        jpanelscroll2 = new javax.swing.JScrollPane();
+        buttonprocessreq = new javax.swing.JButton();
+        mainlabel1 = new javax.swing.JLabel();
+        jpanelscroll1 = new javax.swing.JScrollPane();
         workreqTble = new javax.swing.JTable();
-        refreshbutton = new javax.swing.JButton();
+        buttonRefresh = new javax.swing.JButton();
         buttonback = new javax.swing.JButton();
-        buttonassign = new javax.swing.JButton();
+        buttonAssign = new javax.swing.JButton();
 
         setBackground(new java.awt.Color(153, 204, 255));
 
-        buttonrequestbutton.setBackground(new java.awt.Color(0, 51, 153));
-        buttonrequestbutton.setForeground(new java.awt.Color(255, 255, 255));
-        buttonrequestbutton.setText("Process request");
-        buttonrequestbutton.addActionListener(new java.awt.event.ActionListener() {
+        buttonprocessreq.setBackground(new java.awt.Color(0, 51, 153));
+        buttonprocessreq.setForeground(new java.awt.Color(255, 255, 255));
+        buttonprocessreq.setText("Process request");
+        buttonprocessreq.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                buttonrequestbuttonActionPerformed(evt);
+                buttonprocessreqActionPerformed(evt);
             }
         });
 
-        mainlabel.setFont(new java.awt.Font("Tahoma", 1, 36)); // NOI18N
-        mainlabel.setForeground(new java.awt.Color(0, 51, 153));
-        mainlabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/transport.png"))); // NOI18N
-        mainlabel.setText("TRANSPORTATION WORK AREA");
+        mainlabel1.setFont(new java.awt.Font("Tahoma", 1, 36)); // NOI18N
+        mainlabel1.setForeground(new java.awt.Color(0, 51, 153));
+        mainlabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/transport.png"))); // NOI18N
+        mainlabel1.setText("TRANSPORTATION WORK AREA");
 
         workreqTble.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -78,14 +78,14 @@ private EcoSystem eco;
                 "Hospital Name", "Sender", "Status", "Message", "Haste"
             }
         ));
-        jpanelscroll2.setViewportView(workreqTble);
+        jpanelscroll1.setViewportView(workreqTble);
 
-        refreshbutton.setBackground(new java.awt.Color(0, 51, 153));
-        refreshbutton.setForeground(new java.awt.Color(255, 255, 255));
-        refreshbutton.setText("Refresh");
-        refreshbutton.addActionListener(new java.awt.event.ActionListener() {
+        buttonRefresh.setBackground(new java.awt.Color(0, 51, 153));
+        buttonRefresh.setForeground(new java.awt.Color(255, 255, 255));
+        buttonRefresh.setText("Refresh");
+        buttonRefresh.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                refreshbuttonActionPerformed(evt);
+                buttonRefreshActionPerformed(evt);
             }
         });
 
@@ -98,12 +98,12 @@ private EcoSystem eco;
             }
         });
 
-        buttonassign.setBackground(new java.awt.Color(0, 51, 153));
-        buttonassign.setForeground(new java.awt.Color(255, 255, 255));
-        buttonassign.setText("Assign");
-        buttonassign.addActionListener(new java.awt.event.ActionListener() {
+        buttonAssign.setBackground(new java.awt.Color(0, 51, 153));
+        buttonAssign.setForeground(new java.awt.Color(255, 255, 255));
+        buttonAssign.setText("Assign");
+        buttonAssign.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                buttonassignActionPerformed(evt);
+                buttonAssignActionPerformed(evt);
             }
         });
 
@@ -116,52 +116,52 @@ private EcoSystem eco;
                     .addGroup(layout.createSequentialGroup()
                         .addGap(157, 157, 157)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jpanelscroll2, javax.swing.GroupLayout.PREFERRED_SIZE, 687, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jpanelscroll1, javax.swing.GroupLayout.PREFERRED_SIZE, 687, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGroup(layout.createSequentialGroup()
                                 .addGap(66, 66, 66)
-                                .addComponent(mainlabel))))
+                                .addComponent(mainlabel1))))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(168, 168, 168)
                         .addComponent(buttonback)
                         .addGap(43, 43, 43)
-                        .addComponent(buttonassign)
+                        .addComponent(buttonAssign)
                         .addGap(51, 51, 51)
-                        .addComponent(refreshbutton, javax.swing.GroupLayout.PREFERRED_SIZE, 136, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(buttonRefresh, javax.swing.GroupLayout.PREFERRED_SIZE, 136, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(62, 62, 62)
-                        .addComponent(buttonrequestbutton)))
+                        .addComponent(buttonprocessreq)))
                 .addContainerGap(249, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(mainlabel, javax.swing.GroupLayout.PREFERRED_SIZE, 121, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(mainlabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 121, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(68, 68, 68)
-                .addComponent(jpanelscroll2, javax.swing.GroupLayout.PREFERRED_SIZE, 278, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jpanelscroll1, javax.swing.GroupLayout.PREFERRED_SIZE, 278, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(63, 63, 63)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(buttonback)
-                    .addComponent(buttonassign)
-                    .addComponent(refreshbutton)
-                    .addComponent(buttonrequestbutton))
+                    .addComponent(buttonAssign)
+                    .addComponent(buttonRefresh)
+                    .addComponent(buttonprocessreq))
                 .addContainerGap(53, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
-    private void buttonrequestbuttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonrequestbuttonActionPerformed
+    private void buttonprocessreqActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonprocessreqActionPerformed
         // TODO add your handling code here:
         int selectedRow = workreqTble.getSelectedRow();
         if (selectedRow < 0){JOptionPane.showMessageDialog(null, "Please select a row!");
-}TransportationWorkRequest request = (TransportationWorkRequest)workreqTble.getValueAt(selectedRow, 0);
+}Transportation_WorkRequest request = (Transportation_WorkRequest)workreqTble.getValueAt(selectedRow, 0);
 request.setStatus("Processing");
 CardLayout layout = (CardLayout) upperConatiner.getLayout();
 upperConatiner.add("ProcessRequest", new UI.Transportation.ProcessRequestJPanel(upperConatiner,request));
 layout.next(upperConatiner);
-    }//GEN-LAST:event_buttonrequestbuttonActionPerformed
+    }//GEN-LAST:event_buttonprocessreqActionPerformed
 
-    private void refreshbuttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_refreshbuttonActionPerformed
+    private void buttonRefreshActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonRefreshActionPerformed
         populateTable();
-    }//GEN-LAST:event_refreshbuttonActionPerformed
+    }//GEN-LAST:event_buttonRefreshActionPerformed
 
     private void buttonbackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonbackActionPerformed
         upperConatiner.remove(this);
@@ -169,24 +169,24 @@ layout.next(upperConatiner);
         layout.previous(upperConatiner);
     }//GEN-LAST:event_buttonbackActionPerformed
 
-    private void buttonassignActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonassignActionPerformed
+    private void buttonAssignActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonAssignActionPerformed
         int selectedRow = workreqTble.getSelectedRow();
         if (selectedRow < 0){
             return;
         }
-        TransportationWorkRequest request = (TransportationWorkRequest)workreqTble.getValueAt(selectedRow, 0);
+        Transportation_WorkRequest request = (Transportation_WorkRequest)workreqTble.getValueAt(selectedRow, 0);
         request.setReceiver(acc);
         request.setStatus("Assigned");
-    }//GEN-LAST:event_buttonassignActionPerformed
+    }//GEN-LAST:event_buttonAssignActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton buttonassign;
+    private javax.swing.JButton buttonAssign;
+    private javax.swing.JButton buttonRefresh;
     private javax.swing.JButton buttonback;
-    private javax.swing.JButton buttonrequestbutton;
-    private javax.swing.JScrollPane jpanelscroll2;
-    private javax.swing.JLabel mainlabel;
-    private javax.swing.JButton refreshbutton;
+    private javax.swing.JButton buttonprocessreq;
+    private javax.swing.JScrollPane jpanelscroll1;
+    private javax.swing.JLabel mainlabel1;
     private javax.swing.JTable workreqTble;
     // End of variables declaration//GEN-END:variables
 
@@ -194,13 +194,13 @@ layout.next(upperConatiner);
        // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
       DefaultTableModel model = (DefaultTableModel)workreqTble.getModel();
         model.setRowCount(0);
-        for(WorkRequest request : org.getWQ().getWorkRequestList()){
+        for(Work_Request request : org.getWQ().getWorkRequestList()){
             Object[] row = new Object[7];
-            row[0] = ((TransportationWorkRequest) request);
+            row[0] = ((Transportation_WorkRequest) request);
             row[1] = request.getSender().getEmp().getEName();
-            row[2] = ((TransportationWorkRequest) request).getEquipmentinfo();
-            row[3] = ((TransportationWorkRequest) request). getHospitalName();
-            row[4] = ((TransportationWorkRequest) request). getUrgency();
+            row[2] = ((Transportation_WorkRequest) request).getEquipmentinfo();
+            row[3] = ((Transportation_WorkRequest) request). getHospitalName();
+            row[4] = ((Transportation_WorkRequest) request). getUrgency();
             row[5] = request.getStatus();
             row[6] = request.getRequestDate();
             model.addRow(row);

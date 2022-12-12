@@ -9,9 +9,9 @@ import Model.EcoSystem;
 import Model.EnterPrise;
 import Model.Network;
 import Model.Organization.Organization;
-import Model.WorkQueue.HealthcareEquipmentWorkRequest;
-import Model.WorkQueue.WorkRequest;
-import Model.WorkQueue.TransportationWorkRequest;
+import Model.WorkQueue.HealthCareEquipment_WorkRequest;
+import Model.WorkQueue.Work_Request;
+import Model.WorkQueue.Transportation_WorkRequest;
 import java.awt.CardLayout;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
@@ -54,76 +54,76 @@ populateHealthCareReqTbl();
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        buttonassign = new javax.swing.JButton();
-        buttonback = new javax.swing.JButton();
-        processrequestbutton = new javax.swing.JButton();
-        viewrequeststatusbutton = new javax.swing.JButton();
-        buttonrefresh = new javax.swing.JButton();
-        mainbutton = new javax.swing.JLabel();
+        ButtonAssignment = new javax.swing.JButton();
+        Buttonback = new javax.swing.JButton();
+        ProcessRequestButton = new javax.swing.JButton();
+        ViewReqStatusButton = new javax.swing.JButton();
+        buttonRefresh = new javax.swing.JButton();
+        MainLabel = new javax.swing.JLabel();
         jpanelscroll1 = new javax.swing.JScrollPane();
         jTable1 = new javax.swing.JTable();
-        jlabel2 = new javax.swing.JLabel();
+        jLabel1 = new javax.swing.JLabel();
 
         setBackground(new java.awt.Color(153, 204, 255));
         setMinimumSize(new java.awt.Dimension(900, 665));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        buttonassign.setBackground(new java.awt.Color(0, 51, 153));
-        buttonassign.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        buttonassign.setForeground(new java.awt.Color(255, 255, 255));
-        buttonassign.setText("ASSIGN TO ME");
-        buttonassign.addActionListener(new java.awt.event.ActionListener() {
+        ButtonAssignment.setBackground(new java.awt.Color(0, 51, 153));
+        ButtonAssignment.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        ButtonAssignment.setForeground(new java.awt.Color(255, 255, 255));
+        ButtonAssignment.setText("ASSIGN TO ME");
+        ButtonAssignment.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                buttonassignActionPerformed(evt);
+                ButtonAssignmentActionPerformed(evt);
             }
         });
-        add(buttonassign, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 470, 167, 43));
+        add(ButtonAssignment, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 470, 167, 43));
 
-        buttonback.setBackground(new java.awt.Color(0, 51, 153));
-        buttonback.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        buttonback.setForeground(new java.awt.Color(255, 255, 255));
-        buttonback.setText("<<Back");
-        buttonback.addActionListener(new java.awt.event.ActionListener() {
+        Buttonback.setBackground(new java.awt.Color(0, 51, 153));
+        Buttonback.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        Buttonback.setForeground(new java.awt.Color(255, 255, 255));
+        Buttonback.setText("<<Back");
+        Buttonback.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                buttonbackActionPerformed(evt);
+                ButtonbackActionPerformed(evt);
             }
         });
-        add(buttonback, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 470, 105, 43));
+        add(Buttonback, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 470, 105, 43));
 
-        processrequestbutton.setBackground(new java.awt.Color(0, 51, 153));
-        processrequestbutton.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        processrequestbutton.setForeground(new java.awt.Color(255, 255, 255));
-        processrequestbutton.setText("PROCESS REQUEST>>>");
-        processrequestbutton.addActionListener(new java.awt.event.ActionListener() {
+        ProcessRequestButton.setBackground(new java.awt.Color(0, 51, 153));
+        ProcessRequestButton.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        ProcessRequestButton.setForeground(new java.awt.Color(255, 255, 255));
+        ProcessRequestButton.setText("PROCESS REQUEST>>>");
+        ProcessRequestButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                processrequestbuttonActionPerformed(evt);
+                ProcessRequestButtonActionPerformed(evt);
             }
         });
-        add(processrequestbutton, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 470, 257, 43));
+        add(ProcessRequestButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 470, 257, 43));
 
-        viewrequeststatusbutton.setBackground(new java.awt.Color(0, 51, 153));
-        viewrequeststatusbutton.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        viewrequeststatusbutton.setForeground(new java.awt.Color(255, 255, 255));
-        viewrequeststatusbutton.setText("VIEW REQUEST STATUS>>");
-        viewrequeststatusbutton.addActionListener(new java.awt.event.ActionListener() {
+        ViewReqStatusButton.setBackground(new java.awt.Color(0, 51, 153));
+        ViewReqStatusButton.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        ViewReqStatusButton.setForeground(new java.awt.Color(255, 255, 255));
+        ViewReqStatusButton.setText("VIEW REQUEST STATUS>>");
+        ViewReqStatusButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                viewrequeststatusbuttonActionPerformed(evt);
+                ViewReqStatusButtonActionPerformed(evt);
             }
         });
-        add(viewrequeststatusbutton, new org.netbeans.lib.awtextra.AbsoluteConstraints(790, 470, -1, 43));
+        add(ViewReqStatusButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(790, 470, -1, 43));
 
-        buttonrefresh.setBackground(new java.awt.Color(0, 51, 153));
-        buttonrefresh.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        buttonrefresh.setForeground(new java.awt.Color(255, 255, 255));
-        buttonrefresh.setText("Refresh");
-        add(buttonrefresh, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 100, 130, 36));
+        buttonRefresh.setBackground(new java.awt.Color(0, 51, 153));
+        buttonRefresh.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        buttonRefresh.setForeground(new java.awt.Color(255, 255, 255));
+        buttonRefresh.setText("Refresh");
+        add(buttonRefresh, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 100, 130, 36));
 
-        mainbutton.setBackground(new java.awt.Color(153, 204, 255));
-        mainbutton.setFont(new java.awt.Font("Tahoma", 1, 36)); // NOI18N
-        mainbutton.setForeground(new java.awt.Color(0, 51, 153));
-        mainbutton.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        mainbutton.setText("REQUESTS FROM HOSPITALS");
-        add(mainbutton, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, -10, 648, 113));
+        MainLabel.setBackground(new java.awt.Color(153, 204, 255));
+        MainLabel.setFont(new java.awt.Font("Tahoma", 1, 36)); // NOI18N
+        MainLabel.setForeground(new java.awt.Color(0, 51, 153));
+        MainLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        MainLabel.setText("REQUESTS FROM HOSPITALS");
+        add(MainLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, -10, 648, 113));
 
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -145,33 +145,33 @@ populateHealthCareReqTbl();
 
         add(jpanelscroll1, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 160, 909, 279));
 
-        jlabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/steth.png"))); // NOI18N
-        jlabel2.setText("jLabel1");
-        add(jlabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(1100, 60, 170, 160));
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/steth.png"))); // NOI18N
+        jLabel1.setText("jLabel1");
+        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(1100, 60, 170, 160));
     }// </editor-fold>//GEN-END:initComponents
 
-    private void buttonassignActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonassignActionPerformed
+    private void ButtonAssignmentActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButtonAssignmentActionPerformed
         int selectedRow = jTable1.getSelectedRow();
 
         if (selectedRow < 0){
             JOptionPane.showMessageDialog(null, "Please select a row!");
         }
 
-        HealthcareEquipmentWorkRequest request = (HealthcareEquipmentWorkRequest)jTable1.getValueAt(selectedRow, 0);
+        HealthCareEquipment_WorkRequest request = (HealthCareEquipment_WorkRequest)jTable1.getValueAt(selectedRow, 0);
         request.setReceiver(acc);
         request.setStatus("Pending");
         request.setTransportrequestStatus("N");
 
         populateHealthCareReqTbl();        // TODO add your handling code here:
-    }//GEN-LAST:event_buttonassignActionPerformed
+    }//GEN-LAST:event_ButtonAssignmentActionPerformed
 
-    private void buttonbackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonbackActionPerformed
+    private void ButtonbackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButtonbackActionPerformed
         upperContainer.remove(this);
         CardLayout layout = (CardLayout) upperContainer.getLayout();
         layout.previous(upperContainer);        // TODO add your handling code here:
-    }//GEN-LAST:event_buttonbackActionPerformed
+    }//GEN-LAST:event_ButtonbackActionPerformed
 
-    private void processrequestbuttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_processrequestbuttonActionPerformed
+    private void ProcessRequestButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ProcessRequestButtonActionPerformed
         int selectedRow = jTable1.getSelectedRow();
 
         if (selectedRow < 0){
@@ -179,22 +179,22 @@ populateHealthCareReqTbl();
             return;
         }
 
-        HealthcareEquipmentWorkRequest request = (HealthcareEquipmentWorkRequest)jTable1.getValueAt(selectedRow, 0);
+        HealthCareEquipment_WorkRequest request = (HealthCareEquipment_WorkRequest)jTable1.getValueAt(selectedRow, 0);
         System.out.println("hello");
         request.setStatus("Request sent to transport department for delivery");
-        TransportationWorkRequest transportrequest=new TransportationWorkRequest();
-        transportrequest=new TransportationWorkRequest();
+        Transportation_WorkRequest transportrequest=new Transportation_WorkRequest();
+        transportrequest=new Transportation_WorkRequest();
      transportrequest.setSender(acc);
 
         transportrequest.setHospitalName(request.getHospitalName());
 
         transportrequest.setUrgency(request.getUrgencyLevel());
         transportrequest.setStatus("Sent");
-        transportrequest.setEquipmentinfo(("Name: "+request.getEquipmentName())+","+ "Qauntity: " +( request.getQuantity()));
+        transportrequest.setEquipmentinfo(("Name: "+request.getEquipName())+","+ "Qauntity: " +( request.getQuantity()));
         request.setExpectedArrivalTime(request.getMessage());
         request.setTransportrequestStatus("Y");
-        if(ntk.getNetwork_Name().equals(this.ntk.getNetwork_Name())){
-            for(EnterPrise enterprise :ntk.getDirectoEnterpri().getEnterpList() ){
+        if(ntk.getNetwork_name().equals(this.ntk.getNetwork_name())){
+            for(EnterPrise enterprise :ntk.getEnterpriseRepo().getEnterpRepo() ){
                 System.out.println("****" +enterprise.getOrgName());
                 System.out.println("******"+enterprise.getEnterprise_type());
                 for(Organization organization:enterprise.getOrgaDirectory().getOrganizations()){
@@ -207,7 +207,7 @@ populateHealthCareReqTbl();
                         int requestId=transportrequest.getUniqueId();
                         System.out.println("***" +requestId);
                         transportrequest.setRequestId(requestId);
-                        acc.getWorkQueue().getWorkRequestList().add(transportrequest);
+                        acc.getWorkQ().getWorkRequestList().add(transportrequest);
                         organization.getWQ().getWorkRequestList().add(transportrequest);
 
                     }
@@ -228,25 +228,25 @@ populateHealthCareReqTbl();
         }
         // populateTransportWorkRequest();
         // TODO add your handling code here:
-    }//GEN-LAST:event_processrequestbuttonActionPerformed
+    }//GEN-LAST:event_ProcessRequestButtonActionPerformed
 
-    private void viewrequeststatusbuttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_viewrequeststatusbuttonActionPerformed
+    private void ViewReqStatusButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ViewReqStatusButtonActionPerformed
         CardLayout layout = (CardLayout) upperContainer.getLayout();
         upperContainer.add("ProcessRequest", new ViewTransportationRequestJPanel(upperContainer,acc));
         layout.next(upperContainer);        // TODO add your handling code here:
-    }//GEN-LAST:event_viewrequeststatusbuttonActionPerformed
+    }//GEN-LAST:event_ViewReqStatusButtonActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton buttonassign;
-    private javax.swing.JButton buttonback;
-    private javax.swing.JButton buttonrefresh;
+    private javax.swing.JButton ButtonAssignment;
+    private javax.swing.JButton Buttonback;
+    private javax.swing.JLabel MainLabel;
+    private javax.swing.JButton ProcessRequestButton;
+    private javax.swing.JButton ViewReqStatusButton;
+    private javax.swing.JButton buttonRefresh;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JTable jTable1;
-    private javax.swing.JLabel jlabel2;
     private javax.swing.JScrollPane jpanelscroll1;
-    private javax.swing.JLabel mainbutton;
-    private javax.swing.JButton processrequestbutton;
-    private javax.swing.JButton viewrequeststatusbutton;
     // End of variables declaration//GEN-END:variables
 
     private void populateHealthCareReqTbl() {
@@ -256,16 +256,16 @@ populateHealthCareReqTbl();
         
         model.setRowCount(0);
         System.out.println(org.getWQ().getWorkRequestList().size());
-        for(WorkRequest request : org.getWQ().getWorkRequestList()){
+        for(Work_Request request : org.getWQ().getWorkRequestList()){
             Object[] row = new Object[6];
-            row[0]=((HealthcareEquipmentWorkRequest) request);
-            String urgencyLevel = ((HealthcareEquipmentWorkRequest) request).getUrgencyLevel();
-            int quantity = ((HealthcareEquipmentWorkRequest) request).getQuantity();
+            row[0]=((HealthCareEquipment_WorkRequest) request);
+            String urgencyLevel = ((HealthCareEquipment_WorkRequest) request).getUrgencyLevel();
+            int quantity = ((HealthCareEquipment_WorkRequest) request).getQuantity();
             row[1] = urgencyLevel;
             row[2]=quantity;
-            row[3]=request.getSender().getUsrnm();
+            row[3]=request.getSender().getUsernm();
             
-//            row[4]=request.getReceiver().getUsrnm();
+//            row[4]=request.getReceiver().getUsernm();
             
             model.addRow(row);
         }

@@ -12,8 +12,8 @@ public class Supplier {
     
     private String name;
     private String type;
-    private String location;
-    private Product product;
+    private String loc;
+    private Product prod;
 
     public String getName() {
         return name;
@@ -31,20 +31,20 @@ public class Supplier {
         this.type = type;
     }
 
-    public String getLocation() {
-        return location;
+    public String getLoc() {
+        return loc;
     }
 
-    public void setLocation(String location) {
-        this.location = location;
+    public void setLoc(String loc) {
+        this.loc = loc;
     }
 
-    public Product getProduct() {
-        return product;
+    public Product getProd() {
+        return prod;
     }
 
-    public void setProduct(Product product) {
-        this.product = product;
+    public void setProd(Product prod) {
+        this.prod = prod;
     }
     
 }

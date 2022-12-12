@@ -9,9 +9,9 @@ import Model.Doctor;
 import Model.EcoSystem;
 import Model.EnterPrise;
 import Model.Network;
-import Model.Organization.Organization_Doctor;
-import Model.PrescriptionList;
-import Model.WorkQueue.DoctorWorkRequest;
+import Model.Organization.DoctorOrganization;
+import Model.PrescriptionRepo;
+import Model.WorkQueue.Doctor_WorkRequest;
 import java.awt.CardLayout;
 import javax.swing.JPanel;
 import org.netbeans.lib.awtextra.AbsoluteLayout;
@@ -25,12 +25,12 @@ public class Doctor_WorkArea extends javax.swing.JPanel {
 
 
 private JPanel userContainer;
-private Organization_Doctor org_doc;
+private DoctorOrganization org_doc;
 private Account ua;
 private EnterPrise enter;
 private Doctor doctor;
-private PrescriptionList p_list;
-private DoctorWorkRequest dwr ;
+private PrescriptionRepo p_repo;
+private Doctor_WorkRequest dwr ;
 private Network network;
 private EcoSystem ecosystem;
 
@@ -43,7 +43,7 @@ private EcoSystem ecosystem;
      */
     public Doctor_WorkArea(JPanel userContainer,
 Account ua,
-Organization_Doctor org_doc,
+DoctorOrganization org_doc,
  EnterPrise enter,
 EcoSystem ecosystem,
 Network network
@@ -71,29 +71,29 @@ network();
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jLabel1 = new javax.swing.JLabel();
-        Pres_Button = new javax.swing.JButton();
-        Manage_Equipment_Button = new javax.swing.JButton();
+        jlogo1 = new javax.swing.JLabel();
+        pressbutton = new javax.swing.JButton();
+        manage_equip_button = new javax.swing.JButton();
 
         setBackground(new java.awt.Color(153, 204, 255));
 
-        jLabel1.setText("Doctor Work Area");
+        jlogo1.setText("Doctor Work Area");
 
-        Pres_Button.setBackground(new java.awt.Color(0, 51, 153));
-        Pres_Button.setForeground(new java.awt.Color(255, 255, 255));
-        Pres_Button.setText("Precribe Medicine");
-        Pres_Button.addActionListener(new java.awt.event.ActionListener() {
+        pressbutton.setBackground(new java.awt.Color(0, 51, 153));
+        pressbutton.setForeground(new java.awt.Color(255, 255, 255));
+        pressbutton.setText("Precribe Medicine");
+        pressbutton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                Pres_ButtonActionPerformed(evt);
+                pressbuttonActionPerformed(evt);
             }
         });
 
-        Manage_Equipment_Button.setBackground(new java.awt.Color(0, 51, 153));
-        Manage_Equipment_Button.setForeground(new java.awt.Color(255, 255, 255));
-        Manage_Equipment_Button.setText("Manage_Equipment");
-        Manage_Equipment_Button.addActionListener(new java.awt.event.ActionListener() {
+        manage_equip_button.setBackground(new java.awt.Color(0, 51, 153));
+        manage_equip_button.setForeground(new java.awt.Color(255, 255, 255));
+        manage_equip_button.setText("Manage_Equipment");
+        manage_equip_button.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                Manage_Equipment_ButtonActionPerformed(evt);
+                manage_equip_buttonActionPerformed(evt);
             }
         });
 
@@ -105,48 +105,48 @@ network();
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addGap(160, 160, 160)
-                        .addComponent(jLabel1))
+                        .addComponent(jlogo1))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(46, 46, 46)
-                        .addComponent(Pres_Button)
+                        .addComponent(pressbutton)
                         .addGap(76, 76, 76)
-                        .addComponent(Manage_Equipment_Button)))
+                        .addComponent(manage_equip_button)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(34, 34, 34)
-                .addComponent(jLabel1)
+                .addComponent(jlogo1)
                 .addGap(54, 54, 54)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(Pres_Button)
-                    .addComponent(Manage_Equipment_Button))
+                    .addComponent(pressbutton)
+                    .addComponent(manage_equip_button))
                 .addContainerGap(563, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
-    private void Manage_Equipment_ButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Manage_Equipment_ButtonActionPerformed
+    private void manage_equip_buttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_manage_equip_buttonActionPerformed
         // TODO add your handling code here:
 CardLayout abs = (CardLayout)userContainer.getLayout();
 userContainer.add("PrescriptionJPanel", new UI.Doctor.HealthCareEquipmentManagementJpanel(userContainer, ua,org_doc,enter,ecosystem,network));
 abs.next(userContainer);
-    }//GEN-LAST:event_Manage_Equipment_ButtonActionPerformed
+    }//GEN-LAST:event_manage_equip_buttonActionPerformed
 
-    private void Pres_ButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Pres_ButtonActionPerformed
+    private void pressbuttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pressbuttonActionPerformed
         // TODO add your handling code here:
 CardLayout abs = (CardLayout)userContainer.getLayout();
-userContainer.add("PrescriptionJPanel", new UI.Doctor.PrescriptionJPanel(userContainer,p_list,ua,enter,org_doc));
+userContainer.add("PrescriptionJPanel", new UI.Doctor.PrescriptionJPanel(userContainer,p_repo,ua,enter,org_doc));
 abs.next(userContainer);
-    }//GEN-LAST:event_Pres_ButtonActionPerformed
+    }//GEN-LAST:event_pressbuttonActionPerformed
 
 private void network(){
-network.getNetwork_Name();
+network.getNetwork_name();
 }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton Manage_Equipment_Button;
-    private javax.swing.JButton Pres_Button;
-    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jlogo1;
+    private javax.swing.JButton manage_equip_button;
+    private javax.swing.JButton pressbutton;
     // End of variables declaration//GEN-END:variables
 }
