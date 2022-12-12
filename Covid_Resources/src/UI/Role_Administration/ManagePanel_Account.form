@@ -23,53 +23,53 @@
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" alignment="1" attributes="0">
               <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-              <Component id="lblHeader" min="-2" max="-2" attributes="0"/>
+              <Component id="labelHeader1" min="-2" max="-2" attributes="0"/>
               <EmptySpace min="-2" pref="297" max="-2" attributes="0"/>
           </Group>
           <Group type="102" attributes="0">
               <EmptySpace min="-2" pref="230" max="-2" attributes="0"/>
-              <Component id="lblOrg" min="-2" max="-2" attributes="0"/>
+              <Component id="labelorg1" min="-2" max="-2" attributes="0"/>
               <EmptySpace min="-2" pref="123" max="-2" attributes="0"/>
-              <Component id="lblEmp" min="-2" pref="94" max="-2" attributes="0"/>
+              <Component id="labelEmp" min="-2" pref="94" max="-2" attributes="0"/>
               <EmptySpace min="-2" pref="139" max="-2" attributes="0"/>
-              <Component id="lblRole" min="-2" pref="94" max="-2" attributes="0"/>
+              <Component id="labelRole" min="-2" pref="94" max="-2" attributes="0"/>
               <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
           </Group>
           <Group type="102" alignment="0" attributes="0">
               <EmptySpace min="-2" pref="183" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="1" max="-2" attributes="0">
-                  <Component id="scrollPane" min="-2" pref="633" max="-2" attributes="0"/>
+                  <Component id="scrollPane1" min="-2" pref="633" max="-2" attributes="0"/>
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace min="10" pref="10" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="102" attributes="0">
-                              <Component id="btnBack" min="-2" pref="117" max="-2" attributes="0"/>
+                              <Component id="buttonback" min="-2" pref="117" max="-2" attributes="0"/>
                               <EmptySpace max="32767" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Group type="102" alignment="1" attributes="0">
                                       <Group type="103" groupAlignment="1" max="-2" attributes="0">
                                           <Group type="102" attributes="0">
-                                              <Component id="lblPwd" min="-2" pref="120" max="-2" attributes="0"/>
+                                              <Component id="labelPwd" min="-2" pref="120" max="-2" attributes="0"/>
                                               <EmptySpace type="separate" max="-2" attributes="0"/>
-                                              <Component id="txtPwd" min="-2" pref="188" max="-2" attributes="0"/>
+                                              <Component id="txtfieldPwd" min="-2" pref="188" max="-2" attributes="0"/>
                                           </Group>
                                           <Group type="102" attributes="0">
-                                              <Component id="lblUsr" min="-2" max="-2" attributes="0"/>
+                                              <Component id="labelUsr" min="-2" max="-2" attributes="0"/>
                                               <EmptySpace max="32767" attributes="0"/>
-                                              <Component id="txtUser" min="-2" pref="188" max="-2" attributes="0"/>
+                                              <Component id="txtfieldUser" min="-2" pref="188" max="-2" attributes="0"/>
                                           </Group>
                                       </Group>
                                       <EmptySpace min="-2" pref="138" max="-2" attributes="0"/>
                                   </Group>
-                                  <Component id="btnCreate" alignment="1" min="-2" max="-2" attributes="0"/>
+                                  <Component id="buttonCreate" alignment="1" min="-2" max="-2" attributes="0"/>
                               </Group>
                           </Group>
                           <Group type="102" attributes="0">
-                              <Component id="cmbOrg" min="-2" pref="188" max="-2" attributes="0"/>
+                              <Component id="cmbBoxOrg" min="-2" pref="188" max="-2" attributes="0"/>
                               <EmptySpace min="-2" pref="29" max="-2" attributes="0"/>
-                              <Component id="cmbEmp" min="-2" pref="188" max="-2" attributes="0"/>
+                              <Component id="cmbBoxEmp" min="-2" pref="188" max="-2" attributes="0"/>
                               <EmptySpace max="32767" attributes="0"/>
-                              <Component id="cmbRole" min="-2" pref="188" max="-2" attributes="0"/>
+                              <Component id="cmbBoxRole" min="-2" pref="188" max="-2" attributes="0"/>
                           </Group>
                       </Group>
                   </Group>
@@ -82,35 +82,35 @@
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" alignment="1" attributes="0">
               <EmptySpace min="-2" pref="54" max="-2" attributes="0"/>
-              <Component id="lblHeader" min="-2" max="-2" attributes="0"/>
+              <Component id="labelHeader1" min="-2" max="-2" attributes="0"/>
               <EmptySpace min="-2" pref="75" max="-2" attributes="0"/>
-              <Component id="scrollPane" min="-2" pref="255" max="-2" attributes="0"/>
+              <Component id="scrollPane1" min="-2" pref="255" max="-2" attributes="0"/>
               <EmptySpace min="-2" pref="61" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="lblOrg" alignment="3" min="-2" pref="37" max="-2" attributes="0"/>
-                  <Component id="lblEmp" alignment="3" min="-2" pref="37" max="-2" attributes="0"/>
-                  <Component id="lblRole" alignment="3" min="-2" pref="37" max="-2" attributes="0"/>
+                  <Component id="labelorg1" alignment="3" min="-2" pref="37" max="-2" attributes="0"/>
+                  <Component id="labelEmp" alignment="3" min="-2" pref="37" max="-2" attributes="0"/>
+                  <Component id="labelRole" alignment="3" min="-2" pref="37" max="-2" attributes="0"/>
               </Group>
               <EmptySpace max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="cmbOrg" alignment="3" min="-2" pref="37" max="-2" attributes="0"/>
-                  <Component id="cmbEmp" alignment="3" min="-2" pref="37" max="-2" attributes="0"/>
-                  <Component id="cmbRole" alignment="3" min="-2" pref="37" max="-2" attributes="0"/>
+                  <Component id="cmbBoxOrg" alignment="3" min="-2" pref="37" max="-2" attributes="0"/>
+                  <Component id="cmbBoxEmp" alignment="3" min="-2" pref="37" max="-2" attributes="0"/>
+                  <Component id="cmbBoxRole" alignment="3" min="-2" pref="37" max="-2" attributes="0"/>
               </Group>
               <EmptySpace pref="60" max="32767" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="txtUser" alignment="3" min="-2" pref="37" max="-2" attributes="0"/>
-                  <Component id="lblUsr" alignment="3" min="-2" pref="37" max="-2" attributes="0"/>
+                  <Component id="txtfieldUser" alignment="3" min="-2" pref="37" max="-2" attributes="0"/>
+                  <Component id="labelUsr" alignment="3" min="-2" pref="37" max="-2" attributes="0"/>
               </Group>
               <EmptySpace min="-2" pref="48" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="lblPwd" alignment="3" min="-2" pref="37" max="-2" attributes="0"/>
-                  <Component id="txtPwd" alignment="3" min="-2" pref="37" max="-2" attributes="0"/>
+                  <Component id="labelPwd" alignment="3" min="-2" pref="37" max="-2" attributes="0"/>
+                  <Component id="txtfieldPwd" alignment="3" min="-2" pref="37" max="-2" attributes="0"/>
               </Group>
               <EmptySpace min="-2" pref="72" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="btnBack" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="btnCreate" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="buttonback" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="buttonCreate" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace min="-2" pref="65" max="-2" attributes="0"/>
           </Group>
@@ -118,7 +118,7 @@
     </DimensionLayout>
   </Layout>
   <SubComponents>
-    <Component class="javax.swing.JLabel" name="lblHeader">
+    <Component class="javax.swing.JLabel" name="labelHeader1">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Tahoma" size="36" style="1"/>
@@ -129,7 +129,7 @@
         <Property name="text" type="java.lang.String" value="Manage User Account"/>
       </Properties>
     </Component>
-    <Container class="javax.swing.JScrollPane" name="scrollPane">
+    <Container class="javax.swing.JScrollPane" name="scrollPane1">
 
       <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
       <SubComponents>
@@ -148,7 +148,7 @@
         </Component>
       </SubComponents>
     </Container>
-    <Component class="javax.swing.JLabel" name="lblOrg">
+    <Component class="javax.swing.JLabel" name="labelorg1">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Tahoma" size="18" style="0"/>
@@ -156,7 +156,7 @@
         <Property name="text" type="java.lang.String" value="Organization"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JComboBox" name="cmbOrg">
+    <Component class="javax.swing.JComboBox" name="cmbBoxOrg">
       <Properties>
         <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
           <StringArray count="4">
@@ -173,13 +173,13 @@
         </Property>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="cmbOrgActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="cmbBoxOrgActionPerformed"/>
       </Events>
       <AuxValues>
         <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value=""/>
       </AuxValues>
     </Component>
-    <Component class="javax.swing.JLabel" name="lblEmp">
+    <Component class="javax.swing.JLabel" name="labelEmp">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Tahoma" size="18" style="0"/>
@@ -187,7 +187,7 @@
         <Property name="text" type="java.lang.String" value="Employee"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JLabel" name="lblUsr">
+    <Component class="javax.swing.JLabel" name="labelUsr">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Tahoma" size="18" style="0"/>
@@ -195,7 +195,7 @@
         <Property name="text" type="java.lang.String" value="User Name:"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JLabel" name="lblPwd">
+    <Component class="javax.swing.JLabel" name="labelPwd">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Tahoma" size="18" style="0"/>
@@ -203,7 +203,7 @@
         <Property name="text" type="java.lang.String" value="Password:"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JLabel" name="lblRole">
+    <Component class="javax.swing.JLabel" name="labelRole">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Tahoma" size="18" style="0"/>
@@ -211,7 +211,7 @@
         <Property name="text" type="java.lang.String" value="Role"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JComboBox" name="cmbRole">
+    <Component class="javax.swing.JComboBox" name="cmbBoxRole">
       <Properties>
         <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
           <StringArray count="4">
@@ -228,13 +228,13 @@
         </Property>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="cmbRoleActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="cmbBoxRoleActionPerformed"/>
       </Events>
       <AuxValues>
         <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value=""/>
       </AuxValues>
     </Component>
-    <Component class="javax.swing.JComboBox" name="cmbEmp">
+    <Component class="javax.swing.JComboBox" name="cmbBoxEmp">
       <Properties>
         <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
           <StringArray count="4">
@@ -251,20 +251,20 @@
         </Property>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="cmbEmpActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="cmbBoxEmpActionPerformed"/>
       </Events>
       <AuxValues>
         <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value=""/>
       </AuxValues>
     </Component>
-    <Component class="javax.swing.JTextField" name="txtUser">
+    <Component class="javax.swing.JTextField" name="txtfieldUser">
     </Component>
-    <Component class="javax.swing.JTextField" name="txtPwd">
+    <Component class="javax.swing.JTextField" name="txtfieldPwd">
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtPwdActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtfieldPwdActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JButton" name="btnBack">
+    <Component class="javax.swing.JButton" name="buttonback">
       <Properties>
         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
           <Color blue="99" green="33" red="0" type="rgb"/>
@@ -278,10 +278,10 @@
         <Property name="text" type="java.lang.String" value="&lt;&lt; Back"/>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnBackActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="buttonbackActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JButton" name="btnCreate">
+    <Component class="javax.swing.JButton" name="buttonCreate">
       <Properties>
         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
           <Color blue="99" green="33" red="0" type="rgb"/>
@@ -298,7 +298,7 @@
         <Property name="text" type="java.lang.String" value="Create User Account"/>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnCreateActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="buttonCreateActionPerformed"/>
       </Events>
     </Component>
   </SubComponents>

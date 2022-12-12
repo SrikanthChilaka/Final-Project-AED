@@ -4,7 +4,7 @@
  */
 package UI.Role_Supplier;
 
-import Model.WorkQueue.SupplierWorkRequest;
+import Model.WorkQueue.Supplier_WorkRequest;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 
@@ -15,12 +15,12 @@ import javax.swing.JPanel;
 public class ManageWorkRequestPanel_Supplier extends javax.swing.JPanel {
     
     JPanel panel;
-    SupplierWorkRequest swq;
+    Supplier_WorkRequest swq;
 
     /**
      * Creates new form ManageWorkRequestPanel_Supplier
      */
-    public ManageWorkRequestPanel_Supplier(JPanel panel,SupplierWorkRequest swq) {
+    public ManageWorkRequestPanel_Supplier(JPanel panel,Supplier_WorkRequest swq) {
         initComponents();
         this.panel = panel;
         this.swq = swq;
@@ -35,40 +35,40 @@ public class ManageWorkRequestPanel_Supplier extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        lblHeader = new javax.swing.JLabel();
-        lblDate = new javax.swing.JLabel();
-        txtDate = new javax.swing.JTextField();
-        btnBack = new javax.swing.JButton();
-        btnUpdate = new javax.swing.JButton();
-        jLabel1 = new javax.swing.JLabel();
+        labelHeader = new javax.swing.JLabel();
+        labeldod = new javax.swing.JLabel();
+        txtfieldDate = new javax.swing.JTextField();
+        buttonBack = new javax.swing.JButton();
+        buttonUpdate = new javax.swing.JButton();
+        jLabel2 = new javax.swing.JLabel();
 
         setBackground(new java.awt.Color(153, 204, 255));
 
-        lblHeader.setFont(new java.awt.Font("Tahoma", 1, 36)); // NOI18N
-        lblHeader.setForeground(new java.awt.Color(0, 51, 153));
-        lblHeader.setText("PROCESSING SUPPLIER REQUEST");
+        labelHeader.setFont(new java.awt.Font("Tahoma", 1, 36)); // NOI18N
+        labelHeader.setForeground(new java.awt.Color(0, 51, 153));
+        labelHeader.setText("PROCESSING SUPPLIER REQUEST");
 
-        lblDate.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        lblDate.setForeground(new java.awt.Color(0, 51, 153));
-        lblDate.setText("Select Date of Delivery:");
+        labeldod.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        labeldod.setForeground(new java.awt.Color(0, 51, 153));
+        labeldod.setText("Select Date of Delivery:");
 
-        btnBack.setBackground(new java.awt.Color(0, 51, 153));
-        btnBack.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        btnBack.setForeground(new java.awt.Color(255, 255, 255));
-        btnBack.setText("<<Back");
+        buttonBack.setBackground(new java.awt.Color(0, 51, 153));
+        buttonBack.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        buttonBack.setForeground(new java.awt.Color(255, 255, 255));
+        buttonBack.setText("<<Back");
 
-        btnUpdate.setBackground(new java.awt.Color(0, 51, 153));
-        btnUpdate.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        btnUpdate.setForeground(new java.awt.Color(255, 255, 255));
-        btnUpdate.setText("Update Status");
-        btnUpdate.addActionListener(new java.awt.event.ActionListener() {
+        buttonUpdate.setBackground(new java.awt.Color(0, 51, 153));
+        buttonUpdate.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        buttonUpdate.setForeground(new java.awt.Color(255, 255, 255));
+        buttonUpdate.setText("Update Status");
+        buttonUpdate.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnUpdateActionPerformed(evt);
+                buttonUpdateActionPerformed(evt);
             }
         });
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/supplier.jpg"))); // NOI18N
-        jLabel1.setText("jLabel1");
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/supplier.jpg"))); // NOI18N
+        jLabel2.setText("jLabel1");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
@@ -76,18 +76,18 @@ public class ManageWorkRequestPanel_Supplier extends javax.swing.JPanel {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(38, 38, 38)
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 83, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 83, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(46, 46, 46)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(lblHeader)
+                    .addComponent(labelHeader)
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(lblDate)
-                            .addComponent(btnBack))
+                            .addComponent(labeldod)
+                            .addComponent(buttonBack))
                         .addGap(46, 46, 46)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(btnUpdate)
-                            .addComponent(txtDate, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                            .addComponent(buttonUpdate)
+                            .addComponent(txtfieldDate, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addContainerGap(312, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -95,32 +95,32 @@ public class ManageWorkRequestPanel_Supplier extends javax.swing.JPanel {
             .addGroup(layout.createSequentialGroup()
                 .addGap(43, 43, 43)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(lblHeader)
-                    .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(labelHeader)
+                    .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(39, 39, 39)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(lblDate)
-                    .addComponent(txtDate, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(labeldod)
+                    .addComponent(txtfieldDate, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(78, 78, 78)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btnBack)
-                    .addComponent(btnUpdate))
+                    .addComponent(buttonBack)
+                    .addComponent(buttonUpdate))
                 .addContainerGap(262, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
-    private void btnUpdateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnUpdateActionPerformed
+    private void buttonUpdateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonUpdateActionPerformed
         swq.setStatus("Finished");
         JOptionPane.showMessageDialog(null, "Successfully updated the request!");        // TODO add your handling code here:
-    }//GEN-LAST:event_btnUpdateActionPerformed
+    }//GEN-LAST:event_buttonUpdateActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btnBack;
-    private javax.swing.JButton btnUpdate;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel lblDate;
-    private javax.swing.JLabel lblHeader;
-    private javax.swing.JTextField txtDate;
+    private javax.swing.JButton buttonBack;
+    private javax.swing.JButton buttonUpdate;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel labelHeader;
+    private javax.swing.JLabel labeldod;
+    private javax.swing.JTextField txtfieldDate;
     // End of variables declaration//GEN-END:variables
 }

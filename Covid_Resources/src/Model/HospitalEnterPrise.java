@@ -18,19 +18,10 @@ public HospitalEnterPrise (String Name){
 
 super(Name,EnterPrise.EntType.Hospital);
 
-
-
 }
 //@Override get SupportRole()
 public ArrayList<Role> getRole(){
 return null;
 
 }
-
-
-
-
-
-
-
 }

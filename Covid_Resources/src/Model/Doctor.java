@@ -11,22 +11,22 @@ package Model;
 public class Doctor {
 
     private String Name;
-    private PrescriptionList presList;   
+    private PrescriptionRepo presRepo;   
     public Doctor() {
 
-        presList = new PrescriptionList();
+        presRepo = new PrescriptionRepo();
     }
 
     public void setName(String Name) {
         this.Name = Name;
     }
 
-    public PrescriptionList getPresList() {
-        return presList;
+    public PrescriptionRepo getPresList() {
+        return presRepo;
     }
 
-    public void setPresList(PrescriptionList presList) {
-        this.presList = presList;
+    public void setPresList(PrescriptionRepo presList) {
+        this.presRepo = presList;
     }
     public String getName() {
         return Name;

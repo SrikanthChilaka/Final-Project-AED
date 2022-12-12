@@ -28,30 +28,30 @@
               <EmptySpace min="-2" pref="274" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="0" attributes="0">
-                      <Component id="btnBack" min="-2" max="-2" attributes="0"/>
+                      <Component id="buttonBack" min="-2" max="-2" attributes="0"/>
                       <EmptySpace min="-2" pref="56" max="-2" attributes="0"/>
-                      <Component id="btnSave" min="-2" pref="91" max="-2" attributes="0"/>
+                      <Component id="buttonSave" min="-2" pref="91" max="-2" attributes="0"/>
                       <EmptySpace min="-2" pref="42" max="-2" attributes="0"/>
-                      <Component id="btnUpdate" min="-2" pref="91" max="-2" attributes="0"/>
+                      <Component id="buttonUpdate" min="-2" pref="91" max="-2" attributes="0"/>
                   </Group>
                   <Group type="102" alignment="0" attributes="0">
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="lblSerialNum" alignment="0" min="-2" pref="160" max="-2" attributes="0"/>
-                          <Component id="lblMedicineName" alignment="0" min="-2" max="-2" attributes="0"/>
-                          <Component id="lblAvail" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="labelserialNum" alignment="0" min="-2" pref="160" max="-2" attributes="0"/>
+                          <Component id="labelMedicineName" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="labelAvialability" alignment="0" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="txtAvail" min="-2" pref="150" max="-2" attributes="0"/>
-                          <Component id="txtMedicineName" min="-2" pref="150" max="-2" attributes="0"/>
-                          <Component id="txtSerialNum" min="-2" pref="150" max="-2" attributes="0"/>
+                          <Component id="txtfieldAvail" min="-2" pref="150" max="-2" attributes="0"/>
+                          <Component id="txtfieldMedicineName" min="-2" pref="150" max="-2" attributes="0"/>
+                          <Component id="txtfieldSerialNum" min="-2" pref="150" max="-2" attributes="0"/>
                       </Group>
                   </Group>
               </Group>
               <EmptySpace pref="456" max="32767" attributes="0"/>
           </Group>
           <Group type="102" alignment="1" attributes="0">
-              <Component id="lblHeader" max="32767" attributes="0"/>
+              <Component id="labelHeader" max="32767" attributes="0"/>
               <EmptySpace min="-2" pref="112" max="-2" attributes="0"/>
           </Group>
       </Group>
@@ -60,27 +60,27 @@
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" alignment="0" attributes="0">
               <EmptySpace min="-2" pref="68" max="-2" attributes="0"/>
-              <Component id="lblHeader" min="-2" pref="63" max="-2" attributes="0"/>
+              <Component id="labelHeader" min="-2" pref="63" max="-2" attributes="0"/>
               <EmptySpace min="-2" pref="70" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="txtSerialNum" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="lblSerialNum" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="txtfieldSerialNum" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="labelserialNum" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace min="-2" pref="31" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="lblMedicineName" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="txtMedicineName" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="labelMedicineName" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="txtfieldMedicineName" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace min="-2" pref="39" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="lblAvail" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="txtAvail" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="labelAvialability" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="txtfieldAvail" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace pref="107" max="32767" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="btnBack" alignment="3" min="-2" pref="40" max="-2" attributes="0"/>
-                  <Component id="btnSave" alignment="3" min="-2" pref="40" max="-2" attributes="0"/>
-                  <Component id="btnUpdate" alignment="3" min="-2" pref="40" max="-2" attributes="0"/>
+                  <Component id="buttonBack" alignment="3" min="-2" pref="40" max="-2" attributes="0"/>
+                  <Component id="buttonSave" alignment="3" min="-2" pref="40" max="-2" attributes="0"/>
+                  <Component id="buttonUpdate" alignment="3" min="-2" pref="40" max="-2" attributes="0"/>
               </Group>
               <EmptySpace min="-2" pref="62" max="-2" attributes="0"/>
           </Group>
@@ -88,7 +88,7 @@
     </DimensionLayout>
   </Layout>
   <SubComponents>
-    <Component class="javax.swing.JLabel" name="lblHeader">
+    <Component class="javax.swing.JLabel" name="labelHeader">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Tahoma" size="36" style="1"/>
@@ -100,7 +100,7 @@
         <Property name="text" type="java.lang.String" value="Update Details"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JLabel" name="lblSerialNum">
+    <Component class="javax.swing.JLabel" name="labelserialNum">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Tahoma" size="18" style="0"/>
@@ -111,9 +111,12 @@
         <Property name="text" type="java.lang.String" value="Serial Number:"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JTextField" name="txtSerialNum">
+    <Component class="javax.swing.JTextField" name="txtfieldSerialNum">
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtfieldSerialNumActionPerformed"/>
+      </Events>
     </Component>
-    <Component class="javax.swing.JLabel" name="lblMedicineName">
+    <Component class="javax.swing.JLabel" name="labelMedicineName">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Tahoma" size="18" style="0"/>
@@ -124,9 +127,9 @@
         <Property name="text" type="java.lang.String" value="Medicine Name:"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JTextField" name="txtMedicineName">
+    <Component class="javax.swing.JTextField" name="txtfieldMedicineName">
     </Component>
-    <Component class="javax.swing.JLabel" name="lblAvail">
+    <Component class="javax.swing.JLabel" name="labelAvialability">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Tahoma" size="18" style="0"/>
@@ -137,9 +140,9 @@
         <Property name="text" type="java.lang.String" value="Availability:"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JTextField" name="txtAvail">
+    <Component class="javax.swing.JTextField" name="txtfieldAvail">
     </Component>
-    <Component class="javax.swing.JButton" name="btnBack">
+    <Component class="javax.swing.JButton" name="buttonBack">
       <Properties>
         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
           <Color blue="99" green="33" red="0" type="rgb"/>
@@ -153,10 +156,10 @@
         <Property name="text" type="java.lang.String" value="&lt;&lt;Back"/>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnBackActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="buttonBackActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JButton" name="btnSave">
+    <Component class="javax.swing.JButton" name="buttonSave">
       <Properties>
         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
           <Color blue="99" green="33" red="0" type="rgb"/>
@@ -170,10 +173,10 @@
         <Property name="text" type="java.lang.String" value="Save"/>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnSaveActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="buttonSaveActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JButton" name="btnUpdate">
+    <Component class="javax.swing.JButton" name="buttonUpdate">
       <Properties>
         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
           <Color blue="99" green="33" red="0" type="rgb"/>
@@ -187,7 +190,7 @@
         <Property name="text" type="java.lang.String" value="Update"/>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnUpdateActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="buttonUpdateActionPerformed"/>
       </Events>
     </Component>
   </SubComponents>

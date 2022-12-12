@@ -4,7 +4,7 @@
  */
 package Model;
 
-import Model.Organization.Directory_Organization;
+import Model.Organization.RepositoryOrganization;
 import Model.Organization.Organization;
 
 /**
@@ -14,14 +14,14 @@ import Model.Organization.Organization;
 public abstract class EnterPrise extends Organization {
 
     private EntType enterprise_type;
-    private Directory_Organization orgaDirectory;
+    private RepositoryOrganization orgaDirectory;
     private String Zip;
 
     public EnterPrise(String Name, EntType type) {
 
         super(Name);
         this.enterprise_type = type;
-        orgaDirectory = new Directory_Organization();
+        orgaDirectory = new RepositoryOrganization();
 
     }
 
@@ -60,7 +60,7 @@ public abstract class EnterPrise extends Organization {
     /* public void setEnterprise_type(EntType enterprise_type) {
         this.enterprise_type = enterprise_type;
     }*/
-    public Directory_Organization getOrgaDirectory() {
+    public RepositoryOrganization getOrgaDirectory() {
         return orgaDirectory;
     }
 

@@ -5,7 +5,7 @@
 package UI.Role_Administration;
 
 import Model.Employee;
-import Model.Organization.Directory_Organization;
+import Model.Organization.RepositoryOrganization;
 import Model.Organization.Organization;
 import java.awt.CardLayout;
 import javax.swing.JPanel;
@@ -17,7 +17,7 @@ import javax.swing.table.DefaultTableModel;
  */
 public class ManagePanel_Employee extends javax.swing.JPanel {
     
-    private Directory_Organization od;
+    private RepositoryOrganization od;
     private JPanel panel;
 
     /**
@@ -30,25 +30,25 @@ public class ManagePanel_Employee extends javax.swing.JPanel {
     }
     
     public void fillOrgCmb() {
-        cmbOrg.removeAllItems();
+        cmbBoxOrg.removeAllItems();
 
         for (Organization organization : od.getOrganizations()) {
-            cmbOrg.addItem(organization);
+            cmbBoxOrg.addItem(organization);
         }
     }
 
     public void fillOrgEmpCmb() {
-        cmbOrg2.removeAllItems();
+        cmbBoxOrg2.removeAllItems();
 
         for (Organization organization : od.getOrganizations()) {
-            cmbOrg2.addItem(organization);
+            cmbBoxOrg2.addItem(organization);
         }
     }
     
     private void fillTable(Organization o){
         DefaultTableModel m = (DefaultTableModel) tblEmployee.getModel();
         m.setRowCount(0);
-        for (Employee employee : o.getEmpDir().getE_List()){
+        for (Employee employee : o.getEmpRepo().getE_Repo()){
             Object[] r = new Object[2];
             r[0] = employee.getEId();
             r[1] = employee.getEName();
@@ -65,49 +65,49 @@ public class ManagePanel_Employee extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        lblOrganization = new javax.swing.JLabel();
-        cmbOrg = new javax.swing.JComboBox();
-        lblOrganization2 = new javax.swing.JLabel();
-        cmbOrg2 = new javax.swing.JComboBox();
-        lblName = new javax.swing.JLabel();
-        txtName = new javax.swing.JTextField();
-        scrollPane = new javax.swing.JScrollPane();
+        labelOrganization = new javax.swing.JLabel();
+        cmbBoxOrg = new javax.swing.JComboBox();
+        labelOrganization2 = new javax.swing.JLabel();
+        cmbBoxOrg2 = new javax.swing.JComboBox();
+        labelName = new javax.swing.JLabel();
+        txtfieldName = new javax.swing.JTextField();
+        scrollPane1 = new javax.swing.JScrollPane();
         tblEmployee = new javax.swing.JTable();
-        lblHeading = new javax.swing.JLabel();
-        btnBack = new javax.swing.JButton();
-        btnCreate = new javax.swing.JButton();
+        labelHeading = new javax.swing.JLabel();
+        buttonBack = new javax.swing.JButton();
+        buttonCreate = new javax.swing.JButton();
 
         setBackground(new java.awt.Color(153, 204, 255));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        lblOrganization.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
-        lblOrganization.setText("Organization:");
-        add(lblOrganization, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 110, 151, -1));
+        labelOrganization.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        labelOrganization.setText("Organization:");
+        add(labelOrganization, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 110, 151, -1));
 
-        cmbOrg.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-        cmbOrg.addActionListener(new java.awt.event.ActionListener() {
+        cmbBoxOrg.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        cmbBoxOrg.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                cmbOrgActionPerformed(evt);
+                cmbBoxOrgActionPerformed(evt);
             }
         });
-        add(cmbOrg, new org.netbeans.lib.awtextra.AbsoluteConstraints(428, 112, 168, 29));
+        add(cmbBoxOrg, new org.netbeans.lib.awtextra.AbsoluteConstraints(428, 112, 168, 29));
 
-        lblOrganization2.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
-        lblOrganization2.setText("Organization");
-        add(lblOrganization2, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 400, -1, -1));
+        labelOrganization2.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        labelOrganization2.setText("Organization");
+        add(labelOrganization2, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 400, -1, -1));
 
-        cmbOrg2.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-        cmbOrg2.addActionListener(new java.awt.event.ActionListener() {
+        cmbBoxOrg2.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        cmbBoxOrg2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                cmbOrg2ActionPerformed(evt);
+                cmbBoxOrg2ActionPerformed(evt);
             }
         });
-        add(cmbOrg2, new org.netbeans.lib.awtextra.AbsoluteConstraints(367, 440, 140, 29));
+        add(cmbBoxOrg2, new org.netbeans.lib.awtextra.AbsoluteConstraints(367, 440, 140, 29));
 
-        lblName.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
-        lblName.setText("Name:");
-        add(lblName, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 520, 143, -1));
-        add(txtName, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 520, 110, 29));
+        labelName.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        labelName.setText("Name:");
+        add(labelName, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 520, 143, -1));
+        add(txtfieldName, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 520, 110, 29));
 
         tblEmployee.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -132,75 +132,75 @@ public class ManagePanel_Employee extends javax.swing.JPanel {
                 return canEdit [columnIndex];
             }
         });
-        scrollPane.setViewportView(tblEmployee);
+        scrollPane1.setViewportView(tblEmployee);
 
-        add(scrollPane, new org.netbeans.lib.awtextra.AbsoluteConstraints(144, 170, 600, 206));
+        add(scrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(144, 170, 600, 206));
 
-        lblHeading.setFont(new java.awt.Font("Tahoma", 1, 36)); // NOI18N
-        lblHeading.setForeground(new java.awt.Color(0, 51, 153));
-        lblHeading.setText("Manage Employee");
-        add(lblHeading, new org.netbeans.lib.awtextra.AbsoluteConstraints(266, 9, -1, -1));
+        labelHeading.setFont(new java.awt.Font("Tahoma", 1, 36)); // NOI18N
+        labelHeading.setForeground(new java.awt.Color(0, 51, 153));
+        labelHeading.setText("Manage Employee");
+        add(labelHeading, new org.netbeans.lib.awtextra.AbsoluteConstraints(266, 9, -1, -1));
 
-        btnBack.setBackground(new java.awt.Color(0, 51, 153));
-        btnBack.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        btnBack.setForeground(new java.awt.Color(255, 255, 255));
-        btnBack.setText("<< Back");
-        btnBack.addActionListener(new java.awt.event.ActionListener() {
+        buttonBack.setBackground(new java.awt.Color(0, 51, 153));
+        buttonBack.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        buttonBack.setForeground(new java.awt.Color(255, 255, 255));
+        buttonBack.setText("<< Back");
+        buttonBack.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnBackActionPerformed(evt);
+                buttonBackActionPerformed(evt);
             }
         });
-        add(btnBack, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 581, 143, 70));
+        add(buttonBack, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 581, 143, 70));
 
-        btnCreate.setBackground(new java.awt.Color(0, 51, 153));
-        btnCreate.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        btnCreate.setForeground(new java.awt.Color(255, 255, 255));
-        btnCreate.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/add.png"))); // NOI18N
-        btnCreate.setText("Create Employee");
-        btnCreate.addActionListener(new java.awt.event.ActionListener() {
+        buttonCreate.setBackground(new java.awt.Color(0, 51, 153));
+        buttonCreate.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        buttonCreate.setForeground(new java.awt.Color(255, 255, 255));
+        buttonCreate.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/add.png"))); // NOI18N
+        buttonCreate.setText("Create Employee");
+        buttonCreate.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnCreateActionPerformed(evt);
+                buttonCreateActionPerformed(evt);
             }
         });
-        add(btnCreate, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 581, 239, 70));
+        add(buttonCreate, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 581, 239, 70));
     }// </editor-fold>//GEN-END:initComponents
 
-    private void cmbOrgActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cmbOrgActionPerformed
-        Organization organization = (Organization) cmbOrg.getSelectedItem();
+    private void cmbBoxOrgActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cmbBoxOrgActionPerformed
+        Organization organization = (Organization) cmbBoxOrg.getSelectedItem();
         if (organization != null){
             fillTable(organization);
         }        // TODO add your handling code here:
-    }//GEN-LAST:event_cmbOrgActionPerformed
+    }//GEN-LAST:event_cmbBoxOrgActionPerformed
 
-    private void cmbOrg2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cmbOrg2ActionPerformed
+    private void cmbBoxOrg2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cmbBoxOrg2ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_cmbOrg2ActionPerformed
+    }//GEN-LAST:event_cmbBoxOrg2ActionPerformed
 
-    private void btnBackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBackActionPerformed
+    private void buttonBackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonBackActionPerformed
         panel.remove(this);
         CardLayout l = (CardLayout) panel.getLayout();
         l.previous(panel);        // TODO add your handling code here:
-    }//GEN-LAST:event_btnBackActionPerformed
+    }//GEN-LAST:event_buttonBackActionPerformed
 
-    private void btnCreateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCreateActionPerformed
-        Organization org = (Organization) cmbOrg2.getSelectedItem();
-        String name = txtName.getText();
+    private void buttonCreateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonCreateActionPerformed
+        Organization org = (Organization) cmbBoxOrg2.getSelectedItem();
+        String name = txtfieldName.getText();
 
-        org.getEmpDir().AddEmployee(name);        // TODO add your handling code here:
-    }//GEN-LAST:event_btnCreateActionPerformed
+        org.getEmpRepo().AddEmployee(name);        // TODO add your handling code here:
+    }//GEN-LAST:event_buttonCreateActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btnBack;
-    private javax.swing.JButton btnCreate;
-    private javax.swing.JComboBox cmbOrg;
-    private javax.swing.JComboBox cmbOrg2;
-    private javax.swing.JLabel lblHeading;
-    private javax.swing.JLabel lblName;
-    private javax.swing.JLabel lblOrganization;
-    private javax.swing.JLabel lblOrganization2;
-    private javax.swing.JScrollPane scrollPane;
+    private javax.swing.JButton buttonBack;
+    private javax.swing.JButton buttonCreate;
+    private javax.swing.JComboBox cmbBoxOrg;
+    private javax.swing.JComboBox cmbBoxOrg2;
+    private javax.swing.JLabel labelHeading;
+    private javax.swing.JLabel labelName;
+    private javax.swing.JLabel labelOrganization;
+    private javax.swing.JLabel labelOrganization2;
+    private javax.swing.JScrollPane scrollPane1;
     private javax.swing.JTable tblEmployee;
-    private javax.swing.JTextField txtName;
+    private javax.swing.JTextField txtfieldName;
     // End of variables declaration//GEN-END:variables
 }

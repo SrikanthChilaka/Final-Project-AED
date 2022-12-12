@@ -5,8 +5,8 @@
 package UI.UserInterface.HCEquipStorage;
 
 import Model.Account;
-import Model.WorkQueue.TransportationWorkRequest;
-import Model.WorkQueue.WorkRequest;
+import Model.WorkQueue.Transportation_WorkRequest;
+import Model.WorkQueue.Work_Request;
 import java.awt.CardLayout;
 import javax.swing.JPanel;
 import javax.swing.table.DefaultTableModel;
@@ -21,7 +21,7 @@ public class ViewTransportationRequestJPanel extends javax.swing.JPanel {
      * Creates new form ViewTransportationRequestJPanel
      */
 JPanel upperContainer;
-TransportationWorkRequest request;
+Transportation_WorkRequest request;
 private Account acc;
     public ViewTransportationRequestJPanel(JPanel upperContainer,Account acc ) {
         initComponents();
@@ -41,12 +41,12 @@ private Account acc;
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jScrollPane1 = new javax.swing.JScrollPane();
+        jPanelScroll1 = new javax.swing.JScrollPane();
         jTable1 = new javax.swing.JTable();
-        Backbtn = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
-        MainLabel = new javax.swing.JLabel();
-        jLabel1 = new javax.swing.JLabel();
+        Backbutton = new javax.swing.JButton();
+        jButton5 = new javax.swing.JButton();
+        MainLabel1 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
 
         setBackground(new java.awt.Color(153, 204, 255));
 
@@ -58,35 +58,35 @@ private Account acc;
                 "SENDER", "RECIEVER", "HOSPITAL NAME", "STATUS"
             }
         ));
-        jScrollPane1.setViewportView(jTable1);
+        jPanelScroll1.setViewportView(jTable1);
 
-        Backbtn.setBackground(new java.awt.Color(0, 51, 153));
-        Backbtn.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        Backbtn.setForeground(new java.awt.Color(255, 255, 255));
-        Backbtn.setText("<<BACK");
-        Backbtn.addActionListener(new java.awt.event.ActionListener() {
+        Backbutton.setBackground(new java.awt.Color(0, 51, 153));
+        Backbutton.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        Backbutton.setForeground(new java.awt.Color(255, 255, 255));
+        Backbutton.setText("<<BACK");
+        Backbutton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                BackbtnActionPerformed(evt);
+                BackbuttonActionPerformed(evt);
             }
         });
 
-        jButton2.setBackground(new java.awt.Color(0, 51, 153));
-        jButton2.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        jButton2.setForeground(new java.awt.Color(255, 255, 255));
-        jButton2.setText("Refresh");
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
+        jButton5.setBackground(new java.awt.Color(0, 51, 153));
+        jButton5.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jButton5.setForeground(new java.awt.Color(255, 255, 255));
+        jButton5.setText("Refresh");
+        jButton5.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
+                jButton5ActionPerformed(evt);
             }
         });
 
-        MainLabel.setBackground(new java.awt.Color(0, 51, 153));
-        MainLabel.setFont(new java.awt.Font("Tahoma", 1, 36)); // NOI18N
-        MainLabel.setForeground(new java.awt.Color(0, 51, 153));
-        MainLabel.setText("VIEW TRANSPORTATION WORK REQUEST STATUS");
+        MainLabel1.setBackground(new java.awt.Color(0, 51, 153));
+        MainLabel1.setFont(new java.awt.Font("Tahoma", 1, 36)); // NOI18N
+        MainLabel1.setForeground(new java.awt.Color(0, 51, 153));
+        MainLabel1.setText("VIEW TRANSPORTATION WORK REQUEST STATUS");
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/transport.png"))); // NOI18N
-        jLabel1.setText("jLabel1");
+        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/transport.png"))); // NOI18N
+        jLabel4.setText("jLabel1");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
@@ -98,15 +98,15 @@ private Account acc;
                         .addGap(37, 37, 37)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(layout.createSequentialGroup()
-                                .addComponent(Backbtn, javax.swing.GroupLayout.PREFERRED_SIZE, 118, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(Backbutton, javax.swing.GroupLayout.PREFERRED_SIZE, 118, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(128, 128, 128)
-                                .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 136, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 1017, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addComponent(jButton5, javax.swing.GroupLayout.PREFERRED_SIZE, 136, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(jPanelScroll1, javax.swing.GroupLayout.PREFERRED_SIZE, 1017, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(75, 75, 75)
-                        .addComponent(MainLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 1033, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(MainLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 1033, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(41, 41, 41)
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 152, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 152, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(158, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -115,38 +115,38 @@ private Account acc;
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addGap(33, 33, 33)
-                        .addComponent(MainLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(MainLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 284, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(jPanelScroll1, javax.swing.GroupLayout.PREFERRED_SIZE, 284, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(50, 50, 50)
-                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 163, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 163, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(39, 39, 39)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(Backbtn, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(Backbutton, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jButton5, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(81, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
-    private void BackbtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BackbtnActionPerformed
+    private void BackbuttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BackbuttonActionPerformed
         upperContainer.remove(this);
         CardLayout layout = (CardLayout) upperContainer.getLayout();
         layout.previous(upperContainer);          // TODO add your handling code here:
-    }//GEN-LAST:event_BackbtnActionPerformed
+    }//GEN-LAST:event_BackbuttonActionPerformed
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+    private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
         populateTable(); 
        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton2ActionPerformed
+    }//GEN-LAST:event_jButton5ActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton Backbtn;
-    private javax.swing.JLabel MainLabel;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JButton Backbutton;
+    private javax.swing.JLabel MainLabel1;
+    private javax.swing.JButton jButton5;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JScrollPane jPanelScroll1;
     private javax.swing.JTable jTable1;
     // End of variables declaration//GEN-END:variables
 
@@ -156,24 +156,24 @@ private Account acc;
         
         model.setRowCount(0);
         Object row[]=new Object[6];
-        for(WorkRequest request : acc.getWorkQueue().getWorkRequestList()){
-            row[0]=request.getSender().getUsrnm();
-            row[1]=request.getReceiver().getUsrnm();
-            row[2]=((TransportationWorkRequest)request).getHospitalName();
-            row[3]=((TransportationWorkRequest)request).getMessage();
-            request.setMessage(((TransportationWorkRequest)request).getTime());
-            if(((TransportationWorkRequest)request).getMessage()==null){
+        for(Work_Request request : acc.getWorkQ().getWorkRequestList()){
+            row[0]=request.getSender().getUsernm();
+            row[1]=request.getReceiver().getUsernm();
+            row[2]=((Transportation_WorkRequest)request).getHospitalName();
+            row[3]=((Transportation_WorkRequest)request).getMessage();
+            request.setMessage(((Transportation_WorkRequest)request).getTime());
+            if(((Transportation_WorkRequest)request).getMessage()==null){
                 row[3]="Awaiting an update";
             }
             else{
              
-            String result="Delivery Time: "+((TransportationWorkRequest)request).getMessage();
+            String result="Delivery Time: "+((Transportation_WorkRequest)request).getMessage();
             request.setMessage(result);
 
             row[3]=result;
-            System.out.println("*******"+((TransportationWorkRequest)request).getRequestId());
+            System.out.println("*******"+((Transportation_WorkRequest)request).getRequestId());
            
-            row[4]=((TransportationWorkRequest)request).getEquipmentinfo();
+            row[4]=((Transportation_WorkRequest)request).getEquipmentinfo();
              
         }
             model.addRow(row);

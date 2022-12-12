@@ -5,29 +5,29 @@
 package Model;
 
 import Model.Role.Role;
-import Model.WorkQueue.WorkQueue;
+import Model.WorkQueue.Work_Queue;
 
 /**
  *
  * @author srikanthchilaka
  */
 public class Account {
-    private String usrnm;
+    private String usernm;
     private Role role;
-    private String pwd;
-    private WorkQueue workQueue;
+    private String pswd;
+    private Work_Queue workQ;
     private Employee emp;
 
 
   public Account(){
-  workQueue = new WorkQueue();
+  workQ = new Work_Queue();
 }
-    public String getUsrnm() {
-        return usrnm;
+    public String getUsernm() {
+        return usernm;
     }
 
-    public void setUsrnm(String usrnm) {
-        this.usrnm = usrnm;
+    public void setUsernm(String usernm) {
+        this.usernm = usernm;
     }
 
     public Role getRole() {
@@ -38,20 +38,20 @@ public class Account {
         this.role = role;
     }
 
-    public String getPwd() {
-        return pwd;
+    public String getPswd() {
+        return pswd;
     }
 
-    public void setPwd(String pwd) {
-        this.pwd = pwd;
+    public void setPswd(String pswd) {
+        this.pswd = pswd;
     }
 
-    public WorkQueue getWorkQueue() {
-        return workQueue;
+    public Work_Queue getWorkQ() {
+        return workQ;
     }
 
-    public void setWorkQueue(WorkQueue workQueue) {
-        this.workQueue = workQueue;
+    public void setWorkQ(Work_Queue workQ) {
+        this.workQ = workQ;
     }
 
     public Employee getEmp() {

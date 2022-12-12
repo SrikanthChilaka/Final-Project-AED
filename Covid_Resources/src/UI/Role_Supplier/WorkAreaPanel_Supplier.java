@@ -7,9 +7,9 @@ package UI.Role_Supplier;
 import Model.Account;
 import Model.EcoSystem;
 import Model.Organization.Organization;
-import Model.Organization.Organization_Supplier;
-import Model.WorkQueue.SupplierWorkRequest;
-import Model.WorkQueue.WorkRequest;
+import Model.Organization.SupplierOrganization;
+import Model.WorkQueue.Supplier_WorkRequest;
+import Model.WorkQueue.Work_Request;
 import java.awt.CardLayout;
 import javax.swing.JPanel;
 import javax.swing.table.DefaultTableModel;
@@ -20,7 +20,7 @@ import javax.swing.table.DefaultTableModel;
  */
 public class WorkAreaPanel_Supplier extends javax.swing.JPanel {
     
-    private Organization_Supplier os;
+    private SupplierOrganization os;
     private JPanel panel;
     private Account acc;
     private EcoSystem eco;
@@ -34,22 +34,22 @@ public class WorkAreaPanel_Supplier extends javax.swing.JPanel {
         this.panel = panel;
         this.acc = acc;
         this.eco = eco;
-        this.os = (Organization_Supplier)o ;
+        this.os = (SupplierOrganization)o ;
         fillRows();
     }
     
     private void fillRows() {
-        DefaultTableModel m = (DefaultTableModel)tblSup.getModel();
+        DefaultTableModel m = (DefaultTableModel)tabblesupplier.getModel();
         m.setRowCount(0);
         
-        for(WorkRequest wq : os.getWQ().getWorkRequestList()){
+        for(Work_Request wq : os.getWQ().getWorkRequestList()){
             Object[] row = new Object[6];
-            row[0] = ((SupplierWorkRequest) wq);
-            row[1]=((SupplierWorkRequest) wq).getQuantity();
+            row[0] = ((Supplier_WorkRequest) wq);
+            row[1]=((Supplier_WorkRequest) wq).getQuantity();
             row[2] = wq.getSender().getEmp().getEName();
             row[3] = wq.getReceiver() != null ? wq.getReceiver().getEmp().getEName() : null;
             row[4] = wq.getStatus();
-            row[5]=((SupplierWorkRequest) wq).getDeliveryTime();
+            row[5]=((Supplier_WorkRequest) wq).getDeliveryTime();
             m.addRow(row);
         }
     }
@@ -63,43 +63,43 @@ public class WorkAreaPanel_Supplier extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        btnPro = new javax.swing.JButton();
-        btnRef = new javax.swing.JButton();
-        lblHeader = new javax.swing.JLabel();
+        buttonprocess = new javax.swing.JButton();
+        buttonRefresh = new javax.swing.JButton();
+        labelHeader2 = new javax.swing.JLabel();
         scrollPane = new javax.swing.JScrollPane();
-        tblSup = new javax.swing.JTable();
-        btnBack = new javax.swing.JButton();
-        btnAssign = new javax.swing.JButton();
-        jLabel1 = new javax.swing.JLabel();
+        tabblesupplier = new javax.swing.JTable();
+        buttonBack = new javax.swing.JButton();
+        buttonAssign = new javax.swing.JButton();
+        jLabel3 = new javax.swing.JLabel();
 
         setBackground(new java.awt.Color(153, 204, 255));
 
-        btnPro.setBackground(new java.awt.Color(0, 51, 153));
-        btnPro.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
-        btnPro.setForeground(new java.awt.Color(255, 255, 255));
-        btnPro.setText("Process");
-        btnPro.addActionListener(new java.awt.event.ActionListener() {
+        buttonprocess.setBackground(new java.awt.Color(0, 51, 153));
+        buttonprocess.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        buttonprocess.setForeground(new java.awt.Color(255, 255, 255));
+        buttonprocess.setText("Process");
+        buttonprocess.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnProActionPerformed(evt);
+                buttonprocessActionPerformed(evt);
             }
         });
 
-        btnRef.setBackground(new java.awt.Color(0, 51, 153));
-        btnRef.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
-        btnRef.setForeground(new java.awt.Color(255, 255, 255));
-        btnRef.setText("Refresh");
-        btnRef.addActionListener(new java.awt.event.ActionListener() {
+        buttonRefresh.setBackground(new java.awt.Color(0, 51, 153));
+        buttonRefresh.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        buttonRefresh.setForeground(new java.awt.Color(255, 255, 255));
+        buttonRefresh.setText("Refresh");
+        buttonRefresh.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnRefActionPerformed(evt);
+                buttonRefreshActionPerformed(evt);
             }
         });
 
-        lblHeader.setFont(new java.awt.Font("Tahoma", 1, 36)); // NOI18N
-        lblHeader.setForeground(new java.awt.Color(0, 51, 153));
-        lblHeader.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        lblHeader.setText("SUPPLIER WORK AREA ");
+        labelHeader2.setFont(new java.awt.Font("Tahoma", 1, 36)); // NOI18N
+        labelHeader2.setForeground(new java.awt.Color(0, 51, 153));
+        labelHeader2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        labelHeader2.setText("SUPPLIER WORK AREA ");
 
-        tblSup.setModel(new javax.swing.table.DefaultTableModel(
+        tabblesupplier.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
 
             },
@@ -122,30 +122,30 @@ public class WorkAreaPanel_Supplier extends javax.swing.JPanel {
                 return canEdit [columnIndex];
             }
         });
-        scrollPane.setViewportView(tblSup);
+        scrollPane.setViewportView(tabblesupplier);
 
-        btnBack.setBackground(new java.awt.Color(0, 51, 153));
-        btnBack.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
-        btnBack.setForeground(new java.awt.Color(255, 255, 255));
-        btnBack.setText("<<Back");
-        btnBack.addActionListener(new java.awt.event.ActionListener() {
+        buttonBack.setBackground(new java.awt.Color(0, 51, 153));
+        buttonBack.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        buttonBack.setForeground(new java.awt.Color(255, 255, 255));
+        buttonBack.setText("<<Back");
+        buttonBack.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnBackActionPerformed(evt);
+                buttonBackActionPerformed(evt);
             }
         });
 
-        btnAssign.setBackground(new java.awt.Color(0, 51, 153));
-        btnAssign.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
-        btnAssign.setForeground(new java.awt.Color(255, 255, 255));
-        btnAssign.setText("Assign to me");
-        btnAssign.addActionListener(new java.awt.event.ActionListener() {
+        buttonAssign.setBackground(new java.awt.Color(0, 51, 153));
+        buttonAssign.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        buttonAssign.setForeground(new java.awt.Color(255, 255, 255));
+        buttonAssign.setText("Assign to me");
+        buttonAssign.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnAssignActionPerformed(evt);
+                buttonAssignActionPerformed(evt);
             }
         });
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/supplier.jpg"))); // NOI18N
-        jLabel1.setText("jLabel1");
+        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/supplier.jpg"))); // NOI18N
+        jLabel3.setText("jLabel1");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
@@ -155,20 +155,20 @@ public class WorkAreaPanel_Supplier extends javax.swing.JPanel {
                 .addContainerGap(58, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(btnBack)
+                        .addComponent(buttonBack)
                         .addGap(99, 99, 99)
-                        .addComponent(btnAssign)
+                        .addComponent(buttonAssign)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(btnPro, javax.swing.GroupLayout.PREFERRED_SIZE, 189, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(buttonprocess, javax.swing.GroupLayout.PREFERRED_SIZE, 189, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(87, 87, 87)
-                        .addComponent(btnRef, javax.swing.GroupLayout.PREFERRED_SIZE, 169, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(buttonRefresh, javax.swing.GroupLayout.PREFERRED_SIZE, 169, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addComponent(scrollPane, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 983, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(59, Short.MAX_VALUE))
             .addGroup(layout.createSequentialGroup()
                 .addGap(254, 254, 254)
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 127, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 127, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(28, 28, 28)
-                .addComponent(lblHeader, javax.swing.GroupLayout.PREFERRED_SIZE, 516, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(labelHeader2, javax.swing.GroupLayout.PREFERRED_SIZE, 516, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -176,29 +176,29 @@ public class WorkAreaPanel_Supplier extends javax.swing.JPanel {
             .addGroup(layout.createSequentialGroup()
                 .addGap(20, 20, 20)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 74, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(lblHeader))
+                    .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 74, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(labelHeader2))
                 .addGap(26, 26, 26)
                 .addComponent(scrollPane, javax.swing.GroupLayout.PREFERRED_SIZE, 186, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(47, 47, 47)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btnRef)
-                    .addComponent(btnPro)
-                    .addComponent(btnAssign)
-                    .addComponent(btnBack))
+                    .addComponent(buttonRefresh)
+                    .addComponent(buttonprocess)
+                    .addComponent(buttonAssign)
+                    .addComponent(buttonBack))
                 .addContainerGap(160, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
-    private void btnProActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnProActionPerformed
+    private void buttonprocessActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonprocessActionPerformed
 
-        int clicked = tblSup.getSelectedRow();
+        int clicked = tabblesupplier.getSelectedRow();
 
         if (clicked < 0){
             return;
         }
 
-        SupplierWorkRequest sq = (SupplierWorkRequest)tblSup.getValueAt(clicked, 0);
+        Supplier_WorkRequest sq = (Supplier_WorkRequest)tabblesupplier.getValueAt(clicked, 0);
 
         sq.setStatus("Processing");
 
@@ -206,40 +206,40 @@ public class WorkAreaPanel_Supplier extends javax.swing.JPanel {
         panel.add("ManageWorkRequestPanel_Supplier", mp);
         CardLayout l = (CardLayout) panel.getLayout();
         l.next(panel);
-    }//GEN-LAST:event_btnProActionPerformed
+    }//GEN-LAST:event_buttonprocessActionPerformed
 
-    private void btnRefActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRefActionPerformed
+    private void buttonRefreshActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonRefreshActionPerformed
 
         fillRows();
-    }//GEN-LAST:event_btnRefActionPerformed
+    }//GEN-LAST:event_buttonRefreshActionPerformed
 
-    private void btnBackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBackActionPerformed
+    private void buttonBackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonBackActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_btnBackActionPerformed
+    }//GEN-LAST:event_buttonBackActionPerformed
 
-    private void btnAssignActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAssignActionPerformed
+    private void buttonAssignActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonAssignActionPerformed
 
-        int clicked = tblSup.getSelectedRow();
+        int clicked = tabblesupplier.getSelectedRow();
 
         if (clicked < 0){
             return;
         }
 
-        WorkRequest wq = (WorkRequest)tblSup.getValueAt(clicked, 0);
+        Work_Request wq = (Work_Request)tabblesupplier.getValueAt(clicked, 0);
         wq.setReceiver(acc);
         wq.setStatus("Assigned");
         fillRows();
-    }//GEN-LAST:event_btnAssignActionPerformed
+    }//GEN-LAST:event_buttonAssignActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btnAssign;
-    private javax.swing.JButton btnBack;
-    private javax.swing.JButton btnPro;
-    private javax.swing.JButton btnRef;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel lblHeader;
+    private javax.swing.JButton buttonAssign;
+    private javax.swing.JButton buttonBack;
+    private javax.swing.JButton buttonRefresh;
+    private javax.swing.JButton buttonprocess;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel labelHeader2;
     private javax.swing.JScrollPane scrollPane;
-    private javax.swing.JTable tblSup;
+    private javax.swing.JTable tabblesupplier;
     // End of variables declaration//GEN-END:variables
 }
