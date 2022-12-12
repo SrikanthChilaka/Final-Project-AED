@@ -4,14 +4,14 @@
  */
 package Model.Organization;
 
-import Model.AccountDirectory;
-import Model.Directory_Employee;
+import Model.AccountRepo;
+import Model.EmployeeRepo;
 import Model.Role.Role;
 import java.util.ArrayList;
 import Model.Doctor;
-import Model.DocPrescription;
-import Model.WorkQueue.HealthcareEquipmentWorkRequest;
-import Model.WorkQueue.WorkQueue;
+import Model.DoctorPrescription;
+import Model.WorkQueue.HealthCareEquipment_WorkRequest;
+import Model.WorkQueue.Work_Queue;
 /**
  *
  * @author srikanthchilaka
@@ -19,70 +19,70 @@ import Model.WorkQueue.WorkQueue;
 public abstract class Organization {
 
     private String orgName;
-    private WorkQueue wq;
-    private Directory_Employee empDir;
-    private AccountDirectory userAccDir;
+    private Work_Queue wq;
+    private EmployeeRepo empRepo;
+    private AccountRepo userAccRepo;
     private int orgId;
-    private static int c;
+    private static int o;
 
-    private HealthcareEquipmentWorkRequest eqReq;
-    public ArrayList<DocPrescription> prescriptions;
+    private HealthCareEquipment_WorkRequest eqReq;
+    public ArrayList<DoctorPrescription> prescriptions;
 
     public enum OrganizationType {
         Admin("Admin Organization"), Doctor("Doctor Organization"), Operations("Operations Organization"),
         Pharmacy("Pharmacy Organization"), Supplier("Supplier Organization"), MedicalEquipment("Equipment Organization"),
         Transport("Transportation Organization"), Staff ("Staff Role"), MedicalWaste("Waste Organization");
 
-        private String v;
+        private String r;
 
-        private OrganizationType(String v) {
-            this.v = v;
+        private OrganizationType(String r) {
+            this.r = r;
         }
 
         public String getValue() {
-            return v;
+            return r;
         }
 
     }
     public Organization(String orgName) {
         this.orgName = orgName;
-        wq = new WorkQueue();
-        empDir = new Directory_Employee();
-        userAccDir = new AccountDirectory();
-        orgId = c;
-        prescriptions = new ArrayList<DocPrescription>();
-        ++c;
+        wq = new Work_Queue();
+        empRepo = new EmployeeRepo();
+        userAccRepo = new AccountRepo();
+        orgId = o;
+        prescriptions = new ArrayList<DoctorPrescription>();
+        ++o;
     }
 
 
     public abstract ArrayList<Role> getRole();
 
-    public AccountDirectory getUserAccDir() {
-        return userAccDir;
+    public AccountRepo getUserAccDir() {
+        return userAccRepo;
     }
 
     public int getOrgId() {
         return orgId;
     }
 
-    public Directory_Employee getEmpDir() {
-        return empDir;
+    public EmployeeRepo getEmpRepo() {
+        return empRepo;
     }
     
-    public void setEmpDir(Directory_Employee empDir) {
-        this.empDir = empDir;
+    public void setEmpRepo(EmployeeRepo empRepo) {
+        this.empRepo = empRepo;
     }
     
     public String getOrgName() {
         return orgName;
     }
-    public WorkQueue getWQ() {
+    public Work_Queue getWQ() {
         return wq;
     }
     public void setOrgName(String orgName) {
         this.orgName = orgName;
     }
-    public void setWQ(WorkQueue wq) {
+    public void setWQ(Work_Queue wq) {
         this.wq = wq;
     }
 

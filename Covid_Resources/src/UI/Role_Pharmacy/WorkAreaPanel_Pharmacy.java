@@ -5,15 +5,15 @@
 package UI.Role_Pharmacy;
 
 import Model.Account;
-import Model.DrugPantry;
+import Model.Drug_Store;
 import Model.DrugPantryList;
 import Model.EnterPrise;
 import Model.Network;
 import Model.Organization.Organization;
-import Model.Organization.Organization_Pharmacy;
-import Model.WorkQueue.PharmacyWorkRequest;
-import Model.WorkQueue.SupplierWorkRequest;
-import Model.WorkQueue.WorkRequest;
+import Model.Organization.PharmacyOrganization;
+import Model.WorkQueue.Pharmacy_WorkRequest;
+import Model.WorkQueue.Supplier_WorkRequest;
+import Model.WorkQueue.Work_Request;
 import java.awt.CardLayout;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
@@ -26,7 +26,7 @@ import javax.swing.table.DefaultTableModel;
 public class WorkAreaPanel_Pharmacy extends javax.swing.JPanel {
 
     private Network network;
-    private Organization_Pharmacy op;
+    private PharmacyOrganization op;
     private Organization orgz;
     private DrugPantryList dp;
     private EnterPrise enterprise;
@@ -36,9 +36,9 @@ public class WorkAreaPanel_Pharmacy extends javax.swing.JPanel {
     /**
      * Creates new form WorkAreaPanel_Pharmacy
      */
-    public WorkAreaPanel_Pharmacy(JPanel panel, Account acc, EnterPrise enterprise, Organization_Pharmacy op, Network network) {
+    public WorkAreaPanel_Pharmacy(JPanel panel, Account acc, EnterPrise enterprise, PharmacyOrganization op, Network network) {
         initComponents();
-        this.op=(Organization_Pharmacy) op;
+        this.op=(PharmacyOrganization) op;
         this.panel=panel;
         this.network=network;
         this.enterprise=enterprise;
@@ -51,14 +51,14 @@ public class WorkAreaPanel_Pharmacy extends javax.swing.JPanel {
     public void fillDocRows() {
         DefaultTableModel tab = (DefaultTableModel) tblDoc.getModel();
         tab.setRowCount(0);
-        for (WorkRequest wr : op.getWQ().getWorkRequestList()) {
+        for (Work_Request wr : op.getWQ().getWorkRequestList()) {
             Object[] o = new Object[4];
-            String drug = ((PharmacyWorkRequest) wr).getMedicationName();
+            String drug = ((Pharmacy_WorkRequest) wr).getMedicationName();
             System.out.println("****" + drug);
             o[0] = drug;
-            int num = ((PharmacyWorkRequest) wr).getQuantity();
+            int num = ((Pharmacy_WorkRequest) wr).getQuantity();
             o[1] = num;
-            o[2] = ((PharmacyWorkRequest) wr).getStatus();
+            o[2] = ((Pharmacy_WorkRequest) wr).getStatus();
             tab.addRow(o);
         }
     }
@@ -70,7 +70,7 @@ public class WorkAreaPanel_Pharmacy extends javax.swing.JPanel {
         for (int i = rc - 1; i >= 0; i--) {
             tbl.removeRow(i);
         }
-        for (DrugPantry i : op.getDrugs()) {
+        for (Drug_Store i : op.getDrugs()) {
             Object o[] = new Object[6];
             o[0] = i;
             o[1] = i.getSerialNo();
@@ -92,37 +92,37 @@ public class WorkAreaPanel_Pharmacy extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        lblHeader = new javax.swing.JLabel();
-        scrollPane = new javax.swing.JScrollPane();
+        labelHeader = new javax.swing.JLabel();
+        scrollPane1 = new javax.swing.JScrollPane();
         tblPharmacy = new javax.swing.JTable();
-        btnStatus = new javax.swing.JButton();
-        lblSerialNumber = new javax.swing.JLabel();
-        lblMedicine = new javax.swing.JLabel();
-        lblAvailableQuantity = new javax.swing.JLabel();
-        lblReqQuantity = new javax.swing.JLabel();
-        lblReorder = new javax.swing.JLabel();
-        txtSerialNumber = new javax.swing.JTextField();
-        txtMedicine = new javax.swing.JTextField();
-        txtAvailableQuantity = new javax.swing.JTextField();
-        txtReqQuantity = new javax.swing.JTextField();
-        txtReorder = new javax.swing.JTextField();
-        btnBack = new javax.swing.JButton();
-        btnAddMedicine = new javax.swing.JButton();
-        btnDetails = new javax.swing.JButton();
-        btnReqs = new javax.swing.JButton();
-        btnViewReq = new javax.swing.JButton();
-        lblDocTbl = new javax.swing.JLabel();
+        buttonStatus = new javax.swing.JButton();
+        labelSerialNumber = new javax.swing.JLabel();
+        labelMedicineName = new javax.swing.JLabel();
+        labelAvailableQuantity = new javax.swing.JLabel();
+        labelReqQuantity = new javax.swing.JLabel();
+        labelReorderLevel = new javax.swing.JLabel();
+        txtfieldSerialNumber = new javax.swing.JTextField();
+        txtfieldMedicine = new javax.swing.JTextField();
+        txtfieldAvailableQuantity = new javax.swing.JTextField();
+        txtfieldReqQuantity = new javax.swing.JTextField();
+        txtfieldReorder = new javax.swing.JTextField();
+        buttonBack = new javax.swing.JButton();
+        buttonAddMedicine = new javax.swing.JButton();
+        buttonDetails = new javax.swing.JButton();
+        buttonReqs = new javax.swing.JButton();
+        buttonViewReq = new javax.swing.JButton();
+        labelDocTbl = new javax.swing.JLabel();
         scrollPane2 = new javax.swing.JScrollPane();
         tblDoc = new javax.swing.JTable();
 
         setBackground(new java.awt.Color(153, 204, 255));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        lblHeader.setFont(new java.awt.Font("Tahoma", 1, 36)); // NOI18N
-        lblHeader.setForeground(new java.awt.Color(0, 51, 153));
-        lblHeader.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        lblHeader.setText("PHARMACY MEDICINE INVENTORY LOG");
-        add(lblHeader, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 10, 1069, -1));
+        labelHeader.setFont(new java.awt.Font("Tahoma", 1, 36)); // NOI18N
+        labelHeader.setForeground(new java.awt.Color(0, 51, 153));
+        labelHeader.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        labelHeader.setText("PHARMACY MEDICINE INVENTORY LOG");
+        add(labelHeader, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 10, 1069, -1));
 
         tblPharmacy.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -147,106 +147,112 @@ public class WorkAreaPanel_Pharmacy extends javax.swing.JPanel {
                 return canEdit [columnIndex];
             }
         });
-        scrollPane.setViewportView(tblPharmacy);
+        scrollPane1.setViewportView(tblPharmacy);
 
-        add(scrollPane, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 60, 1025, 80));
+        add(scrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 60, 1025, 80));
 
-        btnStatus.setBackground(new java.awt.Color(0, 51, 153));
-        btnStatus.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        btnStatus.setForeground(new java.awt.Color(255, 255, 255));
-        btnStatus.setText("INVENTORY STATUS CHECK!");
-        btnStatus.addActionListener(new java.awt.event.ActionListener() {
+        buttonStatus.setBackground(new java.awt.Color(0, 51, 153));
+        buttonStatus.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        buttonStatus.setForeground(new java.awt.Color(255, 255, 255));
+        buttonStatus.setText("INVENTORY STATUS CHECK!");
+        buttonStatus.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnStatusActionPerformed(evt);
+                buttonStatusActionPerformed(evt);
             }
         });
-        add(btnStatus, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 320, 309, 38));
+        add(buttonStatus, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 320, 309, 38));
 
-        lblSerialNumber.setFont(new java.awt.Font("Tahoma", 0, 20)); // NOI18N
-        lblSerialNumber.setForeground(new java.awt.Color(0, 51, 153));
-        lblSerialNumber.setText("SERIAL NUMBER:");
-        add(lblSerialNumber, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 310, 236, -1));
+        labelSerialNumber.setFont(new java.awt.Font("Tahoma", 0, 20)); // NOI18N
+        labelSerialNumber.setForeground(new java.awt.Color(0, 51, 153));
+        labelSerialNumber.setText("SERIAL NUMBER:");
+        add(labelSerialNumber, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 310, 236, -1));
 
-        lblMedicine.setFont(new java.awt.Font("Tahoma", 0, 20)); // NOI18N
-        lblMedicine.setForeground(new java.awt.Color(0, 51, 153));
-        lblMedicine.setText("MEDICNE NAME:");
-        add(lblMedicine, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 360, 236, -1));
+        labelMedicineName.setFont(new java.awt.Font("Tahoma", 0, 20)); // NOI18N
+        labelMedicineName.setForeground(new java.awt.Color(0, 51, 153));
+        labelMedicineName.setText("MEDICNE NAME:");
+        add(labelMedicineName, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 360, 236, -1));
 
-        lblAvailableQuantity.setFont(new java.awt.Font("Tahoma", 0, 20)); // NOI18N
-        lblAvailableQuantity.setForeground(new java.awt.Color(0, 51, 153));
-        lblAvailableQuantity.setText("AVAILABLE QUANTITY:");
-        add(lblAvailableQuantity, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 410, 236, -1));
+        labelAvailableQuantity.setFont(new java.awt.Font("Tahoma", 0, 20)); // NOI18N
+        labelAvailableQuantity.setForeground(new java.awt.Color(0, 51, 153));
+        labelAvailableQuantity.setText("AVAILABLE QUANTITY:");
+        add(labelAvailableQuantity, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 410, 236, -1));
 
-        lblReqQuantity.setFont(new java.awt.Font("Tahoma", 0, 20)); // NOI18N
-        lblReqQuantity.setForeground(new java.awt.Color(0, 51, 153));
-        lblReqQuantity.setText("REQUIRED QUANTITY:");
-        add(lblReqQuantity, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 460, 236, -1));
+        labelReqQuantity.setFont(new java.awt.Font("Tahoma", 0, 20)); // NOI18N
+        labelReqQuantity.setForeground(new java.awt.Color(0, 51, 153));
+        labelReqQuantity.setText("REQUIRED QUANTITY:");
+        add(labelReqQuantity, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 460, 236, -1));
 
-        lblReorder.setFont(new java.awt.Font("Tahoma", 0, 20)); // NOI18N
-        lblReorder.setForeground(new java.awt.Color(0, 51, 153));
-        lblReorder.setText("REORDER LEVEL:");
-        add(lblReorder, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 510, 236, -1));
-        add(txtSerialNumber, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 310, 257, 25));
-        add(txtMedicine, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 360, 257, 25));
-        add(txtAvailableQuantity, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 410, 257, 25));
-        add(txtReqQuantity, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 460, 257, 25));
-        add(txtReorder, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 510, 257, 25));
+        labelReorderLevel.setFont(new java.awt.Font("Tahoma", 0, 20)); // NOI18N
+        labelReorderLevel.setForeground(new java.awt.Color(0, 51, 153));
+        labelReorderLevel.setText("REORDER LEVEL:");
+        add(labelReorderLevel, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 510, 236, -1));
+        add(txtfieldSerialNumber, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 310, 257, 25));
+        add(txtfieldMedicine, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 360, 257, 25));
+        add(txtfieldAvailableQuantity, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 410, 257, 25));
+        add(txtfieldReqQuantity, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 460, 257, 25));
 
-        btnBack.setBackground(new java.awt.Color(0, 51, 153));
-        btnBack.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        btnBack.setForeground(new java.awt.Color(255, 255, 255));
-        btnBack.setText("<<BACK");
-        btnBack.addActionListener(new java.awt.event.ActionListener() {
+        txtfieldReorder.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnBackActionPerformed(evt);
+                txtfieldReorderActionPerformed(evt);
             }
         });
-        add(btnBack, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 570, 138, -1));
+        add(txtfieldReorder, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 510, 257, 25));
 
-        btnAddMedicine.setBackground(new java.awt.Color(0, 51, 153));
-        btnAddMedicine.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        btnAddMedicine.setForeground(new java.awt.Color(255, 255, 255));
-        btnAddMedicine.setText("ADD MEDICINE");
-        btnAddMedicine.addActionListener(new java.awt.event.ActionListener() {
+        buttonBack.setBackground(new java.awt.Color(0, 51, 153));
+        buttonBack.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        buttonBack.setForeground(new java.awt.Color(255, 255, 255));
+        buttonBack.setText("<<BACK");
+        buttonBack.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnAddMedicineActionPerformed(evt);
+                buttonBackActionPerformed(evt);
             }
         });
-        add(btnAddMedicine, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 570, 257, -1));
+        add(buttonBack, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 570, 138, -1));
 
-        btnDetails.setBackground(new java.awt.Color(0, 51, 153));
-        btnDetails.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        btnDetails.setForeground(new java.awt.Color(255, 255, 255));
-        btnDetails.setText("VIEW DETAILS >>");
-        btnDetails.addActionListener(new java.awt.event.ActionListener() {
+        buttonAddMedicine.setBackground(new java.awt.Color(0, 51, 153));
+        buttonAddMedicine.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        buttonAddMedicine.setForeground(new java.awt.Color(255, 255, 255));
+        buttonAddMedicine.setText("ADD MEDICINE");
+        buttonAddMedicine.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnDetailsActionPerformed(evt);
+                buttonAddMedicineActionPerformed(evt);
             }
         });
-        add(btnDetails, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 380, 309, 38));
+        add(buttonAddMedicine, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 570, 257, -1));
 
-        btnReqs.setBackground(new java.awt.Color(0, 51, 153));
-        btnReqs.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        btnReqs.setForeground(new java.awt.Color(255, 255, 255));
-        btnReqs.setText("VIEW REQUESTS");
-        btnReqs.addActionListener(new java.awt.event.ActionListener() {
+        buttonDetails.setBackground(new java.awt.Color(0, 51, 153));
+        buttonDetails.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        buttonDetails.setForeground(new java.awt.Color(255, 255, 255));
+        buttonDetails.setText("VIEW DETAILS >>");
+        buttonDetails.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnReqsActionPerformed(evt);
+                buttonDetailsActionPerformed(evt);
             }
         });
-        add(btnReqs, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 450, 309, 38));
+        add(buttonDetails, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 380, 309, 38));
 
-        btnViewReq.setBackground(new java.awt.Color(0, 51, 153));
-        btnViewReq.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        btnViewReq.setForeground(new java.awt.Color(255, 255, 255));
-        btnViewReq.setText("VIEW REQUESTS FROM DOCTORS");
-        add(btnViewReq, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 520, -1, 38));
+        buttonReqs.setBackground(new java.awt.Color(0, 51, 153));
+        buttonReqs.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        buttonReqs.setForeground(new java.awt.Color(255, 255, 255));
+        buttonReqs.setText("VIEW REQUESTS");
+        buttonReqs.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                buttonReqsActionPerformed(evt);
+            }
+        });
+        add(buttonReqs, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 450, 309, 38));
 
-        lblDocTbl.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        lblDocTbl.setForeground(new java.awt.Color(0, 51, 153));
-        lblDocTbl.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        lblDocTbl.setText("View Requests from Doctor:");
-        add(lblDocTbl, new org.netbeans.lib.awtextra.AbsoluteConstraints(-350, 150, 1069, 35));
+        buttonViewReq.setBackground(new java.awt.Color(0, 51, 153));
+        buttonViewReq.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        buttonViewReq.setForeground(new java.awt.Color(255, 255, 255));
+        buttonViewReq.setText("VIEW REQUESTS FROM DOCTORS");
+        add(buttonViewReq, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 520, -1, 38));
+
+        labelDocTbl.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        labelDocTbl.setForeground(new java.awt.Color(0, 51, 153));
+        labelDocTbl.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        labelDocTbl.setText("View Requests from Doctor:");
+        add(labelDocTbl, new org.netbeans.lib.awtextra.AbsoluteConstraints(-350, 150, 1069, 35));
 
         tblDoc.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -261,20 +267,20 @@ public class WorkAreaPanel_Pharmacy extends javax.swing.JPanel {
         add(scrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 190, 825, 80));
     }// </editor-fold>//GEN-END:initComponents
 
-    private void btnStatusActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnStatusActionPerformed
-        for(DrugPantry dp : op.getDrugs()){
+    private void buttonStatusActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonStatusActionPerformed
+        for(Drug_Store dp : op.getDrugs()){
 
             if(dp.getQuantitypresent()<=dp.getReorderQuantity()){
                 if(!dp.getReorderStatus().equals("Y")){
-                    SupplierWorkRequest swr=new SupplierWorkRequest();
+                    Supplier_WorkRequest swr=new Supplier_WorkRequest();
 
                     dp.setReorderStatus("Y");
                     swr.setMedicationName(dp.getDrugName());
                     swr.setQuantity(dp.getQuantityneeded());
                     swr.setSender(acc);
 
-                    acc.getWorkQueue().getWorkRequestList().add(swr);
-                    for(EnterPrise enterprise : network.getDirectoEnterpri().getEnterpList()){
+                    acc.getWorkQ().getWorkRequestList().add(swr);
+                    for(EnterPrise enterprise : network.getEnterpriseRepo().getEnterpRepo()){
                         System.out.println("***** Organization Name:" +enterprise.getOrgName());
                         for(Organization g : enterprise.getOrgaDirectory().getOrganizations()){
                             System.out.println("***** Organization Name:" +g.getOrgName());
@@ -294,18 +300,18 @@ public class WorkAreaPanel_Pharmacy extends javax.swing.JPanel {
             }
         }
         JOptionPane.showMessageDialog(null, "Status of inventory checked and updated!", "Warning", JOptionPane.INFORMATION_MESSAGE);        // TODO add your handling code here:
-    }//GEN-LAST:event_btnStatusActionPerformed
+    }//GEN-LAST:event_buttonStatusActionPerformed
 
-    private void btnBackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBackActionPerformed
+    private void buttonBackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonBackActionPerformed
         panel.remove(this);
         CardLayout layout = (CardLayout) panel.getLayout();
         layout.previous(panel);        // TODO add your handling code here:
-    }//GEN-LAST:event_btnBackActionPerformed
+    }//GEN-LAST:event_buttonBackActionPerformed
 
-    private void btnAddMedicineActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAddMedicineActionPerformed
-        DrugPantry dp=new DrugPantry();
+    private void buttonAddMedicineActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonAddMedicineActionPerformed
+        Drug_Store dp=new Drug_Store();
 
-        String pre=txtAvailableQuantity.getText();
+        String pre=txtfieldAvailableQuantity.getText();
         try{
             Integer.parseInt(pre);
         }
@@ -313,10 +319,10 @@ public class WorkAreaPanel_Pharmacy extends javax.swing.JPanel {
             JOptionPane.showMessageDialog(null,"Please provide valid data in Available Quantity");
             return;
         }
-        dp.setDrugName(txtMedicine.getText());
-        int qp= Integer.parseInt(txtAvailableQuantity.getText());
+        dp.setDrugName(txtfieldMedicine.getText());
+        int qp= Integer.parseInt(txtfieldAvailableQuantity.getText());
         dp.setQuantitypresent(qp);
-        String sno=txtSerialNumber.getText();
+        String sno=txtfieldSerialNumber.getText();
         try{
             Integer.parseInt(sno);
         }
@@ -324,9 +330,9 @@ public class WorkAreaPanel_Pharmacy extends javax.swing.JPanel {
             JOptionPane.showMessageDialog(null,"Serial Number must be integer!");
             return;
         }
-        int sn= Integer.parseInt(txtSerialNumber.getText());
+        int sn= Integer.parseInt(txtfieldSerialNumber.getText());
         dp.setSerialNo(sn);
-        String rc=txtReqQuantity.getText();
+        String rc=txtfieldReqQuantity.getText();
         try
         {
             Integer.parseInt(rc);
@@ -335,10 +341,10 @@ public class WorkAreaPanel_Pharmacy extends javax.swing.JPanel {
             JOptionPane.showMessageDialog(null,"Required quantity must be integer!");
             return;
         }
-        int rt= Integer.parseInt(txtReqQuantity.getText());
+        int rt= Integer.parseInt(txtfieldReqQuantity.getText());
         dp.setQuantityneeded(rt);
 
-        String ro=txtReorder.getText();
+        String ro=txtfieldReorder.getText();
         try
         {
             Integer.parseInt(ro);
@@ -347,7 +353,7 @@ public class WorkAreaPanel_Pharmacy extends javax.swing.JPanel {
             JOptionPane.showMessageDialog(null,"Reorder level must be integer!");
             return;
         }
-        int rl= Integer.parseInt(txtReorder.getText());
+        int rl= Integer.parseInt(txtfieldReorder.getText());
         dp.setReorderQuantity(rl);
         op.addDrug(dp);
         dp.setReorderStatus("N");
@@ -355,7 +361,7 @@ public class WorkAreaPanel_Pharmacy extends javax.swing.JPanel {
         DefaultTableModel dtm =(DefaultTableModel) tblPharmacy.getModel();
 
         dtm.setRowCount(0);
-        for(DrugPantry drp : op.getDrugs()){
+        for(Drug_Store drp : op.getDrugs()){
             Object row[] = new Object[5];
             row[0] = drp;
             row[1] = drp.getSerialNo();
@@ -366,50 +372,54 @@ public class WorkAreaPanel_Pharmacy extends javax.swing.JPanel {
         }
 
         JOptionPane.showMessageDialog(null, "Medicine Added Successfully", "Warning", JOptionPane.INFORMATION_MESSAGE);        // TODO add your handling code here:
-    }//GEN-LAST:event_btnAddMedicineActionPerformed
+    }//GEN-LAST:event_buttonAddMedicineActionPerformed
 
-    private void btnDetailsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDetailsActionPerformed
+    private void buttonDetailsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonDetailsActionPerformed
         int val = tblPharmacy.getSelectedRow();
         if(val<0){
             JOptionPane.showMessageDialog(null, "Pls select a row!!", "Warning", JOptionPane.WARNING_MESSAGE);
             return;
         }
-        DrugPantry dp = (DrugPantry)tblPharmacy.getValueAt(val, 0);
+        Drug_Store dp = (Drug_Store)tblPharmacy.getValueAt(val, 0);
 
         CardLayout c = (CardLayout) panel.getLayout();
         panel.add("UpdateEntryJPanel", new EntryPanel_Update(panel, acc, enterprise,dp));
         c.next(panel);        // TODO add your handling code here:
-    }//GEN-LAST:event_btnDetailsActionPerformed
+    }//GEN-LAST:event_buttonDetailsActionPerformed
 
-    private void btnReqsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnReqsActionPerformed
+    private void buttonReqsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonReqsActionPerformed
         CardLayout c = (CardLayout) panel.getLayout();
         panel.add("ViewrequestJPanel", new RequestPanel_View( panel, acc, enterprise, orgz));
         c.next(panel);        // TODO add your handling code here:
-    }//GEN-LAST:event_btnReqsActionPerformed
+    }//GEN-LAST:event_buttonReqsActionPerformed
+
+    private void txtfieldReorderActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtfieldReorderActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtfieldReorderActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btnAddMedicine;
-    private javax.swing.JButton btnBack;
-    private javax.swing.JButton btnDetails;
-    private javax.swing.JButton btnReqs;
-    private javax.swing.JButton btnStatus;
-    private javax.swing.JButton btnViewReq;
-    private javax.swing.JLabel lblAvailableQuantity;
-    private javax.swing.JLabel lblDocTbl;
-    private javax.swing.JLabel lblHeader;
-    private javax.swing.JLabel lblMedicine;
-    private javax.swing.JLabel lblReorder;
-    private javax.swing.JLabel lblReqQuantity;
-    private javax.swing.JLabel lblSerialNumber;
-    private javax.swing.JScrollPane scrollPane;
+    private javax.swing.JButton buttonAddMedicine;
+    private javax.swing.JButton buttonBack;
+    private javax.swing.JButton buttonDetails;
+    private javax.swing.JButton buttonReqs;
+    private javax.swing.JButton buttonStatus;
+    private javax.swing.JButton buttonViewReq;
+    private javax.swing.JLabel labelAvailableQuantity;
+    private javax.swing.JLabel labelDocTbl;
+    private javax.swing.JLabel labelHeader;
+    private javax.swing.JLabel labelMedicineName;
+    private javax.swing.JLabel labelReorderLevel;
+    private javax.swing.JLabel labelReqQuantity;
+    private javax.swing.JLabel labelSerialNumber;
+    private javax.swing.JScrollPane scrollPane1;
     private javax.swing.JScrollPane scrollPane2;
     private javax.swing.JTable tblDoc;
     private javax.swing.JTable tblPharmacy;
-    private javax.swing.JTextField txtAvailableQuantity;
-    private javax.swing.JTextField txtMedicine;
-    private javax.swing.JTextField txtReorder;
-    private javax.swing.JTextField txtReqQuantity;
-    private javax.swing.JTextField txtSerialNumber;
+    private javax.swing.JTextField txtfieldAvailableQuantity;
+    private javax.swing.JTextField txtfieldMedicine;
+    private javax.swing.JTextField txtfieldReorder;
+    private javax.swing.JTextField txtfieldReqQuantity;
+    private javax.swing.JTextField txtfieldSerialNumber;
     // End of variables declaration//GEN-END:variables
 }

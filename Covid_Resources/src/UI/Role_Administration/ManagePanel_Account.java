@@ -34,25 +34,25 @@ public class ManagePanel_Account extends javax.swing.JPanel {
     }
     
     public void fillOrgCmb() {
-        cmbOrg.removeAllItems();
+        cmbBoxOrg.removeAllItems();
 
         for (Organization organization : enterprise.getOrgaDirectory().getOrganizations()) {
-            cmbOrg.addItem(organization);
+            cmbBoxOrg.addItem(organization);
         }
     }
 
     public void fillEmpCmb(Organization o) {
-        cmbEmp.removeAllItems();
+        cmbBoxEmp.removeAllItems();
 
-        for (Employee e : o.getEmpDir().getE_List()) {
-            cmbEmp.addItem(e);
+        for (Employee e : o.getEmpRepo().getE_Repo()) {
+            cmbBoxEmp.addItem(e);
         }
     }
 
     public void fillRoleCmb(Organization o) {
-        cmbRole.removeAllItems();
+        cmbBoxRole.removeAllItems();
         for (Role role : o.getRole()) {
-            cmbRole.addItem(role);
+            cmbBoxRole.addItem(role);
         }
     }
     
@@ -81,27 +81,27 @@ public class ManagePanel_Account extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        lblHeader = new javax.swing.JLabel();
-        scrollPane = new javax.swing.JScrollPane();
+        labelHeader1 = new javax.swing.JLabel();
+        scrollPane1 = new javax.swing.JScrollPane();
         tblAcc = new javax.swing.JTable();
-        lblOrg = new javax.swing.JLabel();
-        cmbOrg = new javax.swing.JComboBox();
-        lblEmp = new javax.swing.JLabel();
-        lblUsr = new javax.swing.JLabel();
-        lblPwd = new javax.swing.JLabel();
-        lblRole = new javax.swing.JLabel();
-        cmbRole = new javax.swing.JComboBox();
-        cmbEmp = new javax.swing.JComboBox();
-        txtUser = new javax.swing.JTextField();
-        txtPwd = new javax.swing.JTextField();
-        btnBack = new javax.swing.JButton();
-        btnCreate = new javax.swing.JButton();
+        labelorg1 = new javax.swing.JLabel();
+        cmbBoxOrg = new javax.swing.JComboBox();
+        labelEmp = new javax.swing.JLabel();
+        labelUsr = new javax.swing.JLabel();
+        labelPwd = new javax.swing.JLabel();
+        labelRole = new javax.swing.JLabel();
+        cmbBoxRole = new javax.swing.JComboBox();
+        cmbBoxEmp = new javax.swing.JComboBox();
+        txtfieldUser = new javax.swing.JTextField();
+        txtfieldPwd = new javax.swing.JTextField();
+        buttonback = new javax.swing.JButton();
+        buttonCreate = new javax.swing.JButton();
 
         setBackground(new java.awt.Color(153, 204, 255));
 
-        lblHeader.setFont(new java.awt.Font("Tahoma", 1, 36)); // NOI18N
-        lblHeader.setForeground(new java.awt.Color(0, 51, 153));
-        lblHeader.setText("Manage User Account");
+        labelHeader1.setFont(new java.awt.Font("Tahoma", 1, 36)); // NOI18N
+        labelHeader1.setForeground(new java.awt.Color(0, 51, 153));
+        labelHeader1.setText("Manage User Account");
 
         tblAcc.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -126,71 +126,71 @@ public class ManagePanel_Account extends javax.swing.JPanel {
                 return canEdit [columnIndex];
             }
         });
-        scrollPane.setViewportView(tblAcc);
+        scrollPane1.setViewportView(tblAcc);
 
-        lblOrg.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        lblOrg.setText("Organization");
+        labelorg1.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        labelorg1.setText("Organization");
 
-        cmbOrg.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-        cmbOrg.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        cmbOrg.addActionListener(new java.awt.event.ActionListener() {
+        cmbBoxOrg.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        cmbBoxOrg.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        cmbBoxOrg.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                cmbOrgActionPerformed(evt);
+                cmbBoxOrgActionPerformed(evt);
             }
         });
 
-        lblEmp.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        lblEmp.setText("Employee");
+        labelEmp.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        labelEmp.setText("Employee");
 
-        lblUsr.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        lblUsr.setText("User Name:");
+        labelUsr.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        labelUsr.setText("User Name:");
 
-        lblPwd.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        lblPwd.setText("Password:");
+        labelPwd.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        labelPwd.setText("Password:");
 
-        lblRole.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        lblRole.setText("Role");
+        labelRole.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        labelRole.setText("Role");
 
-        cmbRole.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-        cmbRole.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        cmbRole.addActionListener(new java.awt.event.ActionListener() {
+        cmbBoxRole.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        cmbBoxRole.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        cmbBoxRole.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                cmbRoleActionPerformed(evt);
+                cmbBoxRoleActionPerformed(evt);
             }
         });
 
-        cmbEmp.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-        cmbEmp.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        cmbEmp.addActionListener(new java.awt.event.ActionListener() {
+        cmbBoxEmp.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        cmbBoxEmp.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        cmbBoxEmp.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                cmbEmpActionPerformed(evt);
+                cmbBoxEmpActionPerformed(evt);
             }
         });
 
-        txtPwd.addActionListener(new java.awt.event.ActionListener() {
+        txtfieldPwd.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtPwdActionPerformed(evt);
+                txtfieldPwdActionPerformed(evt);
             }
         });
 
-        btnBack.setBackground(new java.awt.Color(0, 51, 153));
-        btnBack.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        btnBack.setForeground(new java.awt.Color(255, 255, 255));
-        btnBack.setText("<< Back");
-        btnBack.addActionListener(new java.awt.event.ActionListener() {
+        buttonback.setBackground(new java.awt.Color(0, 51, 153));
+        buttonback.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        buttonback.setForeground(new java.awt.Color(255, 255, 255));
+        buttonback.setText("<< Back");
+        buttonback.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnBackActionPerformed(evt);
+                buttonbackActionPerformed(evt);
             }
         });
 
-        btnCreate.setBackground(new java.awt.Color(0, 51, 153));
-        btnCreate.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        btnCreate.setForeground(new java.awt.Color(255, 255, 255));
-        btnCreate.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/add.png"))); // NOI18N
-        btnCreate.setText("Create User Account");
-        btnCreate.addActionListener(new java.awt.event.ActionListener() {
+        buttonCreate.setBackground(new java.awt.Color(0, 51, 153));
+        buttonCreate.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        buttonCreate.setForeground(new java.awt.Color(255, 255, 255));
+        buttonCreate.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/add.png"))); // NOI18N
+        buttonCreate.setText("Create User Account");
+        buttonCreate.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnCreateActionPerformed(evt);
+                buttonCreateActionPerformed(evt);
             }
         });
 
@@ -200,132 +200,132 @@ public class ManagePanel_Account extends javax.swing.JPanel {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(lblHeader)
+                .addComponent(labelHeader1)
                 .addGap(297, 297, 297))
             .addGroup(layout.createSequentialGroup()
                 .addGap(230, 230, 230)
-                .addComponent(lblOrg)
+                .addComponent(labelorg1)
                 .addGap(123, 123, 123)
-                .addComponent(lblEmp, javax.swing.GroupLayout.PREFERRED_SIZE, 94, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(labelEmp, javax.swing.GroupLayout.PREFERRED_SIZE, 94, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(139, 139, 139)
-                .addComponent(lblRole, javax.swing.GroupLayout.PREFERRED_SIZE, 94, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(labelRole, javax.swing.GroupLayout.PREFERRED_SIZE, 94, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, Short.MAX_VALUE))
             .addGroup(layout.createSequentialGroup()
                 .addGap(183, 183, 183)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                    .addComponent(scrollPane, javax.swing.GroupLayout.PREFERRED_SIZE, 633, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(scrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 633, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
                         .addGap(10, 10, 10)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(layout.createSequentialGroup()
-                                .addComponent(btnBack, javax.swing.GroupLayout.PREFERRED_SIZE, 117, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(buttonback, javax.swing.GroupLayout.PREFERRED_SIZE, 117, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                                             .addGroup(layout.createSequentialGroup()
-                                                .addComponent(lblPwd, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addComponent(labelPwd, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
                                                 .addGap(18, 18, 18)
-                                                .addComponent(txtPwd, javax.swing.GroupLayout.PREFERRED_SIZE, 188, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                                .addComponent(txtfieldPwd, javax.swing.GroupLayout.PREFERRED_SIZE, 188, javax.swing.GroupLayout.PREFERRED_SIZE))
                                             .addGroup(layout.createSequentialGroup()
-                                                .addComponent(lblUsr)
+                                                .addComponent(labelUsr)
                                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                                .addComponent(txtUser, javax.swing.GroupLayout.PREFERRED_SIZE, 188, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                                .addComponent(txtfieldUser, javax.swing.GroupLayout.PREFERRED_SIZE, 188, javax.swing.GroupLayout.PREFERRED_SIZE)))
                                         .addGap(138, 138, 138))
-                                    .addComponent(btnCreate, javax.swing.GroupLayout.Alignment.TRAILING)))
+                                    .addComponent(buttonCreate, javax.swing.GroupLayout.Alignment.TRAILING)))
                             .addGroup(layout.createSequentialGroup()
-                                .addComponent(cmbOrg, javax.swing.GroupLayout.PREFERRED_SIZE, 188, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(cmbBoxOrg, javax.swing.GroupLayout.PREFERRED_SIZE, 188, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(29, 29, 29)
-                                .addComponent(cmbEmp, javax.swing.GroupLayout.PREFERRED_SIZE, 188, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(cmbBoxEmp, javax.swing.GroupLayout.PREFERRED_SIZE, 188, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(cmbRole, javax.swing.GroupLayout.PREFERRED_SIZE, 188, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                                .addComponent(cmbBoxRole, javax.swing.GroupLayout.PREFERRED_SIZE, 188, javax.swing.GroupLayout.PREFERRED_SIZE)))))
                 .addContainerGap(184, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addGap(54, 54, 54)
-                .addComponent(lblHeader)
+                .addComponent(labelHeader1)
                 .addGap(75, 75, 75)
-                .addComponent(scrollPane, javax.swing.GroupLayout.PREFERRED_SIZE, 255, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(scrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 255, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(61, 61, 61)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(lblOrg, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(lblEmp, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(lblRole, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(labelorg1, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(labelEmp, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(labelRole, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(cmbOrg, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(cmbEmp, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(cmbRole, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(cmbBoxOrg, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(cmbBoxEmp, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(cmbBoxRole, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 60, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(txtUser, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(lblUsr, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(txtfieldUser, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(labelUsr, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(48, 48, 48)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(lblPwd, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(txtPwd, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(labelPwd, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtfieldPwd, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(72, 72, 72)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btnBack)
-                    .addComponent(btnCreate))
+                    .addComponent(buttonback)
+                    .addComponent(buttonCreate))
                 .addGap(65, 65, 65))
         );
     }// </editor-fold>//GEN-END:initComponents
 
-    private void cmbOrgActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cmbOrgActionPerformed
-        Organization o = (Organization) cmbOrg.getSelectedItem();
+    private void cmbBoxOrgActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cmbBoxOrgActionPerformed
+        Organization o = (Organization) cmbBoxOrg.getSelectedItem();
         if (o != null){
             fillEmpCmb(o);
             fillRoleCmb(o);
         }        // TODO add your handling code here:
-    }//GEN-LAST:event_cmbOrgActionPerformed
+    }//GEN-LAST:event_cmbBoxOrgActionPerformed
 
-    private void cmbRoleActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cmbRoleActionPerformed
+    private void cmbBoxRoleActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cmbBoxRoleActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_cmbRoleActionPerformed
+    }//GEN-LAST:event_cmbBoxRoleActionPerformed
 
-    private void cmbEmpActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cmbEmpActionPerformed
+    private void cmbBoxEmpActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cmbBoxEmpActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_cmbEmpActionPerformed
+    }//GEN-LAST:event_cmbBoxEmpActionPerformed
 
-    private void btnBackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBackActionPerformed
+    private void buttonbackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonbackActionPerformed
         panel.remove(this);
         CardLayout l = (CardLayout) panel.getLayout();
         l.previous(panel);        // TODO add your handling code here:
-    }//GEN-LAST:event_btnBackActionPerformed
+    }//GEN-LAST:event_buttonbackActionPerformed
 
-    private void btnCreateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCreateActionPerformed
-        String usrnm = txtUser.getText();
-        String pwd = txtPwd.getText();
-        Organization organization = (Organization) cmbOrg.getSelectedItem();
-        Employee e = (Employee) cmbEmp.getSelectedItem();
-        Role r = (Role) cmbRole.getSelectedItem();
+    private void buttonCreateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonCreateActionPerformed
+        String usrnm = txtfieldUser.getText();
+        String pwd = txtfieldPwd.getText();
+        Organization organization = (Organization) cmbBoxOrg.getSelectedItem();
+        Employee e = (Employee) cmbBoxEmp.getSelectedItem();
+        Role r = (Role) cmbBoxRole.getSelectedItem();
         organization.getUserAccDir().createUserAccount(usrnm, pwd, e, r);
         fillData();        // TODO add your handling code here:
-    }//GEN-LAST:event_btnCreateActionPerformed
+    }//GEN-LAST:event_buttonCreateActionPerformed
 
-    private void txtPwdActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtPwdActionPerformed
+    private void txtfieldPwdActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtfieldPwdActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_txtPwdActionPerformed
+    }//GEN-LAST:event_txtfieldPwdActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btnBack;
-    private javax.swing.JButton btnCreate;
-    private javax.swing.JComboBox cmbEmp;
-    private javax.swing.JComboBox cmbOrg;
-    private javax.swing.JComboBox cmbRole;
-    private javax.swing.JLabel lblEmp;
-    private javax.swing.JLabel lblHeader;
-    private javax.swing.JLabel lblOrg;
-    private javax.swing.JLabel lblPwd;
-    private javax.swing.JLabel lblRole;
-    private javax.swing.JLabel lblUsr;
-    private javax.swing.JScrollPane scrollPane;
+    private javax.swing.JButton buttonCreate;
+    private javax.swing.JButton buttonback;
+    private javax.swing.JComboBox cmbBoxEmp;
+    private javax.swing.JComboBox cmbBoxOrg;
+    private javax.swing.JComboBox cmbBoxRole;
+    private javax.swing.JLabel labelEmp;
+    private javax.swing.JLabel labelHeader1;
+    private javax.swing.JLabel labelPwd;
+    private javax.swing.JLabel labelRole;
+    private javax.swing.JLabel labelUsr;
+    private javax.swing.JLabel labelorg1;
+    private javax.swing.JScrollPane scrollPane1;
     private javax.swing.JTable tblAcc;
-    private javax.swing.JTextField txtPwd;
-    private javax.swing.JTextField txtUser;
+    private javax.swing.JTextField txtfieldPwd;
+    private javax.swing.JTextField txtfieldUser;
     // End of variables declaration//GEN-END:variables
 }

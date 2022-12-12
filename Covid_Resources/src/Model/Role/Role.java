@@ -22,23 +22,23 @@ public abstract class Role {
         Logistics("Logistics"), 
         Pharmacist("Pharmacist");
         
-        private String v;
+        private String w;
 
-        private RoleType(String v){
-            this.v = v;
+        private RoleType(String w){
+            this.w = w;
             }
 
         public String getRoleValue() {
-            return v;
+            return w;
         }
 
-        public void setRoleValue(String v) {
-            this.v = v;
+        public void setRoleValue(String w) {
+            this.w = w;
         }
         
         @Override 
         public String toString(){
-            return v;
+            return w;
         }
     }
     

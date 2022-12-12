@@ -6,7 +6,7 @@ package Model;
 
 import Model.Organization.Organization;
 import Model.Role.Role;
-import Model.Role.Role_SystemAdmin;
+import Model.Role.SystemAdmin_Role;
 import java.util.ArrayList;
 
 /**
@@ -44,7 +44,7 @@ public class EcoSystem extends Organization {
     @Override
     public ArrayList<Role> getRole() {
         ArrayList<Role> roles = new ArrayList<>();
-        roles.add(new Role_SystemAdmin());
+        roles.add(new SystemAdmin_Role());
         return roles;
     }
 

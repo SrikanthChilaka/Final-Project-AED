@@ -23,19 +23,19 @@
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" attributes="0">
               <EmptySpace min="-2" pref="38" max="-2" attributes="0"/>
-              <Component id="jLabel1" min="-2" pref="83" max="-2" attributes="0"/>
+              <Component id="jLabel2" min="-2" pref="83" max="-2" attributes="0"/>
               <EmptySpace min="-2" pref="46" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                  <Component id="lblHeader" min="-2" max="-2" attributes="0"/>
+                  <Component id="labelHeader" min="-2" max="-2" attributes="0"/>
                   <Group type="102" alignment="0" attributes="0">
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="lblDate" alignment="0" min="-2" max="-2" attributes="0"/>
-                          <Component id="btnBack" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="labeldod" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="buttonBack" alignment="0" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace min="-2" pref="46" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="btnUpdate" min="-2" max="-2" attributes="0"/>
-                          <Component id="txtDate" min="-2" pref="170" max="-2" attributes="0"/>
+                          <Component id="buttonUpdate" min="-2" max="-2" attributes="0"/>
+                          <Component id="txtfieldDate" min="-2" pref="170" max="-2" attributes="0"/>
                       </Group>
                   </Group>
               </Group>
@@ -48,18 +48,18 @@
           <Group type="102" alignment="0" attributes="0">
               <EmptySpace min="-2" pref="43" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="lblHeader" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="jLabel1" alignment="3" min="-2" pref="71" max="-2" attributes="0"/>
+                  <Component id="labelHeader" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="jLabel2" alignment="3" min="-2" pref="71" max="-2" attributes="0"/>
               </Group>
               <EmptySpace min="-2" pref="39" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="lblDate" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="txtDate" alignment="3" min="-2" pref="22" max="-2" attributes="0"/>
+                  <Component id="labeldod" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="txtfieldDate" alignment="3" min="-2" pref="22" max="-2" attributes="0"/>
               </Group>
               <EmptySpace min="-2" pref="78" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="btnBack" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="btnUpdate" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="buttonBack" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="buttonUpdate" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace pref="262" max="32767" attributes="0"/>
           </Group>
@@ -67,7 +67,7 @@
     </DimensionLayout>
   </Layout>
   <SubComponents>
-    <Component class="javax.swing.JLabel" name="lblHeader">
+    <Component class="javax.swing.JLabel" name="labelHeader">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Tahoma" size="36" style="1"/>
@@ -78,7 +78,7 @@
         <Property name="text" type="java.lang.String" value="PROCESSING SUPPLIER REQUEST"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JLabel" name="lblDate">
+    <Component class="javax.swing.JLabel" name="labeldod">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Tahoma" size="18" style="0"/>
@@ -89,9 +89,9 @@
         <Property name="text" type="java.lang.String" value="Select Date of Delivery:"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JTextField" name="txtDate">
+    <Component class="javax.swing.JTextField" name="txtfieldDate">
     </Component>
-    <Component class="javax.swing.JButton" name="btnBack">
+    <Component class="javax.swing.JButton" name="buttonBack">
       <Properties>
         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
           <Color blue="99" green="33" red="0" type="rgb"/>
@@ -105,7 +105,7 @@
         <Property name="text" type="java.lang.String" value="&lt;&lt;Back"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JButton" name="btnUpdate">
+    <Component class="javax.swing.JButton" name="buttonUpdate">
       <Properties>
         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
           <Color blue="99" green="33" red="0" type="rgb"/>
@@ -119,10 +119,10 @@
         <Property name="text" type="java.lang.String" value="Update Status"/>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnUpdateActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="buttonUpdateActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JLabel" name="jLabel1">
+    <Component class="javax.swing.JLabel" name="jLabel2">
       <Properties>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
           <Image iconType="3" name="/Images/supplier.jpg"/>

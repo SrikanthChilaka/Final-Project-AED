@@ -25,13 +25,13 @@
               <EmptySpace pref="58" max="32767" attributes="0"/>
               <Group type="103" groupAlignment="1" max="-2" attributes="0">
                   <Group type="102" alignment="1" attributes="0">
-                      <Component id="btnBack" min="-2" max="-2" attributes="0"/>
+                      <Component id="buttonBack" min="-2" max="-2" attributes="0"/>
                       <EmptySpace min="-2" pref="99" max="-2" attributes="0"/>
-                      <Component id="btnAssign" min="-2" max="-2" attributes="0"/>
+                      <Component id="buttonAssign" min="-2" max="-2" attributes="0"/>
                       <EmptySpace max="32767" attributes="0"/>
-                      <Component id="btnPro" min="-2" pref="189" max="-2" attributes="0"/>
+                      <Component id="buttonprocess" min="-2" pref="189" max="-2" attributes="0"/>
                       <EmptySpace min="-2" pref="87" max="-2" attributes="0"/>
-                      <Component id="btnRef" min="-2" pref="169" max="-2" attributes="0"/>
+                      <Component id="buttonRefresh" min="-2" pref="169" max="-2" attributes="0"/>
                   </Group>
                   <Component id="scrollPane" alignment="0" min="-2" pref="983" max="-2" attributes="0"/>
               </Group>
@@ -39,9 +39,9 @@
           </Group>
           <Group type="102" alignment="0" attributes="0">
               <EmptySpace min="-2" pref="254" max="-2" attributes="0"/>
-              <Component id="jLabel1" min="-2" pref="127" max="-2" attributes="0"/>
+              <Component id="jLabel3" min="-2" pref="127" max="-2" attributes="0"/>
               <EmptySpace min="-2" pref="28" max="-2" attributes="0"/>
-              <Component id="lblHeader" min="-2" pref="516" max="-2" attributes="0"/>
+              <Component id="labelHeader2" min="-2" pref="516" max="-2" attributes="0"/>
               <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
           </Group>
       </Group>
@@ -51,17 +51,17 @@
           <Group type="102" alignment="0" attributes="0">
               <EmptySpace min="-2" pref="20" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="jLabel1" alignment="3" min="-2" pref="74" max="-2" attributes="0"/>
-                  <Component id="lblHeader" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="jLabel3" alignment="3" min="-2" pref="74" max="-2" attributes="0"/>
+                  <Component id="labelHeader2" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
               <Component id="scrollPane" min="-2" pref="186" max="-2" attributes="0"/>
               <EmptySpace min="-2" pref="47" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="btnRef" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="btnPro" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="btnAssign" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="btnBack" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="buttonRefresh" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="buttonprocess" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="buttonAssign" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="buttonBack" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace pref="160" max="32767" attributes="0"/>
           </Group>
@@ -69,7 +69,7 @@
     </DimensionLayout>
   </Layout>
   <SubComponents>
-    <Component class="javax.swing.JButton" name="btnPro">
+    <Component class="javax.swing.JButton" name="buttonprocess">
       <Properties>
         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
           <Color blue="99" green="33" red="0" type="rgb"/>
@@ -83,10 +83,10 @@
         <Property name="text" type="java.lang.String" value="Process"/>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnProActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="buttonprocessActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JButton" name="btnRef">
+    <Component class="javax.swing.JButton" name="buttonRefresh">
       <Properties>
         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
           <Color blue="99" green="33" red="0" type="rgb"/>
@@ -100,10 +100,10 @@
         <Property name="text" type="java.lang.String" value="Refresh"/>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnRefActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="buttonRefreshActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JLabel" name="lblHeader">
+    <Component class="javax.swing.JLabel" name="labelHeader2">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Tahoma" size="36" style="1"/>
@@ -122,7 +122,7 @@
 
       <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
       <SubComponents>
-        <Component class="javax.swing.JTable" name="tblSup">
+        <Component class="javax.swing.JTable" name="tabblesupplier">
           <Properties>
             <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
               <Table columnCount="6" rowCount="0">
@@ -141,7 +141,7 @@
         </Component>
       </SubComponents>
     </Container>
-    <Component class="javax.swing.JButton" name="btnBack">
+    <Component class="javax.swing.JButton" name="buttonBack">
       <Properties>
         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
           <Color blue="99" green="33" red="0" type="rgb"/>
@@ -155,10 +155,10 @@
         <Property name="text" type="java.lang.String" value="&lt;&lt;Back"/>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnBackActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="buttonBackActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JButton" name="btnAssign">
+    <Component class="javax.swing.JButton" name="buttonAssign">
       <Properties>
         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
           <Color blue="99" green="33" red="0" type="rgb"/>
@@ -172,10 +172,10 @@
         <Property name="text" type="java.lang.String" value="Assign to me"/>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnAssignActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="buttonAssignActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JLabel" name="jLabel1">
+    <Component class="javax.swing.JLabel" name="jLabel3">
       <Properties>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
           <Image iconType="3" name="/Images/supplier.jpg"/>
